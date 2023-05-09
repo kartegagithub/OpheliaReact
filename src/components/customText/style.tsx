@@ -3,7 +3,7 @@ import { textColor } from '../../constants/styles/colors';
 
 const styles = StyleSheet.create({
   customTextStyle: {
-    fontSize: 16,
+    fontSize: 14,
     color: textColor,
   },
 });
