@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import Container from '../shared/fragment/container';
-import CustomInput from '../components/customInput';
 import IconUser from '../components/customInput/iconUser';
+import CustomInput from '../components/customInput';
 
 function TextInputScreen() {
 
