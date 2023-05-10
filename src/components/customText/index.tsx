@@ -1,13 +1,14 @@
 import * as React from 'react';
-import { Text } from 'react-native';
+import { StyleProp, Text, ViewStyle } from 'react-native';
 import styles from './style';
-
-function CustomText(props) {
-  const {
-    children
-  } = props || {};
+type TextProps = {
+  style?: StyleProp<ViewStyle>,
+  children?: string | number,
+}
+function CustomText({ style, children }: TextProps) {
+ 
     return (
-      <Text style={styles.customTextStyle}>
+      <Text style={[styles.customTextStyle, style]}>
         {children}
       </Text>
     );

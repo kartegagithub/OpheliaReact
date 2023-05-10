@@ -15,11 +15,14 @@ const styles = StyleSheet.create({
     marginTop: 12,
     marginLeft: wp(100) - 70
   },
-  labelStyle:{
-    fontSize:14, 
-    bottom:10, 
-    color:'#b76c94'
-}
+  labelStyle: {
+    fontSize: 14,
+    color: '#b76c94'
+  },
+  errorMessage: {
+    fontSize: 12,
+    color: "#dc143c", top: 4
+  },
 });
 
 export default styles;
