@@ -1,46 +1,55 @@
-import React from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
-import Container from '../shared/fragment/container';
-import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import React, {useEffect, useState} from 'react';
+import {StatusBar} from 'react-native';
+import {FlatList, View} from 'react-native';
 import CustomButton from '../components/customButton';
+import CustomSwitch from '../components/customSwitch';
 import CustomText from '../components/customText';
+import menuData from '../constants/menu';
+import Container from '../shared/fragment/container';
+import homeScreenStyle from './styles/homeScreenStyle';
 
-type RootStackParamList = {
-  TextScreen: undefined;
-  ButtonScreen: undefined;
-  TextInputScreen: undefined;
-  // Profile: { userId: string };
-  // Feed: { sort: 'latest' | 'top' } | undefined;
-};
-
-type Props = NativeStackScreenProps<RootStackParamList, 'TextScreen'>;
-
-function HomeScreen({ navigation }: Props) {
-  const onPressText = () => {
-    navigation.navigate("TextScreen")
-  }
-  const onPressButton = () => {
-    navigation.navigate("ButtonScreen")
-  }
-  const onPressTextInput = () => {
-    navigation.navigate("TextInputScreen")
-  }
-
+function HomeScreen({navigation}) {
+  const [menu, setMenu] = useState(menuData);
+  useEffect(() => {
+    StatusBar.setBarStyle('dark-content');
+  }, []);
+  const goScreen = screenName => {
+    navigation.navigate(screenName);
+  };
+  const renderMenu = ({item}) => {
+    const onChange = () => {
+      setMenu(
+        menu?.map(val => {
+          return {
+            ...val,
+            isOn: item?.id == val.id ? !val?.isOn : val.isOn,
+          };
+        }),
+      );
+    };
+    return (
+      <View style={homeScreenStyle.item}>
+        <CustomSwitch isOn={item?.isOn} onChange={onChange} />
+        <CustomText style={homeScreenStyle.itemTitle}>{item.title}</CustomText>
+        <View style={homeScreenStyle.itemButtons}>
+          <CustomButton
+            onPress={() => goScreen(item?.screenName)}
+            label={'Önizle'}
+          />
+          <CustomButton label={'Detay'} />
+        </View>
+      </View>
+    );
+  };
   return (
     <Container>
-      <TouchableOpacity onPress={onPressText} style={{ backgroundColor: '#EFF3F9', padding: 16, marginTop: 16 }}>
-        <Text>
-          Text
-        </Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={onPressButton} style={{ backgroundColor: '#EFF3F9', padding: 16, marginTop: 16 }}>
-        <Text>ButtonScreen</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={onPressTextInput} style={{ backgroundColor: '#EFF3F9', padding: 16, marginTop: 16 }}>
-        <CustomText>
-          TextInput
-        </CustomText>
-      </TouchableOpacity>
+      <View>
+        <FlatList
+          data={menu}
+          keyExtractor={item => item.id}
+          renderItem={renderMenu}
+        />
+      </View>
     </Container>
   );
 }

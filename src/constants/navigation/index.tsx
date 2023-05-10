@@ -14,11 +14,23 @@ function Navigation() {
       <Stack.Navigator
         initialRouteName="Home"
         screenOptions={{
-          headerShown: false,
+          headerShown: true,
         }}>
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            title: 'Demo Component List',
+          }}
+        />
         <Stack.Screen name="TextScreen" component={TextScreen} />
-        <Stack.Screen name="ButtonScreen" component={ButtonScreen} />
+        <Stack.Screen
+          name="ButtonScreen"
+          component={ButtonScreen}
+          options={{
+            title: 'Buttons Example',
+          }}
+        />
         <Stack.Screen name="TextInputScreen" component={TextInputScreen} />
       </Stack.Navigator>
     </NavigationContainer>

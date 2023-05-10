@@ -1,5 +1,3 @@
 const textColor = '#000';
 
-export {
-  textColor
-};
+export {textColor};

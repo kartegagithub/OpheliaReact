@@ -1,10 +1,10 @@
 import {StyleSheet} from 'react-native';
-import { textColor } from '../../constants/styles/colors';
+import defaultColor from '../../constants/style/defaultColor';
 
 const styles = StyleSheet.create({
   customTextStyle: {
     fontSize: 14,
-    color: textColor,
+    color: defaultColor.textColor,
   },
 });
 export default styles;
