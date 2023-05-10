@@ -19,11 +19,11 @@ function ButtonScreen() {
     const fadeOut = () => {
         // Will change fadeAnim value to 0 in 3 seconds
         Animated.timing(fadeAnim, {
-          toValue: 0,
-          duration: 3000,
-          useNativeDriver: true,
+            toValue: 0,
+            duration: 3000,
+            useNativeDriver: true,
         }).start();
-      };
+    };
     return (
         <Container>
             <CustomButton
@@ -73,6 +73,10 @@ function ButtonScreen() {
                 label={'Deneme'}
                 onPress={fadeOut}
                 containerStyle={{ padding: 10, height: 45, overflow: 'hidden', borderRadius: 4, backgroundColor: 'aqua' }} />
+            <CustomButton
+                label={'Deneme'}
+                onPress={fadeOut}
+                containerStyle={{ backgroundColor: 'white', borderWidth: 1, borderColor: 'grey', padding: 10, }} />
         </Container>
     );
 }
