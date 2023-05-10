@@ -2,12 +2,6 @@ import { StyleSheet } from 'react-native';
 import { wp } from '../../shared/helpers/veriables';
 
 const styles = StyleSheet.create({
-  inputStyle: {
-    fontSize: 12,
-    borderRadius: 4,
-    height: 48,
-    color: '#697686',
-  },
   container: {
     marginTop: 16,
   },
@@ -20,7 +14,12 @@ const styles = StyleSheet.create({
     position: "absolute",
     marginTop: 12,
     marginLeft: wp(100) - 70
-  }
+  },
+  labelStyle:{
+    fontSize:14, 
+    bottom:10, 
+    color:'#b76c94'
+}
 });
 
 export default styles;
