@@ -16,6 +16,9 @@ function HomeScreen({navigation}) {
   const goScreen = screenName => {
     navigation.navigate(screenName);
   };
+  const goScreenDetail = data => {
+    navigation.navigate('DetailScreen', data);
+  };
   const renderMenu = ({item}) => {
     const onChange = () => {
       setMenu(
@@ -36,7 +39,7 @@ function HomeScreen({navigation}) {
             onPress={() => goScreen(item?.screenName)}
             label={'Önizle'}
           />
-          <CustomButton label={'Detay'} />
+          <CustomButton onPress={() => goScreenDetail(item)} label={'Detay'} />
         </View>
       </View>
     );

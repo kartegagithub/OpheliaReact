@@ -9,14 +9,14 @@ const menuData = [
     usageDescription: {
       codes: [
         `<CustomActionSheet
-        options={['Button 1', 'Button 2', 'Button 3']}
-        title="Example Title"
-        message="Example Message"
-        cancelButtonIndex={1}
-        destructiveButtonIndex={2}
-        ref={ref4}
-        onPress={index => Alert.alert('Selected Button Index: ' + index)}
-      />`,
+          options={['Button 1', 'Button 2', 'Button 3']}
+          title="Example Title"
+          message="Example Message"
+          cancelButtonIndex={1}
+          destructiveButtonIndex={2}
+          ref={ref}
+          onPress={index => Alert.alert('Selected Button Index: ' + index)}
+        />`,
       ],
       description:
         'Önemli Not: iOS tarafında sadece string option verilebilir. <Text> gibi bir component çalışmayacaktır.\nÖncelikle ref oluşturulması gereklidir. const ref = createRef();\nSonrasında ref üzerinden gösterim sağlanabilir. ref?.current?.show()',
