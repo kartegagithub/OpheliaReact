@@ -3,10 +3,25 @@ const menuData = [
     id: 0,
     title: 'ActionSheet',
     package: 'react-native-actionsheet',
-    description: '',
+    description:
+      'Platformlar arası ActionSheet.\nBu bileşen, özel bir ActionSheet uygular ve onu farklı platformlarda (iOS ve Android) çizmek için aynı yolu sağlar.\nAslında, en iyi etkiyi korumak için iOS ta hala ActionSheetIOS u kullanıyor.',
     installDescription: '',
-    usageDescription: '',
-    screenName: '',
+    usageDescription: {
+      codes: [
+        `<CustomActionSheet
+        options={['Button 1', 'Button 2', 'Button 3']}
+        title="Example Title"
+        message="Example Message"
+        cancelButtonIndex={1}
+        destructiveButtonIndex={2}
+        ref={ref4}
+        onPress={index => Alert.alert('Selected Button Index: ' + index)}
+      />`,
+      ],
+      description:
+        'Önemli Not: iOS tarafında sadece string option verilebilir. <Text> gibi bir component çalışmayacaktır.\nÖncelikle ref oluşturulması gereklidir. const ref = createRef();\nSonrasında ref üzerinden gösterim sağlanabilir. ref?.current?.show()',
+    },
+    screenName: 'ActionSheetScreen',
   },
   {
     id: 1,
