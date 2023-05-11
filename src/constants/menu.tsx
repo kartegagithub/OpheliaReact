@@ -26,5 +26,14 @@ const menuData = [
     usageDescription: '',
     screenName: 'ButtonScreen',
   },
+  {
+    id: 3,
+    title: 'TextInput',
+    package: 'react-native-textinput-effects',
+    description: '',
+    installDescription: '',
+    usageDescription: '',
+    screenName: 'TextInputScreen',
+  },
 ];
 export default menuData;
