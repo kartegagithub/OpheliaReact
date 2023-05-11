@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {StatusBar} from 'react-native';
 import {FlatList, View} from 'react-native';
 import CustomButton from '../components/customButton';
@@ -7,9 +7,14 @@ import CustomText from '../components/customText';
 import menuData from '../constants/menu';
 import Container from '../shared/fragment/container';
 import homeScreenStyle from './styles/homeScreenStyle';
+import Clipboard from '@react-native-clipboard/clipboard';
 
 function HomeScreen({navigation}) {
   const [menu, setMenu] = useState(menuData);
+  const [setupData, setSetupDate] = useState({
+    code: null,
+    intallDescription: null,
+  });
   useEffect(() => {
     StatusBar.setBarStyle('dark-content');
   }, []);
@@ -44,6 +49,36 @@ function HomeScreen({navigation}) {
       </View>
     );
   };
+  const generateInstall = () => {
+    const getSelectedComponents = menu?.filter(item => item.isOn);
+    if (getSelectedComponents?.length < 1) {
+      setSetupDate({
+        code: null,
+        intallDescription: null,
+      });
+      return;
+    }
+    let installText = '';
+    let code = 'npm i --save';
+    for (let i = 0; i < getSelectedComponents.length; i++) {
+      if (getSelectedComponents[i].installDescription) {
+        installText +=
+          '\n' +
+          getSelectedComponents[i].package +
+          '\n' +
+          getSelectedComponents[i].installDescription +
+          '\n----------------------------\n';
+      }
+      code += ' ' + getSelectedComponents[i].package;
+    }
+    setSetupDate({
+      code: code,
+      intallDescription: installText,
+    });
+  };
+  const copyCode = () => {
+    Clipboard.setString(`${setupData.code} --legacy-peer-deps`);
+  };
   return (
     <Container>
       <View>
@@ -52,6 +87,23 @@ function HomeScreen({navigation}) {
           keyExtractor={item => item.id}
           renderItem={renderMenu}
         />
+
+        <View style={homeScreenStyle.installArea}>
+          <CustomButton onPress={generateInstall} label="Kurulum oluştur" />
+          {setupData && (setupData?.intallDescription || setupData?.code) && (
+            <>
+              <View>
+                {setupData.intallDescription && (
+                  <CustomText>{setupData.intallDescription}</CustomText>
+                )}
+                <View>
+                  <CustomText>{`${setupData.code} --legacy-peer-deps`}</CustomText>
+                  <CustomButton onPress={copyCode} label="Komutu Kopyala" />
+                </View>
+              </View>
+            </>
+          )}
+        </View>
       </View>
     </Container>
   );

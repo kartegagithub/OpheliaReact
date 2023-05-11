@@ -5,7 +5,7 @@ const menuData = [
     package: 'react-native-actionsheet',
     description:
       'Platformlar arası ActionSheet.\nBu bileşen, özel bir ActionSheet uygular ve onu farklı platformlarda (iOS ve Android) çizmek için aynı yolu sağlar.\nAslında, en iyi etkiyi korumak için iOS ta hala ActionSheetIOS u kullanıyor.',
-    installDescription: '',
+    installDescription: 'test sonucu',
     usageDescription: {
       codes: [
         `<CustomActionSheet
@@ -28,7 +28,7 @@ const menuData = [
     title: 'Switch',
     package: 'react-native-switch-toggle',
     description: '',
-    installDescription: '',
+    installDescription: 'asdasdasd',
     usageDescription: '',
     screenName: '',
   },
