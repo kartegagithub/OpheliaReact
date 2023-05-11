@@ -4,12 +4,9 @@ import Container from '../shared/fragment/container';
 import CustomText from '../components/customText';
 
 function TextScreen() {
-
   return (
     <Container>
-        <CustomText>
-          Text Validation 1
-        </CustomText>
+      <CustomText>Text Validation 1</CustomText>
     </Container>
   );
 }

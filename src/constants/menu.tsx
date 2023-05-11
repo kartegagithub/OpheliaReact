@@ -35,5 +35,14 @@ const menuData = [
     usageDescription: '',
     screenName: 'TextInputScreen',
   },
+  {
+    id: 4,
+    title: 'Text',
+    package: '',
+    description: '',
+    installDescription: '',
+    usageDescription: '',
+    screenName: 'TextScreen',
+  },
 ];
 export default menuData;
