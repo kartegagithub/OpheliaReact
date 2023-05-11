@@ -12,8 +12,8 @@ type InputProps = {
   placeholderText?: string;
   errorMessage?: string;
   textOnBorder?: string;
-  leftIcon?: any;
-  rightIcon?: any;
+  leftIcon?: React.ReactNode;
+  rightIcon?: React.ReactNode;
   value?: any;
   editable?: boolean;
   onChangeText?: (text: any) => void;
