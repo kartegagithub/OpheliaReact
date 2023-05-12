@@ -7,6 +7,7 @@ import ButtonScreen from '../../screens/ButtonScreen';
 import TextInputScreen from '../../screens/TextInputScreen';
 import ActionSheetScreen from '../../screens/ActionSheetScreen';
 import DetailScreen from '../../screens/DetailScreen';
+import AvatarScreen from '../../screens/AvatarScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -39,6 +40,13 @@ function Navigation() {
           component={ActionSheetScreen}
           options={{
             title: 'ActionSheet Example',
+          }}
+        />
+        <Stack.Screen
+          name="AvatarScreen"
+          component={AvatarScreen}
+          options={{
+            title: 'Avatar Example',
           }}
         />
         <Stack.Screen

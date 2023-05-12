@@ -32,10 +32,14 @@ function DetailScreen({route}) {
           (usageDescription?.description ||
             usageDescription?.codes?.length > 0) && (
             <>
-              <CustomText style={detailScreenStyle.subTitle}>
-                Kullanım Bilgisi
-              </CustomText>
-              <CustomText>{usageDescription?.description}</CustomText>
+              {usageDescription?.desctiption && (
+                <>
+                  <CustomText style={detailScreenStyle.subTitle}>
+                    Kullanım Bilgisi
+                  </CustomText>
+                  <CustomText>{usageDescription?.description}</CustomText>
+                </>
+              )}
               <CustomText style={detailScreenStyle.subTitle}>
                 Kod Örnekleri
               </CustomText>

@@ -5,7 +5,7 @@ const menuData = [
     package: 'react-native-actionsheet',
     description:
       'Platformlar arası ActionSheet.\nBu bileşen, özel bir ActionSheet uygular ve onu farklı platformlarda (iOS ve Android) çizmek için aynı yolu sağlar.\nAslında, en iyi etkiyi korumak için iOS ta hala ActionSheetIOS u kullanıyor.',
-    installDescription: 'test sonucu',
+    installDescription: '',
     usageDescription: {
       codes: [
         `<CustomActionSheet
@@ -58,6 +58,27 @@ const menuData = [
     installDescription: '',
     usageDescription: '',
     screenName: 'TextScreen',
+  },
+  {
+    id: 5,
+    title: 'Avatar',
+    package: 'react-native-user-avatar',
+    description:
+      'Avatar olarak renkli bir arka plan üzerinde kullanıcının baş harflerini kullanmaya geri dönmeyi destekleyen sade bir kullanıcı avatarı ekranı.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `<CustomAvatar
+          src="https://picsum.photos/id/237/200/200"
+          name="Kartega Yazılım"
+          badgeText={5}
+          size={75}
+          randomBg={true}
+        />`,
+      ],
+      description: '',
+    },
+    screenName: 'AvatarScreen',
   },
 ];
 export default menuData;
