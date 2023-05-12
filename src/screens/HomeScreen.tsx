@@ -41,6 +41,7 @@ function HomeScreen({navigation}) {
         <CustomText style={homeScreenStyle.itemTitle}>{item.title}</CustomText>
         <View style={homeScreenStyle.itemButtons}>
           <CustomButton
+            containerStyle={homeScreenStyle.previewBtn}
             onPress={() => goScreen(item?.screenName)}
             label={'Önizle'}
           />
@@ -89,17 +90,28 @@ function HomeScreen({navigation}) {
         />
 
         <View style={homeScreenStyle.installArea}>
-          <CustomButton onPress={generateInstall} label="Kurulum oluştur" />
+          <CustomButton
+            onPress={generateInstall}
+            label="Kurulum oluştur"
+            containerStyle={homeScreenStyle.createInstall}
+          />
           {setupData && (setupData?.intallDescription || setupData?.code) && (
             <>
+              {setupData.intallDescription && (
+                <CustomText style={homeScreenStyle.installText}>
+                  {setupData.intallDescription}
+                </CustomText>
+              )}
               <View>
-                {setupData.intallDescription && (
-                  <CustomText>{setupData.intallDescription}</CustomText>
-                )}
-                <View>
-                  <CustomText>{`${setupData.code} --legacy-peer-deps`}</CustomText>
-                  <CustomButton onPress={copyCode} label="Komutu Kopyala" />
-                </View>
+                <CustomText
+                  style={
+                    homeScreenStyle.setupText
+                  }>{`${setupData.code} --legacy-peer-deps`}</CustomText>
+                <CustomButton
+                  onPress={copyCode}
+                  label="Komutu Kopyala"
+                  containerStyle={homeScreenStyle.copyBtn}
+                />
               </View>
             </>
           )}

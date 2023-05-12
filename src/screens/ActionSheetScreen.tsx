@@ -5,6 +5,7 @@ import Content from '../shared/fragment/content';
 import CustomButton from '../components/customButton';
 import CustomActionSheet from '../components/customActionSheet';
 import {Alert} from 'react-native';
+import Padding from '../shared/fragment/padding';
 
 function ActionSheetScreen() {
   const ref = createRef();
@@ -15,22 +16,27 @@ function ActionSheetScreen() {
   return (
     <Container>
       <Content>
+        <Padding />
         <CustomButton
           label="ActionSheet With Buttons"
           onPress={() => ref?.current?.show()}
         />
+        <Padding />
         <CustomButton
           label="ActionSheet With Buttons and Title"
           onPress={() => ref1?.current?.show()}
         />
+        <Padding />
         <CustomButton
           label="ActionSheet With Buttons, Title and Message"
           onPress={() => ref2?.current?.show()}
         />
+        <Padding />
         <CustomButton
           label="ActionSheet With Buttons Index"
           onPress={() => ref3?.current?.show()}
         />
+        <Padding />
         <CustomButton
           label="ActionSheet With Cancel Index 1, Destructive Index 2"
           onPress={() => ref4?.current?.show()}

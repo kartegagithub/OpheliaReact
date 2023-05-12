@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import defaultColor from '../../constants/style/defaultColor';
 
 const homeScreenStyle = StyleSheet.create({
   item: {
@@ -17,6 +18,25 @@ const homeScreenStyle = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-end',
     flex: 1,
+  },
+  previewBtn: {
+    marginRight: 5,
+  },
+  installArea: {
+    paddingTop: 10,
+  },
+  installText: {
+    paddingTop: 10,
+  },
+  setupText: {
+    paddingTop: 10,
+  },
+  copyBtn: {
+    marginTop: 10,
+    backgroundColor: defaultColor.darkDegree,
+  },
+  createInstall: {
+    backgroundColor: defaultColor.darkDegree,
   },
 });
 

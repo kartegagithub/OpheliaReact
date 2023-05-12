@@ -35,7 +35,7 @@ const menuData = [
   {
     id: 2,
     title: 'Buttons',
-    package: 'react-native-button',
+    package: 'react-native-material-ripple',
     description: '',
     installDescription: '',
     usageDescription: '',
