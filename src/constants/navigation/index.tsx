@@ -8,6 +8,7 @@ import TextInputScreen from '../../screens/TextInputScreen';
 import ActionSheetScreen from '../../screens/ActionSheetScreen';
 import DetailScreen from '../../screens/DetailScreen';
 import AvatarScreen from '../../screens/AvatarScreen';
+import SwipeableListScreen from '../../screens/SwipeableListScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -47,6 +48,13 @@ function Navigation() {
           component={AvatarScreen}
           options={{
             title: 'Avatar Example',
+          }}
+        />
+        <Stack.Screen
+          name="SwipeableListScreen"
+          component={SwipeableListScreen}
+          options={{
+            title: 'SwipeableList Example',
           }}
         />
         <Stack.Screen

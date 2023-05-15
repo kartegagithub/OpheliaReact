@@ -80,5 +80,19 @@ const menuData = [
     },
     screenName: 'AvatarScreen',
   },
+  {
+    id: 6,
+    title: 'Swipeable List',
+    package: 'react-native-swipeable-list',
+    description:
+      'Avatar olarak renkli bir arka plan üzerinde kullanıcının baş harflerini kullanmaya geri dönmeyi destekleyen sade bir kullanıcı avatarı ekranı.',
+    installDescription: '',
+    usageDescription: {
+      codes: [`<CustomSwipeableList data={dummyData} />`],
+      description:
+        'renderHiddenItem ile butonların tasarımı ayarlanabilir. renderItem gözükecek item tasarımı sağlar.',
+    },
+    screenName: 'SwipeableListScreen',
+  },
 ];
 export default menuData;
