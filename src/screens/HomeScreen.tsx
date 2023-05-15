@@ -8,6 +8,8 @@ import menuData from '../constants/menu';
 import Container from '../shared/fragment/container';
 import homeScreenStyle from './styles/homeScreenStyle';
 import Clipboard from '@react-native-clipboard/clipboard';
+import Content from '../shared/fragment/content';
+import Padding from '../shared/fragment/padding';
 
 function HomeScreen({navigation}) {
   const [menu, setMenu] = useState(menuData);
@@ -82,7 +84,7 @@ function HomeScreen({navigation}) {
   };
   return (
     <Container>
-      <View>
+      <Content>
         <FlatList
           data={menu}
           keyExtractor={item => item.id}
@@ -116,7 +118,8 @@ function HomeScreen({navigation}) {
             </>
           )}
         </View>
-      </View>
+        <Padding b={30} />
+      </Content>
     </Container>
   );
 }

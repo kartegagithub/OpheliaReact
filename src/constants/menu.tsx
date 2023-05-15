@@ -94,5 +94,50 @@ const menuData = [
     },
     screenName: 'SwipeableListScreen',
   },
+  {
+    id: 7,
+    title: 'Charts',
+    package: 'react-native-chart-kit react-native-svg',
+    description: 'Cross Platform grafikler oluşturmanızı sağlar.',
+    installDescription:
+      'react-native-svg bağımlılığı vardor. Kurulması gerekir.',
+    usageDescription: {
+      codes: [
+        `
+      const lineConfig = {
+        labels: ['Pzt', 'Sal', 'Çar', 'Per', 'Cum'],
+        datasets: [
+          {
+            data: [500, 750, 950, 250, 800],
+            color: (opacity = 1) => 'rgba(134, 65, 244, '+opacity+')',
+            strokeWidth: 2,
+          },
+        ],
+        legend: ['Günlük Kazanç'],
+      };
+      <CustomChart type="line" data={lineConfig} width={wp(100) - 40} />`,
+        `
+        const pieData = [
+          {
+            name: 'Ankara',
+            population: 150,
+            color: defaultColor.lightColor,
+            legendFontColor: '#7F7F7F',
+            legendFontSize: 15,
+          },
+          {
+            name: 'İstanbul',
+            population: 300,
+            color: defaultColor.darkDegree,
+            legendFontColor: '#7F7F7F',
+            legendFontSize: 15,
+          },
+        ];
+      <CustomChart type="pie" data={pieData} width={wp(100) - 40} />`,
+      ],
+      description: 'https://github.com/indiespirit/react-native-chart-kit',
+    },
+    screenName: 'ChartScreen',
+  },
 ];
 export default menuData;
