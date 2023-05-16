@@ -139,5 +139,24 @@ const menuData = [
     },
     screenName: 'ChartScreen',
   },
+  {
+    id: 8,
+    title: 'Image',
+    package: 'react-native-fast-image',
+    description: 'Hızlı, performanslı görselleri oluşturmanızı sağlar.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+      <CustomImage
+        source={{uri: 'https://picsum.photos/id/111/200/300'}}
+        style={{width: 300, height: 300}}
+      />`,
+      ],
+      description:
+        'https://github.com/DylanVann/react-native-fast-image priority: normal || high || low olarak ayarlanabilir. Öncelik belirtir.',
+    },
+    screenName: 'ImageScreen',
+  },
 ];
 export default menuData;

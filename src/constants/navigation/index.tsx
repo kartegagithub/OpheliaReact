@@ -10,6 +10,7 @@ import DetailScreen from '../../screens/DetailScreen';
 import AvatarScreen from '../../screens/AvatarScreen';
 import SwipeableListScreen from '../../screens/SwipeableListScreen';
 import ChartScreen from '../../screens/ChartScreen';
+import ImageScreen from '../../screens/ImageScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -63,6 +64,13 @@ function Navigation() {
           component={ChartScreen}
           options={{
             title: 'Chart Example',
+          }}
+        />
+        <Stack.Screen
+          name="ImageScreen"
+          component={ImageScreen}
+          options={{
+            title: 'Image Example',
           }}
         />
         <Stack.Screen
