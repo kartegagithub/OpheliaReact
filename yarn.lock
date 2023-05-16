@@ -6330,6 +6330,13 @@
   dependencies:
     "prop-types" "^15.7.2"
 
+"react-native-big-list@^1.6.1":
+  "integrity" "sha512-ZPv2oJQ5jFHnOH4ibhqHiyIfJnGACOg2GnfIazgnJlK0nI9SX75Mh4NhD4xuNKbtxoBRL4nBdhxVreZosIfEQQ=="
+  "resolved" "https://registry.npmjs.org/react-native-big-list/-/react-native-big-list-1.6.1.tgz"
+  "version" "1.6.1"
+  dependencies:
+    "prop-types" "^15.8.1"
+
 "react-native-button@^3.0.1":
   "integrity" "sha512-Tkj7PwATNEXPOX4ubE+P8WnyJMenywU6Es/Bk2r2aR15204+AxSOEB3sp7JDP44LI+tUMetjudNBRRuKQOmoPw=="
   "resolved" "https://registry.npmjs.org/react-native-button/-/react-native-button-3.0.1.tgz"

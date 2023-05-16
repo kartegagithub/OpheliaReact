@@ -158,5 +158,29 @@ const menuData = [
     },
     screenName: 'ImageScreen',
   },
+  {
+    id: 9,
+    title: 'BigList',
+    package: 'react-native-big-list',
+    description:
+      'Büyük boyutlu listelerin; hızlı ve performanslı gösterimni sağlar.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        const customRender = ({item, index}) => (
+          <View>
+            <CustomText>
+              {item?.title || '-'}
+            </CustomText>
+          </View>
+        );
+        <CustomBigList data={data} customRender={customRender} />`,
+      ],
+      description:
+        'https://github.com/marcocesarato/react-native-big-list  customRender props ile render düzenlenebilir.',
+    },
+    screenName: 'BigListScreen',
+  },
 ];
 export default menuData;
