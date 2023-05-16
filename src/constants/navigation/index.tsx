@@ -12,6 +12,7 @@ import SwipeableListScreen from '../../screens/SwipeableListScreen';
 import ChartScreen from '../../screens/ChartScreen';
 import ImageScreen from '../../screens/ImageScreen';
 import BigListScreen from '../../screens/BigListScreen';
+import CodeEditorScreen from '../../screens/CodeEditorScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -77,6 +78,13 @@ function Navigation() {
         <Stack.Screen
           name="BigListScreen"
           component={BigListScreen}
+          options={{
+            title: 'BigList Example',
+          }}
+        />
+        <Stack.Screen
+          name="CodeEditorScreen"
+          component={CodeEditorScreen}
           options={{
             title: 'BigList Example',
           }}

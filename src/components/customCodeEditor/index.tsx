@@ -8,6 +8,7 @@ function CustomCodeEditor({
   language = 'javascript',
   showLineNumbers = true,
   initialValue = '',
+  syntaxStyle,
   style = {},
   ...props
 }) {
@@ -18,8 +19,12 @@ function CustomCodeEditor({
   return (
     <CodeEditor
       style={styleDefault}
-      language="javascript"
-      syntaxStyle={CodeEditorSyntaxStyles.atomOneLight}
+      language={language || 'javascript'}
+      syntaxStyle={
+        syntaxStyle
+          ? CodeEditorSyntaxStyles[syntaxStyle]
+          : CodeEditorSyntaxStyles.atomOneLight
+      }
       showLineNumbers={showLineNumbers}
       initialValue={initialValue}
       {...props}

@@ -32,7 +32,7 @@ function DetailScreen({route}) {
           (usageDescription?.description ||
             usageDescription?.codes?.length > 0) && (
             <>
-              {usageDescription?.desctiption && (
+              {usageDescription?.description && (
                 <>
                   <CustomText style={detailScreenStyle.subTitle}>
                     Kullanım Bilgisi

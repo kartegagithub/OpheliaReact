@@ -182,5 +182,25 @@ const menuData = [
     },
     screenName: 'BigListScreen',
   },
+  {
+    id: 10,
+    title: 'Code Editor',
+    package: '@rivascva/react-native-code-editor',
+    description:
+      'Kaynak kodlarının editör içerindeki örnek görüntüsünü oluşturur',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomCodeEditor
+              initialValue={'<?php var_dump($_POST); ?>'}
+              language="php"
+            />`,
+      ],
+      description:
+        'https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/master/AVAILABLE_STYLES_HLJS.MD syntax style list. https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/master/AVAILABLE_LANGUAGES_HLJS.MD desteklenen diller. Diğer detaylar için https://github.com/RivasCVA/react-native-code-editor',
+    },
+    screenName: 'CodeEditorScreen',
+  },
 ];
 export default menuData;
