@@ -13,6 +13,7 @@ import ChartScreen from '../../screens/ChartScreen';
 import ImageScreen from '../../screens/ImageScreen';
 import BigListScreen from '../../screens/BigListScreen';
 import CodeEditorScreen from '../../screens/CodeEditorScreen';
+import YoutubeVideoScreen from '../../screens/YoutubeVideoScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -87,6 +88,13 @@ function Navigation() {
           component={CodeEditorScreen}
           options={{
             title: 'BigList Example',
+          }}
+        />
+        <Stack.Screen
+          name="YoutubeVideoScreen"
+          component={YoutubeVideoScreen}
+          options={{
+            title: 'Youtube Video Example',
           }}
         />
         <Stack.Screen

@@ -202,5 +202,24 @@ const menuData = [
     },
     screenName: 'CodeEditorScreen',
   },
+  {
+    id: 11,
+    title: 'Youtube Video',
+    package: 'react-native-webview react-native-youtube-iframe',
+    description: 'Youtube videolarını gösterimini sağlar.',
+    installDescription: 'Bu paketin react-native-webview bağımlılığı vardır.',
+    usageDescription: {
+      codes: [
+        `
+        <CustomYoutubeVideo
+          videoID={
+            'N5HaMCMaPL4'
+          }
+      />`,
+      ],
+      description: 'https://lonelycpp.github.io/react-native-youtube-iframe/',
+    },
+    screenName: 'YoutubeVideoScreen',
+  },
 ];
 export default menuData;
