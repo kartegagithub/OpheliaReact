@@ -14,6 +14,8 @@ import ImageScreen from '../../screens/ImageScreen';
 import BigListScreen from '../../screens/BigListScreen';
 import CodeEditorScreen from '../../screens/CodeEditorScreen';
 import YoutubeVideoScreen from '../../screens/YoutubeVideoScreen';
+import NativePickerScreen from '../../screens/NativePickerScreen';
+import IconScreen from '../../screens/IconScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -95,6 +97,20 @@ function Navigation() {
           component={YoutubeVideoScreen}
           options={{
             title: 'Youtube Video Example',
+          }}
+        />
+        <Stack.Screen
+          name="NativePickerScreen"
+          component={NativePickerScreen}
+          options={{
+            title: 'Native Picker Example',
+          }}
+        />
+        <Stack.Screen
+          name="IconScreen"
+          component={IconScreen}
+          options={{
+            title: 'Icon Detail',
           }}
         />
         <Stack.Screen

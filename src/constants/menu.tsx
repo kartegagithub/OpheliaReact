@@ -221,5 +221,70 @@ const menuData = [
     },
     screenName: 'YoutubeVideoScreen',
   },
+  {
+    id: 12,
+    title: 'Native Picker',
+    package: '@react-native-picker/picker react-native-picker-select',
+    description: 'Cross Platform dropdown picker desteği.',
+    installDescription:
+      'Bu paketin @react-native-picker/picker bağımlılığı vardır.',
+    usageDescription: {
+      codes: [
+        `
+        <CustomNativePicker
+        items={[
+          {label: 'Ankara', value: '06'},
+          {label: 'İstanbul', value: '34'},
+          {label: 'İzmir', value: '35'},
+        ]}
+      />`,
+      ],
+      description: 'https://github.com/lawnstarter/react-native-picker-select',
+    },
+    screenName: 'NativePickerScreen',
+  },
+  {
+    id: 13,
+    title: 'İcons',
+    package: 'react-native-vector-icons',
+    description:
+      'Popüler icon kitlerinin uygulamada kullanılmasını sağlar. ios icon Fonts, android için main/assets/fonts klasörüne fontlar taşınmalıdır.',
+    installDescription: `android için android/app/build.gradle içinde apply from: "../../node_modules/react-native-vector-icons/fonts.gradle" ios için, info.plist içerisine <key>UIAppFonts</key>
+      <array>
+        <string>AntDesign.ttf</string>
+        <string>Entypo.ttf</string>
+        <string>EvilIcons.ttf</string>
+        <string>Feather.ttf</string>
+        <string>FontAwesome.ttf</string>
+        <string>FontAwesome5_Brands.ttf</string>
+        <string>FontAwesome5_Regular.ttf</string>
+        <string>FontAwesome5_Solid.ttf</string>
+        <string>Foundation.ttf</string>
+        <string>Ionicons.ttf</string>
+        <string>MaterialIcons.ttf</string>
+        <string>MaterialCommunityIcons.ttf</string>
+        <string>SimpleLineIcons.ttf</string>
+        <string>Octicons.ttf</string>
+        <string>Zocial.ttf</string>
+        <string>Fontisto.ttf</string>
+      </array>`,
+    usageDescription: {
+      codes: [
+        `
+        <CustomIcon name="add-circle" type="ionicons" size={26} />
+        <CustomIcon
+        name="videocam-outline"
+        type="ionicons"
+        size={16}
+        isButton={true}
+        text="Video Arama"
+        backgroundColor="#44bd32"
+        onPress={() => Alert.alert('Call video')}
+      />`,
+      ],
+      description: 'https://github.com/oblador/react-native-vector-icons',
+    },
+    screenName: 'IconScreen',
+  },
 ];
 export default menuData;
