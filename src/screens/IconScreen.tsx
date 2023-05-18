@@ -6,6 +6,7 @@ import {Alert, View} from 'react-native';
 import CustomText from '../components/customText';
 import CustomIcon from '../components/customIcon';
 import iconScreenStyle from './styles/iconScreenStyle';
+import defaultColor from '../constants/style/defaultColor';
 
 function IconScreen() {
   return (
@@ -67,12 +68,42 @@ function IconScreen() {
             <CustomIcon name="lock" type="fontAwesome5" size={26} />
           </View>
           <View style={iconScreenStyle.iconArea}>
-            <CustomIcon name="futbol" type="fontAwesome5" size={26} />
-            <CustomIcon name="lemon" type="fontAwesome5" size={26} />
-            <CustomIcon name="image" type="fontAwesome5" size={26} />
-            <CustomIcon name="smile" type="fontAwesome5" size={26} />
-            <CustomIcon name="star" type="fontAwesome5" size={26} />
-            <CustomIcon name="hospital" type="fontAwesome5" size={26} />
+            <CustomIcon
+              name="futbol"
+              type="fontAwesome5"
+              color={defaultColor.darkColor}
+              size={26}
+            />
+            <CustomIcon
+              name="lemon"
+              type="fontAwesome5"
+              size={26}
+              color={defaultColor.darkDegree}
+            />
+            <CustomIcon
+              name="image"
+              type="fontAwesome5"
+              size={26}
+              color={defaultColor.middleColor}
+            />
+            <CustomIcon
+              name="smile"
+              type="fontAwesome5"
+              size={26}
+              color={defaultColor.lightColor}
+            />
+            <CustomIcon
+              name="star"
+              type="fontAwesome5"
+              size={26}
+              color={defaultColor.grayColor}
+            />
+            <CustomIcon
+              name="hospital"
+              type="fontAwesome5"
+              size={26}
+              color="red"
+            />
           </View>
         </View>
         <View>
