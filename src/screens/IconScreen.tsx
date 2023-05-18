@@ -108,6 +108,26 @@ function IconScreen() {
         </View>
         <View>
           <Padding />
+          <CustomText>IonIcons</CustomText>
+          <View style={iconScreenStyle.iconArea}>
+            <CustomIcon name="heart" type="octicons" size={26} />
+            <CustomIcon name="codescan-checkmark" type="octicons" size={26} />
+            <CustomIcon name="file-directory" type="octicons" size={26} />
+            <CustomIcon name="mark-github" type="octicons" size={26} />
+            <CustomIcon name="pin" type="octicons" size={26} />
+            <CustomIcon name="sign-out" type="octicons" size={26} />
+          </View>
+          <View style={iconScreenStyle.iconArea}>
+            <CustomIcon name="heart-fill" type="octicons" size={26} />
+            <CustomIcon name="skip" type="octicons" size={26} />
+            <CustomIcon name="file" type="octicons" size={26} />
+            <CustomIcon name="feed-star" type="octicons" size={26} />
+            <CustomIcon name="x-circle-fill" type="octicons" size={26} />
+            <CustomIcon name="location" type="octicons" size={26} />
+          </View>
+        </View>
+        <View>
+          <Padding />
           <CustomText>Button</CustomText>
           <View style={iconScreenStyle.iconArea}>
             <CustomIcon
