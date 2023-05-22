@@ -333,5 +333,29 @@ const menuData = [
     },
     screenName: 'MasonryImagesScreen',
   },
+  {
+    id: 16,
+    title: 'Toast',
+    package: 'react-native-root-toast',
+    description: 'Cross Platform toast mesaj desteği',
+    installDescription:
+      'Navigation başlatılan noktada <RootSiblingParent> ile sarılması gerekir.',
+    usageDescription: {
+      codes: [
+        `
+        const data = [
+          {
+            id: 'id123',
+            imgURL:
+              'https://ii1.pepperfry.com/media/catalog/product/m/o/568x625/modern-chaise-lounger-in-grey-colour-by-dreamzz-furniture-modern-chaise-lounger-in-grey-colour-by-dr-tmnirx.jpg',
+            text: 'Pioneer LHS Chaise Lounger in Grey Colour',
+          },]
+          <CustomMasonryImages data={data} render={item => <CustomText>{item.text}</CustomText>} />
+          `,
+      ],
+      description: 'https://github.com/magicismight/react-native-root-toast',
+    },
+    screenName: 'ToastScreen',
+  },
 ];
 export default menuData;
