@@ -17,6 +17,7 @@ import YoutubeVideoScreen from '../../screens/YoutubeVideoScreen';
 import NativePickerScreen from '../../screens/NativePickerScreen';
 import IconScreen from '../../screens/IconScreen';
 import DropdownScreen from '../../screens/DropdownScreen';
+import MasonryImagesScreen from '../../screens/MasonryImagesScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -119,6 +120,13 @@ function Navigation() {
           component={DropdownScreen}
           options={{
             title: 'Dropdown Detail',
+          }}
+        />
+        <Stack.Screen
+          name="MasonryImagesScreen"
+          component={MasonryImagesScreen}
+          options={{
+            title: 'Masonry Images Detail',
           }}
         />
         <Stack.Screen

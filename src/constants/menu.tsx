@@ -310,5 +310,28 @@ const menuData = [
     },
     screenName: 'DropdownScreen',
   },
+  {
+    id: 15,
+    title: 'Masonry Images',
+    package: '@react-native-seoul/masonry-list',
+    description: 'Cross Platform masonry resim listesi desteği',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        const data = [
+          {
+            id: 'id123',
+            imgURL:
+              'https://ii1.pepperfry.com/media/catalog/product/m/o/568x625/modern-chaise-lounger-in-grey-colour-by-dreamzz-furniture-modern-chaise-lounger-in-grey-colour-by-dr-tmnirx.jpg',
+            text: 'Pioneer LHS Chaise Lounger in Grey Colour',
+          },]
+          <CustomMasonryImages data={data} render={item => <CustomText>{item.text}</CustomText>} />
+          `,
+      ],
+      description: 'https://github.com/hyochan/react-native-masonry-list',
+    },
+    screenName: 'MasonryImagesScreen',
+  },
 ];
 export default menuData;
