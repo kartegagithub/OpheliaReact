@@ -286,5 +286,29 @@ const menuData = [
     },
     screenName: 'IconScreen',
   },
+  {
+    id: 14,
+    title: 'Dropwdown',
+    package: 'react-native-dropdown-picker',
+    description: 'Cross Platform dropdown desteği.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        const items = [
+          {label: 'Adana', value: '01'},
+          {label: 'Adıyaman', value: '02'},
+          {label: 'Afyon', value: '03'},
+        ];
+        const onSelect = item => {
+          alert(JSON.stringify(item));
+        };
+        <CustomDropdown items={items} onSelect={onSelect} />`,
+      ],
+      description:
+        'https://hossein-zare.github.io/react-native-dropdown-picker-website/',
+    },
+    screenName: 'DropdownScreen',
+  },
 ];
 export default menuData;

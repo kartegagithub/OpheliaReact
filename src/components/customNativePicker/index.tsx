@@ -1,6 +1,5 @@
 import * as React from 'react';
 import style from './style';
-import {Picker} from '@react-native-picker/picker';
 import RNPickerSelect from 'react-native-picker-select';
 import Icon from 'react-native-vector-icons/FontAwesome';
 const CustomNativePicker = ({

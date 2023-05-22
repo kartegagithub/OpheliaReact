@@ -16,6 +16,7 @@ import CodeEditorScreen from '../../screens/CodeEditorScreen';
 import YoutubeVideoScreen from '../../screens/YoutubeVideoScreen';
 import NativePickerScreen from '../../screens/NativePickerScreen';
 import IconScreen from '../../screens/IconScreen';
+import DropdownScreen from '../../screens/DropdownScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -111,6 +112,13 @@ function Navigation() {
           component={IconScreen}
           options={{
             title: 'Icon Detail',
+          }}
+        />
+        <Stack.Screen
+          name="DropdownScreen"
+          component={DropdownScreen}
+          options={{
+            title: 'Dropdown Detail',
           }}
         />
         <Stack.Screen
