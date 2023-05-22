@@ -16,7 +16,7 @@ function DropdownScreen({}) {
   };
   return (
     <Container>
-      <Content>
+      <Content contentStyle={{flex: 1}}>
         <View>
           <Padding />
           <CustomDropdown items={items} onSelect={onSelect} />
