@@ -20,6 +20,7 @@ import DropdownScreen from '../../screens/DropdownScreen';
 import MasonryImagesScreen from '../../screens/MasonryImagesScreen';
 import ToastScreen from '../../screens/ToastScreen';
 import CarouselScreen from '../../screens/CarouselScreen';
+import LinearGradientScreen from '../../screens/LinearGradientScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -150,6 +151,13 @@ function Navigation() {
           component={DetailScreen}
           options={{
             title: 'Component Detail',
+          }}
+        />
+        <Stack.Screen
+          name="LinearGradientScreen"
+          component={LinearGradientScreen}
+          options={{
+            title: 'Linear Gradient Detail',
           }}
         />
       </Stack.Navigator>

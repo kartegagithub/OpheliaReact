@@ -375,5 +375,32 @@ const menuData = [
     },
     screenName: 'CarouselScreen',
   },
+  {
+    id: 18,
+    title: 'Linear Gradient',
+    package: 'react-native-linear-gradient',
+    description:
+      'Cross Platform Linear Gradient işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomLinearGradient
+              colors={['#f9ce34', '#ee2a7b', '#6228d7']}
+              start={{x: 0.0, y: 0}}
+              end={{x: 1, y: 1.0}}
+              locations={[0, 0.3, 0.8]}
+              style={linearGradientScreenStyle.button}>
+              <CustomText style={linearGradientScreenStyle.buttonText}>
+                Instagram ile bağlan
+              </CustomText>
+            </CustomLinearGradient>
+          `,
+      ],
+      description:
+        'https://github.com/react-native-linear-gradient/react-native-linear-gradient',
+    },
+    screenName: 'LinearGradientScreen',
+  },
 ];
 export default menuData;
