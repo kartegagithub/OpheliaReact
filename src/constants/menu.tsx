@@ -362,10 +362,13 @@ const menuData = [
     usageDescription: {
       codes: [
         `
-        import {toastShow} from '../components/customToast';
-        toastShow('Hello!', {
-          position: 'center',
-        });
+        import CustomCarousel from '../components/customCarousel';
+        <CustomCarousel
+              items={data}
+              layout={'stack'}
+              layoutCardOffset={'18'}
+              showPagination={true}
+            />
           `,
       ],
       description: 'https://github.com/meliorence/react-native-snap-carousel',
