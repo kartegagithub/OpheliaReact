@@ -19,6 +19,7 @@ import IconScreen from '../../screens/IconScreen';
 import DropdownScreen from '../../screens/DropdownScreen';
 import MasonryImagesScreen from '../../screens/MasonryImagesScreen';
 import ToastScreen from '../../screens/ToastScreen';
+import CarouselScreen from '../../screens/CarouselScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -135,6 +136,13 @@ function Navigation() {
           component={ToastScreen}
           options={{
             title: 'Toast Detail',
+          }}
+        />
+        <Stack.Screen
+          name="CarouselScreen"
+          component={CarouselScreen}
+          options={{
+            title: 'Carousel Detail',
           }}
         />
         <Stack.Screen

@@ -353,5 +353,24 @@ const menuData = [
     },
     screenName: 'ToastScreen',
   },
+  {
+    id: 17,
+    title: 'Carousel',
+    package: 'react-native-snap-carousel',
+    description: 'Cross Platform Carousel, Slider desteği. Animasyon desteği.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        import {toastShow} from '../components/customToast';
+        toastShow('Hello!', {
+          position: 'center',
+        });
+          `,
+      ],
+      description: 'https://github.com/meliorence/react-native-snap-carousel',
+    },
+    screenName: 'CarouselScreen',
+  },
 ];
 export default menuData;
