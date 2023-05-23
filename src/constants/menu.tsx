@@ -402,5 +402,23 @@ const menuData = [
     },
     screenName: 'LinearGradientScreen',
   },
+  {
+    id: 19,
+    title: 'Shadow',
+    package: 'react-native-svg react-native-shadow-2',
+    description: 'Cross Platform Shadow Gölge işlemleri için kullanılabilir.',
+    installDescription: 'react-native-svg paket bağımlılığı vardır.',
+    usageDescription: {
+      codes: [
+        `
+        <CustomShadow distance={20} startColor={'#ccc'}>
+        <CustomImage source={{uri: 'https://picsum.photos/1000'}} />
+      </CustomShadow>
+          `,
+      ],
+      description: 'https://github.com/SrBrahma/react-native-shadow-2',
+    },
+    screenName: 'ShadowScreen',
+  },
 ];
 export default menuData;

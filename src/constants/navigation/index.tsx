@@ -21,6 +21,7 @@ import MasonryImagesScreen from '../../screens/MasonryImagesScreen';
 import ToastScreen from '../../screens/ToastScreen';
 import CarouselScreen from '../../screens/CarouselScreen';
 import LinearGradientScreen from '../../screens/LinearGradientScreen';
+import ShadowScreen from '../../screens/ShadowScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -147,17 +148,24 @@ function Navigation() {
           }}
         />
         <Stack.Screen
-          name="DetailScreen"
-          component={DetailScreen}
-          options={{
-            title: 'Component Detail',
-          }}
-        />
-        <Stack.Screen
           name="LinearGradientScreen"
           component={LinearGradientScreen}
           options={{
             title: 'Linear Gradient Detail',
+          }}
+        />
+        <Stack.Screen
+          name="ShadowScreen"
+          component={ShadowScreen}
+          options={{
+            title: 'Shadow Detail',
+          }}
+        />
+        <Stack.Screen
+          name="DetailScreen"
+          component={DetailScreen}
+          options={{
+            title: 'Component Detail',
           }}
         />
       </Stack.Navigator>
