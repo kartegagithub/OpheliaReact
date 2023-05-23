@@ -8,16 +8,21 @@ import CustomLinearGradient from '../components/customLinearGradient';
 import linearGradientScreenStyle from './styles/linearGradientScreenStyle';
 import CustomShadow from '../components/customShadow';
 import CustomImage from '../components/customImage';
+import shadowScreenStyle from './styles/shadowScreenStyle';
 
 function ShadowScreen() {
   return (
     <Container>
       <Content>
-        <View style={{paddingLeft: 20}}>
+        <View style={shadowScreenStyle.cardContainer}>
           <Padding />
           <View>
-            <CustomShadow distance={20} startColor={'#ccc'}>
+            <CustomShadow
+              distance={20}
+              startColor={'#ccc'}
+              style={shadowScreenStyle.card}>
               <CustomImage source={{uri: 'https://picsum.photos/1000'}} />
+              <CustomText>Test Başlığı</CustomText>
             </CustomShadow>
           </View>
           <Padding />
