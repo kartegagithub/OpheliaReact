@@ -441,5 +441,34 @@ const menuData = [
     },
     screenName: 'MarqueeTextScreen',
   },
+  {
+    id: 21,
+    title: 'Progress',
+    package: 'react-native-svg react-native-progress',
+    description: 'Cross Platform progress için kullanılabilir.',
+    installDescription: 'react-native-svg paket bağımlılığı vardır.',
+    usageDescription: {
+      codes: [
+        `
+        <CustomProgress
+              type='bar'
+              progress={0.3}
+              width={200}
+              height={30}
+              borderRadius={30}
+            />
+            <CustomProgress
+              type="circle"
+              size={100}
+              showsText
+              progress={0.5}
+              borderWidth={0}
+            />
+          `,
+      ],
+      description: 'https://github.com/oblador/react-native-progress',
+    },
+    screenName: 'ProgressScreen',
+  },
 ];
 export default menuData;
