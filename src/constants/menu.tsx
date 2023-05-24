@@ -420,5 +420,26 @@ const menuData = [
     },
     screenName: 'ShadowScreen',
   },
+  {
+    id: 20,
+    title: 'Marquee Text',
+    package: '',
+    description: 'Cross Platform Marquee Text desteği',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomMarqueeText speed={1} loop={true} delay={1000}>
+        <CustomText size={24}>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry and typesetting industry.
+        </CustomText>
+      </CustomMarqueeText>
+          `,
+      ],
+      description: '',
+    },
+    screenName: 'MarqueeTextScreen',
+  },
 ];
 export default menuData;

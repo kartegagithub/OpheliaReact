@@ -22,6 +22,7 @@ import ToastScreen from '../../screens/ToastScreen';
 import CarouselScreen from '../../screens/CarouselScreen';
 import LinearGradientScreen from '../../screens/LinearGradientScreen';
 import ShadowScreen from '../../screens/ShadowScreen';
+import MarqueeTextScreen from '../../screens/MarqueeTextScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -159,6 +160,13 @@ function Navigation() {
           component={ShadowScreen}
           options={{
             title: 'Shadow Detail',
+          }}
+        />
+        <Stack.Screen
+          name="MarqueeTextScreen"
+          component={MarqueeTextScreen}
+          options={{
+            title: 'Marquee Text Detail',
           }}
         />
         <Stack.Screen
