@@ -499,5 +499,29 @@ const menuData = [
     },
     screenName: 'MessageScreen',
   },
+  {
+    id: 23,
+    title: 'Blur',
+    package: 'react-native-blur',
+    description: 'Cross Platform Blur efekt işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomBlur
+          style={blurScreenStyle.blur}
+          blurType="xlight"
+          blurAmount={3}>
+        <CustomText
+          style={[blurScreenStyle.buttonText, blurScreenStyle.blackText]}>
+          Orjinal görsel için satın alım yapın
+        </CustomText>
+      </CustomBlur>
+          `,
+      ],
+      description: 'https://github.com/Kureev/react-native-blur',
+    },
+    screenName: 'BlurScreen',
+  },
 ];
 export default menuData;

@@ -25,6 +25,7 @@ import ShadowScreen from '../../screens/ShadowScreen';
 import MarqueeTextScreen from '../../screens/MarqueeTextScreen';
 import ProgressScreen from '../../screens/ProgressScreen';
 import MessageScreen from '../../screens/MessageScreen';
+import BlurScreen from '../../screens/BlurScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -183,6 +184,13 @@ function Navigation() {
           component={MessageScreen}
           options={{
             title: 'Message Detail',
+          }}
+        />
+        <Stack.Screen
+          name="BlurScreen"
+          component={BlurScreen}
+          options={{
+            title: 'Blur Detail',
           }}
         />
         <Stack.Screen
