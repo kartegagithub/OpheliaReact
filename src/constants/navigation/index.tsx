@@ -24,6 +24,7 @@ import LinearGradientScreen from '../../screens/LinearGradientScreen';
 import ShadowScreen from '../../screens/ShadowScreen';
 import MarqueeTextScreen from '../../screens/MarqueeTextScreen';
 import ProgressScreen from '../../screens/ProgressScreen';
+import MessageScreen from '../../screens/MessageScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -175,6 +176,13 @@ function Navigation() {
           component={ProgressScreen}
           options={{
             title: 'Progress Detail',
+          }}
+        />
+        <Stack.Screen
+          name="MessageScreen"
+          component={MessageScreen}
+          options={{
+            title: 'Message Detail',
           }}
         />
         <Stack.Screen

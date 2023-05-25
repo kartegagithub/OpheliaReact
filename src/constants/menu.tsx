@@ -470,5 +470,34 @@ const menuData = [
     },
     screenName: 'ProgressScreen',
   },
+  {
+    id: 22,
+    title: 'Message',
+    package: 'react-native-flash-message',
+    description: 'Cross Platform alert message için kullanılabilir.',
+    installDescription: `App.tsx navigation öncesinde başlatılması gerekir.
+      <FlashMessage
+        position="top"
+        //titleStyle={{fontSize: 14}}
+        floating
+        duration={2500}
+      />`,
+    usageDescription: {
+      codes: [
+        `
+        import {
+          showError,
+          showInfo,
+          showSuccess,
+          showWarn,
+        } from '../components/customMessage';
+        showSuccess('Merhaba Dünya!');
+          `,
+      ],
+      description:
+        'https://github.com/lucasferreira/react-native-flash-message',
+    },
+    screenName: 'MessageScreen',
+  },
 ];
 export default menuData;
