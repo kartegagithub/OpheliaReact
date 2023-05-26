@@ -1,9 +1,10 @@
 import * as React from 'react';
 import style from './style';
-import {Image, View} from 'react-native';
+import {Image, TouchableOpacity, View} from 'react-native';
 import CustomText from '../customText';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
 import {wp} from '../../shared/helpers/veriables';
+import CustomIcon from '../customIcon';
 
 const CustomCarousel = ({
   render,
@@ -13,6 +14,9 @@ const CustomCarousel = ({
   inactiveDotStyle,
   paginationProps,
   showPagination,
+  showArrow,
+  width,
+  itemWidth,
   ...props
 }) => {
   const [activeSlide, setActiveSlide] = React.useState(0);
@@ -25,19 +29,54 @@ const CustomCarousel = ({
       </View>
     );
   };
+  const carouselRef = React.useRef();
+  const goBack = () => {
+    carouselRef?.current?.snapToPrev?.();
+  };
+  const goNext = () => {
+    carouselRef?.current?.snapToNext?.();
+  };
   return (
-    <View>
+    <View
+      style={{
+        width: width || wp(100),
+      }}>
       <Carousel
+        ref={carouselRef}
         data={items || []}
         renderItem={render || _renderItem}
-        sliderWidth={wp(100)}
-        itemWidth={wp(100)}
+        sliderWidth={width || wp(100)}
+        itemWidth={itemWidth || width || wp(100)}
         {...props}
         onSnapToItem={index => {
           props?.onSnapToItem?.(index);
           setActiveSlide(index);
         }}
       />
+      {showArrow && (
+        <>
+          <TouchableOpacity
+            onPress={goBack}
+            style={[style.arrow, style.arrowLeft]}>
+            <CustomIcon
+              type="fontAwesome"
+              name="angle-left"
+              size={36}
+              color="#000"
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={goNext}
+            style={[style.arrow, style.arrowRight]}>
+            <CustomIcon
+              type="fontAwesome"
+              name="angle-right"
+              size={36}
+              color="#000"
+            />
+          </TouchableOpacity>
+        </>
+      )}
       {showPagination && (
         <Pagination
           dotsLength={items?.length}
