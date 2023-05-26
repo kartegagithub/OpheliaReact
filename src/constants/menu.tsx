@@ -396,5 +396,176 @@ const menuData = [
     },
     screenName: 'DateTimeScreen',
   },
+  {
+    id:18,
+    title: 'Carousel',
+    package: 'react-native-snap-carousel',
+    description: 'Cross Platform Carousel, Slider desteği. Animasyon desteği.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        import CustomCarousel from '../components/customCarousel';
+        <CustomCarousel
+              items={data}
+              layout={'stack'}
+              layoutCardOffset={'18'}
+              showPagination={true}
+            />
+          `,
+      ],
+      description: 'https://github.com/meliorence/react-native-snap-carousel',
+    },
+    screenName: 'CarouselScreen',
+  },
+  {
+    id: 19,
+    title: 'Linear Gradient',
+    package: 'react-native-linear-gradient',
+    description:
+      'Cross Platform Linear Gradient işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomLinearGradient
+              colors={['#f9ce34', '#ee2a7b', '#6228d7']}
+              start={{x: 0.0, y: 0}}
+              end={{x: 1, y: 1.0}}
+              locations={[0, 0.3, 0.8]}
+              style={linearGradientScreenStyle.button}>
+              <CustomText style={linearGradientScreenStyle.buttonText}>
+                Instagram ile bağlan
+              </CustomText>
+            </CustomLinearGradient>
+          `,
+      ],
+      description:
+        'https://github.com/react-native-linear-gradient/react-native-linear-gradient',
+    },
+    screenName: 'LinearGradientScreen',
+  },
+  {
+    id: 20,
+    title: 'Shadow',
+    package: 'react-native-svg react-native-shadow-2',
+    description: 'Cross Platform Shadow Gölge işlemleri için kullanılabilir.',
+    installDescription: 'react-native-svg paket bağımlılığı vardır.',
+    usageDescription: {
+      codes: [
+        `
+        <CustomShadow distance={20} startColor={'#ccc'}>
+        <CustomImage source={{uri: 'https://picsum.photos/1000'}} />
+      </CustomShadow>
+          `,
+      ],
+      description: 'https://github.com/SrBrahma/react-native-shadow-2',
+    },
+    screenName: 'ShadowScreen',
+  },
+  {
+    id: 21,
+    title: 'Marquee Text',
+    package: '',
+    description: 'Cross Platform Marquee Text desteği',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomMarqueeText speed={1} loop={true} delay={1000}>
+        <CustomText size={24}>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry and typesetting industry.
+        </CustomText>
+      </CustomMarqueeText>
+          `,
+      ],
+      description: '',
+    },
+    screenName: 'MarqueeTextScreen',
+  },
+  {
+    id: 22,
+    title: 'Progress',
+    package: 'react-native-svg react-native-progress',
+    description: 'Cross Platform progress için kullanılabilir.',
+    installDescription: 'react-native-svg paket bağımlılığı vardır.',
+    usageDescription: {
+      codes: [
+        `
+        <CustomProgress
+              type='bar'
+              progress={0.3}
+              width={200}
+              height={30}
+              borderRadius={30}
+            />
+            <CustomProgress
+              type="circle"
+              size={100}
+              showsText
+              progress={0.5}
+              borderWidth={0}
+            />
+          `,
+      ],
+      description: 'https://github.com/oblador/react-native-progress',
+    },
+    screenName: 'ProgressScreen',
+  },
+  {
+    id: 23,
+    title: 'Message',
+    package: 'react-native-flash-message',
+    description: 'Cross Platform alert message için kullanılabilir.',
+    installDescription: `App.tsx navigation öncesinde başlatılması gerekir.
+      <FlashMessage
+        position="top"
+        //titleStyle={{fontSize: 14}}
+        floating
+        duration={2500}
+      />`,
+    usageDescription: {
+      codes: [
+        `
+        import {
+          showError,
+          showInfo,
+          showSuccess,
+          showWarn,
+        } from '../components/customMessage';
+        showSuccess('Merhaba Dünya!');
+          `,
+      ],
+      description:
+        'https://github.com/lucasferreira/react-native-flash-message',
+    },
+    screenName: 'MessageScreen',
+  },
+  {
+    id: 24,
+    title: 'Blur',
+    package: 'react-native-blur',
+    description: 'Cross Platform Blur efekt işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomBlur
+          style={blurScreenStyle.blur}
+          blurType="xlight"
+          blurAmount={3}>
+        <CustomText
+          style={[blurScreenStyle.buttonText, blurScreenStyle.blackText]}>
+          Orjinal görsel için satın alım yapın
+        </CustomText>
+      </CustomBlur>
+          `,
+      ],
+      description: 'https://github.com/Kureev/react-native-blur',
+    },
+    screenName: 'BlurScreen',
+>>>>>>> 0872ab17eec432998d89ae015391ef474020823e
+  },
 ];
 export default menuData;

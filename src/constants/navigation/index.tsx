@@ -19,7 +19,17 @@ import IconScreen from '../../screens/IconScreen';
 import DropdownScreen from '../../screens/DropdownScreen';
 import MasonryImagesScreen from '../../screens/MasonryImagesScreen';
 import ToastScreen from '../../screens/ToastScreen';
+<<<<<<< HEAD
 import DateTimeScreen from '../../screens/DateTimeScreen';
+=======
+import CarouselScreen from '../../screens/CarouselScreen';
+import LinearGradientScreen from '../../screens/LinearGradientScreen';
+import ShadowScreen from '../../screens/ShadowScreen';
+import MarqueeTextScreen from '../../screens/MarqueeTextScreen';
+import ProgressScreen from '../../screens/ProgressScreen';
+import MessageScreen from '../../screens/MessageScreen';
+import BlurScreen from '../../screens/BlurScreen';
+>>>>>>> 0872ab17eec432998d89ae015391ef474020823e
 
 const Stack = createNativeStackNavigator();
 
@@ -136,6 +146,55 @@ function Navigation() {
           component={ToastScreen}
           options={{
             title: 'Toast Detail',
+          }}
+        />
+        <Stack.Screen
+          name="CarouselScreen"
+          component={CarouselScreen}
+          options={{
+            title: 'Carousel Detail',
+          }}
+        />
+        <Stack.Screen
+          name="LinearGradientScreen"
+          component={LinearGradientScreen}
+          options={{
+            title: 'Linear Gradient Detail',
+          }}
+        />
+        <Stack.Screen
+          name="ShadowScreen"
+          component={ShadowScreen}
+          options={{
+            title: 'Shadow Detail',
+          }}
+        />
+        <Stack.Screen
+          name="MarqueeTextScreen"
+          component={MarqueeTextScreen}
+          options={{
+            title: 'Marquee Text Detail',
+          }}
+        />
+        <Stack.Screen
+          name="ProgressScreen"
+          component={ProgressScreen}
+          options={{
+            title: 'Progress Detail',
+          }}
+        />
+        <Stack.Screen
+          name="MessageScreen"
+          component={MessageScreen}
+          options={{
+            title: 'Message Detail',
+          }}
+        />
+        <Stack.Screen
+          name="BlurScreen"
+          component={BlurScreen}
+          options={{
+            title: 'Blur Detail',
           }}
         />
         <Stack.Screen

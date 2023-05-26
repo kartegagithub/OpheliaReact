@@ -5,7 +5,18 @@ type TextProps = {
   style?: StyleProp<ViewStyle>;
   children?: string | number;
 };
-function CustomText({style, children}: TextProps) {
-  return <Text style={[styles.customTextStyle, style]}>{children}</Text>;
+function CustomText({style, size, color, children}: TextProps) {
+  return (
+    <Text
+      style={[
+        {
+          fontSize: size || styles.customTextStyle.fontSize,
+          color: color || styles.customTextStyle.color,
+        },
+        style,
+      ]}>
+      {children}
+    </Text>
+  );
 }
 export default CustomText;

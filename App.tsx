@@ -6,6 +6,7 @@ import store from './src/store';
 import Navigation from './src/constants/navigation';
 import {StatusBar} from 'react-native';
 import {RootSiblingParent} from 'react-native-root-siblings';
+import FlashMessage from 'react-native-flash-message';
 
 function App(): JSX.Element {
   return (
@@ -13,6 +14,12 @@ function App(): JSX.Element {
       <StatusBar backgroundColor="#fff" />
       <SafeAreaProvider>
         <RootSiblingParent>
+          <FlashMessage
+            position="top"
+            //titleStyle={{fontSize: 14}}
+            floating
+            duration={2500}
+          />
           <Navigation />
         </RootSiblingParent>
       </SafeAreaProvider>
