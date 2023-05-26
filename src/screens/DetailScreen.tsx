@@ -7,7 +7,6 @@ import CustomCodeEditor from '../components/customCodeEditor';
 import detailScreenStyle from './styles/detailScreenStyle';
 
 function DetailScreen({route}) {
-  console.log({route});
   const {title, description, usageDescription, installDescription} =
     route?.params;
   return (

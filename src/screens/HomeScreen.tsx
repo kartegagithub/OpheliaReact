@@ -13,10 +13,12 @@ import Padding from '../shared/fragment/padding';
 
 function HomeScreen({navigation}) {
   const [menu, setMenu] = useState(menuData);
+  console.log({menu});
   const [setupData, setSetupDate] = useState({
     code: null,
     intallDescription: null,
   });
+  console.log({setupData});
   useEffect(() => {
     StatusBar.setBarStyle('dark-content');
   }, []);
@@ -54,6 +56,7 @@ function HomeScreen({navigation}) {
   };
   const generateInstall = () => {
     const getSelectedComponents = menu?.filter(item => item.isOn);
+    console.log({getSelectedComponents});
     if (getSelectedComponents?.length < 1) {
       setSetupDate({
         code: null,

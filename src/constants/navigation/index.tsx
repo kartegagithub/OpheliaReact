@@ -19,6 +19,7 @@ import IconScreen from '../../screens/IconScreen';
 import DropdownScreen from '../../screens/DropdownScreen';
 import MasonryImagesScreen from '../../screens/MasonryImagesScreen';
 import ToastScreen from '../../screens/ToastScreen';
+import DateTimeScreen from '../../screens/DateTimeScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -142,6 +143,13 @@ function Navigation() {
           component={DetailScreen}
           options={{
             title: 'Component Detail',
+          }}
+        />
+        <Stack.Screen
+          name="DateTimeScreen"
+          component={DateTimeScreen}
+          options={{
+            title: 'DateTime Detail',
           }}
         />
       </Stack.Navigator>

@@ -353,5 +353,48 @@ const menuData = [
     },
     screenName: 'ToastScreen',
   },
+  {
+    id: 17,
+    title: 'DateTime',
+    package: 'react-native-date-picker',
+    description:
+      'This is a React Native Date Picker with following main features ,Supports iOS, Android and Expo,3 different modes: Time, Date, DateTime,Various languages, Customizable,Modal or Inlined',
+    installDescription:
+      'Xcode >= 11.6 ,React Native >= 0.57,If using React Native 0.64, 0.64.2 or later must be used,If using Expo, SDK 42 or later must be used. If using Expo SDK 44, 44.0.4 or later must be used.',
+    usageDescription: {
+      codes: [
+        `
+        import React, { useState } from 'react'
+        import { Button } from 'react-native'
+        import DatePicker from 'react-native-date-picker'
+        
+        export default () => {
+          const [date, setDate] = useState(new Date())
+          const [open, setOpen] = useState(false)
+        
+          return (
+            <>
+              <Button title="Open" onPress={() => setOpen(true)} />
+              <DatePicker
+                modal
+                open={open}
+                date={date}
+                onConfirm={(date) => {
+                  setOpen(false)
+                  setDate(date)
+                }}
+                onCancel={() => {
+                  setOpen(false)
+                }}
+              />
+            </>
+          )
+        }
+          `,
+      ],
+      description: 'https://github.com/henninghall/react-native-date-picker',
+    },
+    screenName: 'DateTimeScreen',
+  },
 ];
 export default menuData;
