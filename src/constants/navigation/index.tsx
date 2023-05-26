@@ -19,9 +19,7 @@ import IconScreen from '../../screens/IconScreen';
 import DropdownScreen from '../../screens/DropdownScreen';
 import MasonryImagesScreen from '../../screens/MasonryImagesScreen';
 import ToastScreen from '../../screens/ToastScreen';
-<<<<<<< HEAD
 import DateTimeScreen from '../../screens/DateTimeScreen';
-=======
 import CarouselScreen from '../../screens/CarouselScreen';
 import LinearGradientScreen from '../../screens/LinearGradientScreen';
 import ShadowScreen from '../../screens/ShadowScreen';
@@ -29,7 +27,6 @@ import MarqueeTextScreen from '../../screens/MarqueeTextScreen';
 import ProgressScreen from '../../screens/ProgressScreen';
 import MessageScreen from '../../screens/MessageScreen';
 import BlurScreen from '../../screens/BlurScreen';
->>>>>>> 0872ab17eec432998d89ae015391ef474020823e
 
 const Stack = createNativeStackNavigator();
 

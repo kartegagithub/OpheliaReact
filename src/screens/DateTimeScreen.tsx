@@ -4,6 +4,9 @@ import CustomDateTime from '../components/customDateTime';
 import Container from '../shared/fragment/container';
 import Content from '../shared/fragment/content';
 import moment from 'moment';
+import defaultColor from '../constants/style/defaultColor';
+import IconUser from '../components/customInput/iconUser';
+import IconCalendar from '../components/customDateTime/iconCalandar';
 
 function DateTimeScreen({}) {
   const [dateTime, setDateTime] = useState(new Date());
@@ -13,14 +16,18 @@ function DateTimeScreen({}) {
   const [date, setDate] = useState(new Date());
   const [dateOpen, setDateOpen] = useState(false);
   const [dateInput, setDateInput] = useState(new Date());
-  console.log({dateInput});
   const [dateInputOpen, setDateInputOpen] = useState(false);
-
+  const [dateInputIcon, setDateInputIcon] = useState(new Date());
+  const [dateInputIconOpen, setDateInputIconOpen] = useState(false);
   return (
     <Container>
       <Content>
         <View style={{marginTop: 10}}>
-          <Button title="PICK DATETIME" onPress={() => setDateTimeOpen(true)} />
+          <Button
+            color={defaultColor.lightColor}
+            title="PICK DATETIME"
+            onPress={() => setDateTimeOpen(true)}
+          />
           <CustomDateTime
             mode={'datetime'}
             maximumDate={new Date('2021-12-31')}
@@ -37,7 +44,11 @@ function DateTimeScreen({}) {
           />
         </View>
         <View style={{marginTop: 10}}>
-          <Button title="PICK TIME" onPress={() => setTimeOpen(true)} />
+          <Button
+            color={defaultColor.lightColor}
+            title="PICK TIME"
+            onPress={() => setTimeOpen(true)}
+          />
           <CustomDateTime
             mode="time"
             modal
@@ -53,7 +64,11 @@ function DateTimeScreen({}) {
           />
         </View>
         <View style={{marginTop: 10}}>
-          <Button title="PICK DATE" onPress={() => setDateOpen(true)} />
+          <Button
+            color={defaultColor.lightColor}
+            title="PICK DATE"
+            onPress={() => setDateOpen(true)}
+          />
           <CustomDateTime
             mode="date"
             maximumDate={new Date('2021-12-31')}
@@ -75,7 +90,7 @@ function DateTimeScreen({}) {
             <TextInput
               value={moment(dateInput)?.format('YYYY/MM/DD')}
               editable={false}
-              style={{backgroundColor: 'pink'}}
+              style={{backgroundColor: defaultColor.lightColor, color: 'white'}}
             />
             <CustomDateTime
               locale={'tr'}
@@ -90,6 +105,36 @@ function DateTimeScreen({}) {
                 setDateInput(date);
               }}
             />
+          </TouchableOpacity>
+        </View>
+        <View style={{marginTop: 10}}>
+          <TouchableOpacity onPress={() => setDateInputIconOpen(true)}>
+            <TextInput
+              value={moment(dateInputIcon)?.format('YYYY/MM/DD')}
+              editable={false}
+              style={{backgroundColor: defaultColor.lightColor, color: 'white'}}
+            />
+            <CustomDateTime
+              locale={'tr'}
+              modal
+              open={dateInputIconOpen}
+              date={dateInputIcon}
+              onCancel={() => {
+                setDateInputIconOpen(false);
+              }}
+              onConfirm={date => {
+                setDateInputIconOpen(false);
+                setDateInputIcon(date);
+              }}
+            />
+            <View
+              style={{
+                position: 'absolute',
+                right: 0,
+                margin: 10,
+              }}>
+              <IconCalendar color1={'white'} color2={'white'} />
+            </View>
           </TouchableOpacity>
         </View>
       </Content>

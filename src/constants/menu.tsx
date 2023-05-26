@@ -397,7 +397,7 @@ const menuData = [
     screenName: 'DateTimeScreen',
   },
   {
-    id:18,
+    id: 18,
     title: 'Carousel',
     package: 'react-native-snap-carousel',
     description: 'Cross Platform Carousel, Slider desteği. Animasyon desteği.',
@@ -565,7 +565,6 @@ const menuData = [
       description: 'https://github.com/Kureev/react-native-blur',
     },
     screenName: 'BlurScreen',
->>>>>>> 0872ab17eec432998d89ae015391ef474020823e
   },
 ];
 export default menuData;
