@@ -27,6 +27,7 @@ import MarqueeTextScreen from '../../screens/MarqueeTextScreen';
 import ProgressScreen from '../../screens/ProgressScreen';
 import MessageScreen from '../../screens/MessageScreen';
 import BlurScreen from '../../screens/BlurScreen';
+import QRCodeScreen from '../../screens/QRCodeScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -195,17 +196,24 @@ function Navigation() {
           }}
         />
         <Stack.Screen
-          name="DetailScreen"
-          component={DetailScreen}
-          options={{
-            title: 'Component Detail',
-          }}
-        />
-        <Stack.Screen
           name="DateTimeScreen"
           component={DateTimeScreen}
           options={{
             title: 'DateTime Detail',
+          }}
+        />
+        <Stack.Screen
+          name="QRCodeScreen"
+          component={QRCodeScreen}
+          options={{
+            title: 'QRCode Detail',
+          }}
+        />
+        <Stack.Screen
+          name="DetailScreen"
+          component={DetailScreen}
+          options={{
+            title: 'Component Detail',
           }}
         />
       </Stack.Navigator>

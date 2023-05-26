@@ -566,5 +566,27 @@ const menuData = [
     },
     screenName: 'BlurScreen',
   },
+  {
+    id: 25,
+    title: 'QRCode',
+    package: 'react-native-qrcode-svg',
+    description:
+      'Cross Platform QRCode generate işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomQRCode
+              value="Merhaba"
+              logo={{uri: 'https://kartega.com/Files/img/logo_bar.png'}}
+              color="red"
+              logoSize={40}
+            />
+          `,
+      ],
+      description: 'https://github.com/awesomejerry/react-native-qrcode-svg',
+    },
+    screenName: 'QRCodeScreen',
+  },
 ];
 export default menuData;
