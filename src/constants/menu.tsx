@@ -588,5 +588,26 @@ const menuData = [
     },
     screenName: 'QRCodeScreen',
   },
+  {
+    id: 27,
+    title: 'Compressor',
+    package: 'react-native-compressor',
+    description: 'Video ve Resim compres işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomQRCode
+              value="Merhaba"
+              logo={{uri: 'https://kartega.com/Files/img/logo_bar.png'}}
+              color="red"
+              logoSize={40}
+            />
+          `,
+      ],
+      description: 'https://github.com/Shobbak/react-native-compressor',
+    },
+    screenName: 'CompressorScreen',
+  },
 ];
 export default menuData;

@@ -28,6 +28,7 @@ import ProgressScreen from '../../screens/ProgressScreen';
 import MessageScreen from '../../screens/MessageScreen';
 import BlurScreen from '../../screens/BlurScreen';
 import QRCodeScreen from '../../screens/QRCodeScreen';
+import CompressorScreen from '../../screens/CompressorScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -207,6 +208,13 @@ function Navigation() {
           component={QRCodeScreen}
           options={{
             title: 'QRCode Detail',
+          }}
+        />
+        <Stack.Screen
+          name="CompressorScreen"
+          component={CompressorScreen}
+          options={{
+            title: 'Compressor Detail',
           }}
         />
         <Stack.Screen
