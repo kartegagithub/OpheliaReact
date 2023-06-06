@@ -29,6 +29,7 @@ import MessageScreen from '../../screens/MessageScreen';
 import BlurScreen from '../../screens/BlurScreen';
 import QRCodeScreen from '../../screens/QRCodeScreen';
 import CompressorScreen from '../../screens/CompressorScreen';
+import ModalScreen from '../../screens/ModalScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -222,6 +223,13 @@ function Navigation() {
           component={DetailScreen}
           options={{
             title: 'Component Detail',
+          }}
+        />
+        <Stack.Screen
+          name="ModalScreen"
+          component={ModalScreen}
+          options={{
+            title: 'Modal Detail',
           }}
         />
       </Stack.Navigator>

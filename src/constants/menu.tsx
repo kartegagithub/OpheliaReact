@@ -607,7 +607,28 @@ const menuData = [
       ],
       description: 'https://github.com/Shobbak/react-native-compressor',
     },
-    screenName: 'CompressorScreen',
+    screenName: '',
+  },
+  {
+    id: 28,
+    title: 'Modal',
+    package: 'react-native-modal',
+    description: 'Modal Örnekleri.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomQRCode
+              value="Merhaba"
+              logo={{uri: 'https://kartega.com/Files/img/logo_bar.png'}}
+              color="red"
+              logoSize={40}
+            />
+          `,
+      ],
+      description: 'https://github.com/Shobbak/react-native-compressor',
+    },
+    screenName: 'ModalScreen',
   },
 ];
 export default menuData;
