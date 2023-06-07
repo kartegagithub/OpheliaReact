@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {StatusBar} from 'react-native';
+import {StatusBar, Text} from 'react-native';
 import {FlatList, View} from 'react-native';
 import CustomButton from '../components/customButton';
 import CustomSwitch from '../components/customSwitch';
@@ -10,18 +10,31 @@ import homeScreenStyle from './styles/homeScreenStyle';
 import Clipboard from '@react-native-clipboard/clipboard';
 import Content from '../shared/fragment/content';
 import Padding from '../shared/fragment/padding';
+import CustomInput from '../components/customInput';
+import defaultColor from '../constants/style/defaultColor';
+import IconUser from '../components/customInput/iconUser';
 
 function HomeScreen({navigation}) {
   const [menu, setMenu] = useState(menuData);
-  console.log({menu});
   const [setupData, setSetupDate] = useState({
     code: null,
     intallDescription: null,
   });
-  console.log({setupData});
+  const [searchText, onChangeSearch] = useState('');
+  const [filteredData, setFilteredData] = useState([]);
   useEffect(() => {
     StatusBar.setBarStyle('dark-content');
   }, []);
+  useEffect(() => {
+    const filtered = menu?.filter(item =>
+      item.title.toLowerCase().includes(searchText.toLowerCase()),
+    );
+    if (searchText === '') {
+      return setFilteredData(menu);
+    }
+
+    setFilteredData(filtered);
+  }, [searchText]);
   const goScreen = screenName => {
     navigation.navigate(screenName);
   };
@@ -88,8 +101,21 @@ function HomeScreen({navigation}) {
   return (
     <Container>
       <Content>
+        <View>
+          <CustomInput
+            onChangeText={newText => onChangeSearch(newText)}
+            style={{
+              fontSize: 12,
+              borderRadius: 4,
+              height: 48,
+              color: defaultColor.textColor,
+              backgroundColor: defaultColor.grayColor,
+            }}
+            rightIcon={<IconUser />} //iconSearch
+          />
+        </View>
         <FlatList
-          data={menu}
+          data={filteredData}
           keyExtractor={item => item.id}
           renderItem={renderMenu}
         />
