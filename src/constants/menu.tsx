@@ -607,7 +607,7 @@ const menuData = [
       ],
       description: 'https://github.com/Shobbak/react-native-compressor',
     },
-    screenName: '',
+    screenName: 'CompressorScreen',
   },
   {
     id: 28,
@@ -629,6 +629,67 @@ const menuData = [
       description: 'https://github.com/Shobbak/react-native-compressor',
     },
     screenName: 'ModalScreen',
+  },
+  {
+    id: 29,
+    title: 'Permissions',
+    package: 'react-native-permissions',
+    description: 'Native özellik izinleri için kullanılabilir.',
+    installDescription: `<key>NSAppleMusicUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSCameraUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSContactsUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSFaceIDUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSLocationTemporaryUsageDescriptionDictionary</key>
+    <dict>
+      <key>YOUR-PURPOSE-KEY</key>
+      <string>İzin isteği</string>
+    </dict>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSMotionUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSRemindersUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSSiriUsageDescription</key>
+    <string>İzin isteği</string>
+    <key>NSUserTrackingUsageDescription</key>
+    <string>İzin isteği</string>`,
+    usageDescription: {
+      codes: [
+        `
+        <CustomQRCode
+              value="Merhaba"
+              logo={{uri: 'https://kartega.com/Files/img/logo_bar.png'}}
+              color="red"
+              logoSize={40}
+            />
+          `,
+      ],
+      description: 'https://github.com/zoontek/react-native-permissions',
+    },
+    screenName: 'PermissionsScreen',
   },
 ];
 export default menuData;

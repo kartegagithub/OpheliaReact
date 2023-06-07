@@ -30,6 +30,7 @@ import BlurScreen from '../../screens/BlurScreen';
 import QRCodeScreen from '../../screens/QRCodeScreen';
 import CompressorScreen from '../../screens/CompressorScreen';
 import ModalScreen from '../../screens/ModalScreen';
+import PermissionsScreen from '../../screens/PermissionsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -216,6 +217,13 @@ function Navigation() {
           component={CompressorScreen}
           options={{
             title: 'Compressor Detail',
+          }}
+        />
+        <Stack.Screen
+          name="PermissionsScreen"
+          component={PermissionsScreen}
+          options={{
+            title: 'Permissions Detail',
           }}
         />
         <Stack.Screen
