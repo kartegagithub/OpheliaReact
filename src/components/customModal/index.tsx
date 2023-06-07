@@ -138,6 +138,18 @@ type ModalProps = {
     | 'zoomOutRight';
   avoidKeyboard?: boolean;
   coverScreen?: boolean;
+  hasBackdrop?: boolean;
+  backdropColor?: string;
+  backdropOpacity?: number;
+  backdropTransitionInTiming?: number;
+  backdropTransitionOutTiming?: number;
+  customBackdrop?: React.ReactNode;
+  deviceHeight?: number;
+  deviceWidth?: number;
+  style?: any;
+  swipeDirection?: string;
+  scrollHorizontal?: boolean;
+  useNativeDriver?: boolean;
 };
 function CustomModal(
   {
@@ -151,19 +163,44 @@ function CustomModal(
     animationOutTiming,
     avoidKeyboard,
     coverScreen,
+    hasBackdrop,
+    backdropColor,
+    backdropOpacity,
+    backdropTransitionInTiming,
+    backdropTransitionOutTiming,
+    customBackdrop,
+    deviceHeight,
+    deviceWidth,
+    swipeDirection,
+    scrollHorizontal,
+    useNativeDriver,
+    style,
   }: ModalProps,
   ...props: any
 ) {
   return (
     <View style={{flex: 1}}>
       <Modal
+        scrollHorizontal={scrollHorizontal}
+        swipeDirection={swipeDirection}
         animationInTiming={animationInTiming}
         animationIn={animationIn}
         animationOut={animationOut}
         animationOutTiming={animationOutTiming}
         avoidKeyboard={avoidKeyboard}
         coverScreen={coverScreen}
-        isVisible={isModalVisible}>
+        isVisible={isModalVisible}
+        hasBackdrop={hasBackdrop}
+        backdropColor={backdropColor}
+        backdropOpacity={backdropOpacity}
+        backdropTransitionInTiming={backdropTransitionInTiming}
+        backdropTransitionOutTiming={backdropTransitionOutTiming}
+        deviceHeight={deviceHeight}
+        deviceWidth={deviceWidth}
+        style={style}
+        customBackdrop={customBackdrop}
+        useNativeDriver={useNativeDriver}
+        {...props}>
         <View style={{flex: 1}}>
           <Text>{buttonText}</Text>
           <Button title={titleContentModal} onPress={toggleModal} />
