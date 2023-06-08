@@ -691,5 +691,26 @@ const menuData = [
     },
     screenName: 'PermissionsScreen',
   },
+  {
+    id: 30,
+    title: 'Calendar',
+    package: 'react-native-calendars',
+    description: 'Takvim gösterimi için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomQRCode
+              value="Merhaba"
+              logo={{uri: 'https://kartega.com/Files/img/logo_bar.png'}}
+              color="red"
+              logoSize={40}
+            />
+          `,
+      ],
+      description: 'https://github.com/wix/react-native-calendars',
+    },
+    screenName: 'CalendarScreen',
+  },
 ];
 export default menuData;
