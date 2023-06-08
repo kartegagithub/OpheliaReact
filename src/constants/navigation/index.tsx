@@ -32,6 +32,7 @@ import CompressorScreen from '../../screens/CompressorScreen';
 import ModalScreen from '../../screens/ModalScreen';
 import PermissionsScreen from '../../screens/PermissionsScreen';
 import CalendarScreen from '../../screens/CalendarScreen';
+import LottieScreen from '../../screens/LottieScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -232,6 +233,13 @@ function Navigation() {
           component={CalendarScreen}
           options={{
             title: 'Calendar Detail',
+          }}
+        />
+        <Stack.Screen
+          name="LottieScreen"
+          component={LottieScreen}
+          options={{
+            title: 'Lottie Detail',
           }}
         />
         <Stack.Screen

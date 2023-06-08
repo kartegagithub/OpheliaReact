@@ -712,5 +712,26 @@ const menuData = [
     },
     screenName: 'CalendarScreen',
   },
+  {
+    id: 31,
+    title: 'Lottie',
+    package: 'lottie-react-native lottie-ios@3.4.1',
+    description: 'Lottie animasyonları gösterimi için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomQRCode
+              value="Merhaba"
+              logo={{uri: 'https://kartega.com/Files/img/logo_bar.png'}}
+              color="red"
+              logoSize={40}
+            />
+          `,
+      ],
+      description: 'https://github.com/lottie-react-native/lottie-react-native',
+    },
+    screenName: 'LottieScreen',
+  },
 ];
 export default menuData;
