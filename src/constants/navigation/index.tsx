@@ -33,6 +33,7 @@ import ModalScreen from '../../screens/ModalScreen';
 import PermissionsScreen from '../../screens/PermissionsScreen';
 import CalendarScreen from '../../screens/CalendarScreen';
 import LottieScreen from '../../screens/LottieScreen';
+import CheckboxScreen from '../../screens/CheckboxScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -240,6 +241,13 @@ function Navigation() {
           component={LottieScreen}
           options={{
             title: 'Lottie Detail',
+          }}
+        />
+        <Stack.Screen
+          name="CheckboxScreen"
+          component={CheckboxScreen}
+          options={{
+            title: 'Checkbox Detail',
           }}
         />
         <Stack.Screen

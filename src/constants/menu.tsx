@@ -733,5 +733,26 @@ const menuData = [
     },
     screenName: 'LottieScreen',
   },
+  {
+    id: 32,
+    title: 'Checkbox',
+    package: 'react-native-bouncy-checkbox',
+    description: 'Checbox için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomQRCode
+              value="Merhaba"
+              logo={{uri: 'https://kartega.com/Files/img/logo_bar.png'}}
+              color="red"
+              logoSize={40}
+            />
+          `,
+      ],
+      description: 'https://github.com/WrathChaos/react-native-bouncy-checkbox',
+    },
+    screenName: 'CheckboxScreen',
+  },
 ];
 export default menuData;
