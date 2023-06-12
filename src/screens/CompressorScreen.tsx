@@ -6,26 +6,32 @@ import {View} from 'react-native';
 import CustomText from '../components/customText';
 import CustomButton from '../components/customButton';
 import {getMetaData, videoCompress} from '../components/customCompressor';
-import {showInfo} from '../components/customMessage';
-
+import {showInfo, showSuccess} from '../components/customMessage';
+import {launchImageLibrary} from 'react-native-image-picker';
+let uriSelected = null;
 function CompressorScreen() {
   const [metaData, setMetaData] = useState(null);
   const onProgress = e => {
     showInfo(e);
   };
   const onCompress = async () => {
+
+    const result = await launchImageLibrary({
+      mediaType:'video'
+    });
+    uriSelected = result?.assets?.[0]?.uri;
     const getdata = await videoCompress(
-      {
-        uri: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-      },
+      uriSelected,
       onProgress,
     );
+    showSuccess('Video Compress Edildi:' + getdata);
+    videoMetaData(getdata);
+    
   };
-  const videoMetaData = async () => {
-    const getdata = await getMetaData(
-      'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-    );
+  const videoMetaData = async (source) => {
+    const metaData = await getMetaData(source);
     console.log(metaData);
+    showSuccess('Video Compress Data:' + JSON.stringify(metaData));
   };
   return (
     <Container>
