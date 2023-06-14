@@ -754,5 +754,23 @@ const menuData = [
     },
     screenName: 'CheckboxScreen',
   },
+  {
+    id: 33,
+    title: 'MediaPicker',
+    package: 'react-native-image-picker',
+    description: 'Media Picker işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        const selected = await getSelectVideo();
+        const selected = await getSelectImage();
+        const selected = await getSelectCamera();
+          `,
+      ],
+      description: 'https://github.com/react-native-image-picker/react-native-image-picker',
+    },
+    screenName: 'MediaPickerScreen',
+  },
 ];
 export default menuData;

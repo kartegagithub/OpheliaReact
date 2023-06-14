@@ -34,6 +34,7 @@ import PermissionsScreen from '../../screens/PermissionsScreen';
 import CalendarScreen from '../../screens/CalendarScreen';
 import LottieScreen from '../../screens/LottieScreen';
 import CheckboxScreen from '../../screens/CheckboxScreen';
+import MediaPickerScreen from '../../screens/MediaPickerScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -248,6 +249,13 @@ function Navigation() {
           component={CheckboxScreen}
           options={{
             title: 'Checkbox Detail',
+          }}
+        />
+         <Stack.Screen
+          name="MediaPickerScreen"
+          component={MediaPickerScreen}
+          options={{
+            title: 'MediaPicker Detail',
           }}
         />
         <Stack.Screen
