@@ -43,9 +43,6 @@ function CompressorScreen() {
             <CustomButton onPress={onCompress}>
               <CustomText color="#fff">Compress Video</CustomText>
             </CustomButton>
-            <CustomButton onPress={videoMetaData}>
-              <CustomText color="#fff">Get Video Metadata</CustomText>
-            </CustomButton>
           </View>
           <Padding />
         </View>
