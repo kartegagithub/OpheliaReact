@@ -772,5 +772,21 @@ const menuData = [
     },
     screenName: 'MediaPickerScreen',
   },
+  {
+    id: 34,
+    title: 'Device Info',
+    package: 'react-native-device-info',
+    description: 'Device ile ilgili bilgi işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        const info = await getBatteryLevel();
+          `,
+      ],
+      description: 'https://github.com/react-native-device-info/react-native-device-info',
+    },
+    screenName: 'DeviceInfoScreen',
+  },
 ];
 export default menuData;

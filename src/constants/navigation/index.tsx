@@ -35,6 +35,7 @@ import CalendarScreen from '../../screens/CalendarScreen';
 import LottieScreen from '../../screens/LottieScreen';
 import CheckboxScreen from '../../screens/CheckboxScreen';
 import MediaPickerScreen from '../../screens/MediaPickerScreen';
+import DeviceInfoScreen from '../../screens/DeviceInfoScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -256,6 +257,13 @@ function Navigation() {
           component={MediaPickerScreen}
           options={{
             title: 'MediaPicker Detail',
+          }}
+        />
+         <Stack.Screen
+          name="DeviceInfoScreen"
+          component={DeviceInfoScreen}
+          options={{
+            title: 'Device Info Detail',
           }}
         />
         <Stack.Screen
