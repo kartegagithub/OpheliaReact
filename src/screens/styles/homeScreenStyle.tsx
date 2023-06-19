@@ -12,6 +12,7 @@ const homeScreenStyle = StyleSheet.create({
   },
   itemTitle: {
     marginLeft: 10,
+    flex: 1,
   },
   itemButtons: {
     flexDirection: 'row',

@@ -36,6 +36,8 @@ import LottieScreen from '../../screens/LottieScreen';
 import CheckboxScreen from '../../screens/CheckboxScreen';
 import MediaPickerScreen from '../../screens/MediaPickerScreen';
 import DeviceInfoScreen from '../../screens/DeviceInfoScreen';
+import MoneyInputMaskScreen from '../../screens/MoneyInputMaskScreen';
+import InputMaskScreen from '../../screens/InputMaskScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -264,6 +266,20 @@ function Navigation() {
           component={DeviceInfoScreen}
           options={{
             title: 'Device Info Detail',
+          }}
+        />
+         <Stack.Screen
+          name="InputMaskScreen"
+          component={InputMaskScreen}
+          options={{
+            title: 'Input Mask Detail',
+          }}
+        />
+         <Stack.Screen
+          name="MoneyInputMaskScreen"
+          component={MoneyInputMaskScreen}
+          options={{
+            title: 'Money Input Mask Detail',
           }}
         />
         <Stack.Screen

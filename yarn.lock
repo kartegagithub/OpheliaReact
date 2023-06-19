@@ -6545,6 +6545,11 @@
   "resolved" "https://registry.npmjs.org/react-native-compressor/-/react-native-compressor-1.6.1.tgz"
   "version" "1.6.1"
 
+"react-native-currency-input@^1.1.0":
+  "integrity" "sha512-TNyqQ98pB6WdLJiEz5NIZWUT1zpzJNBUCGS+5PGO0QCmbssSA/n4zVC7+msX5Z0Wl+iwhpTPsCckDJeRIlxwKg=="
+  "resolved" "https://registry.npmjs.org/react-native-currency-input/-/react-native-currency-input-1.1.0.tgz"
+  "version" "1.1.0"
+
 "react-native-date-picker@^4.2.13":
   "integrity" "sha512-cQ3k+ExXggAnytomeNGNrtV/l2a7WzVUeWKo7Gs2pv/z3TCjjlmKn0ZBMPgcThrFAgFMxgYI0XzKVKT7TPsOmw=="
   "resolved" "https://registry.npmjs.org/react-native-date-picker/-/react-native-date-picker-4.2.13.tgz"
@@ -6618,6 +6623,11 @@
   "integrity" "sha512-Z8Xxvupsex+9BBFoSYS87bilNPWcRfRsGC0cpJk72Nxb5p2nEkGSBv73xZbEHnW2mUFvP+huYxrVvjZkr/gRjQ=="
   "resolved" "https://registry.npmjs.org/react-native-linear-gradient/-/react-native-linear-gradient-2.6.2.tgz"
   "version" "2.6.2"
+
+"react-native-mask-input@^1.2.3":
+  "integrity" "sha512-RWx+gc1EaBslJWR6dsvGdILJ5XvnvZuyEsgJaH9uAMukB3Z9eOlxra1E7Ovck8NSMVcYWpBB/lzojO4LwqqXgA=="
+  "resolved" "https://registry.npmjs.org/react-native-mask-input/-/react-native-mask-input-1.2.3.tgz"
+  "version" "1.2.3"
 
 "react-native-material-ripple@^0.9.1":
   "integrity" "sha512-dHjARdKoGD3LXwPh2TkURabywM5BfdpKc/AHplJTfBMalhVZ2bc7iJoJmNhNnmT/TZ+B3szL6uV1mO7Pv8zNeA=="

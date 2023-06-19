@@ -788,5 +788,37 @@ const menuData = [
     },
     screenName: 'DeviceInfoScreen',
   },
+  {
+    id: 35,
+    title: 'Custom Input Mask',
+    package: 'react-native-mask-input',
+    description: 'Input mask işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        const info = await getBatteryLevel();
+          `,
+      ],
+      description: 'https://github.com/CaioQuirinoMedeiros/react-native-mask-input',
+    },
+    screenName: 'InputMaskScreen',
+  },
+  {
+    id: 36,
+    title: 'Custom Currency Input Mask',
+    package: 'react-native-currency-input',
+    description: 'Sadece para birimi mask işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        const info = await getBatteryLevel();
+          `,
+      ],
+      description: 'https://github.com/CaioQuirinoMedeiros/react-native-currency-input',
+    },
+    screenName: 'MoneyInputMaskScreen',
+  },
 ];
 export default menuData;
