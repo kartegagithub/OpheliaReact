@@ -797,7 +797,7 @@ const menuData = [
     usageDescription: {
       codes: [
         `
-        const info = await getBatteryLevel();
+        <CustomInputMask onChangeText={handleChange} value={value} mask="card" />
           `,
       ],
       description: 'https://github.com/CaioQuirinoMedeiros/react-native-mask-input',
@@ -813,7 +813,11 @@ const menuData = [
     usageDescription: {
       codes: [
         `
-        const info = await getBatteryLevel();
+        <CustomMoneyInputMask
+          onChangeText={handleChange}
+          value={value}
+          prefix="₺"
+        />
           `,
       ],
       description: 'https://github.com/CaioQuirinoMedeiros/react-native-currency-input',
