@@ -38,6 +38,7 @@ import MediaPickerScreen from '../../screens/MediaPickerScreen';
 import DeviceInfoScreen from '../../screens/DeviceInfoScreen';
 import MoneyInputMaskScreen from '../../screens/MoneyInputMaskScreen';
 import InputMaskScreen from '../../screens/InputMaskScreen';
+import RenderHTMLScreen from '../../screens/RenderHTMLScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -278,6 +279,13 @@ function Navigation() {
          <Stack.Screen
           name="MoneyInputMaskScreen"
           component={MoneyInputMaskScreen}
+          options={{
+            title: 'Money Input Mask Detail',
+          }}
+        />
+         <Stack.Screen
+          name="RenderHTMLScreen"
+          component={RenderHTMLScreen}
           options={{
             title: 'Money Input Mask Detail',
           }}

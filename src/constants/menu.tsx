@@ -824,5 +824,21 @@ const menuData = [
     },
     screenName: 'MoneyInputMaskScreen',
   },
+  {
+    id: 37,
+    title: 'HTML Render',
+    package: 'react-native-render-html',
+    description: 'HTML gösterim işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomRenderHTML source={source} />
+          `,
+      ],
+      description: 'https://github.com/meliorence/react-native-render-html',
+    },
+    screenName: 'RenderHTMLScreen',
+  },
 ];
 export default menuData;
