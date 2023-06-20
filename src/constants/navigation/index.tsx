@@ -39,6 +39,7 @@ import DeviceInfoScreen from '../../screens/DeviceInfoScreen';
 import MoneyInputMaskScreen from '../../screens/MoneyInputMaskScreen';
 import InputMaskScreen from '../../screens/InputMaskScreen';
 import RenderHTMLScreen from '../../screens/RenderHTMLScreen';
+import RatingScreen from '../../screens/RatingScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -255,35 +256,35 @@ function Navigation() {
             title: 'Checkbox Detail',
           }}
         />
-         <Stack.Screen
+        <Stack.Screen
           name="MediaPickerScreen"
           component={MediaPickerScreen}
           options={{
             title: 'MediaPicker Detail',
           }}
         />
-         <Stack.Screen
+        <Stack.Screen
           name="DeviceInfoScreen"
           component={DeviceInfoScreen}
           options={{
             title: 'Device Info Detail',
           }}
         />
-         <Stack.Screen
+        <Stack.Screen
           name="InputMaskScreen"
           component={InputMaskScreen}
           options={{
             title: 'Input Mask Detail',
           }}
         />
-         <Stack.Screen
+        <Stack.Screen
           name="MoneyInputMaskScreen"
           component={MoneyInputMaskScreen}
           options={{
             title: 'Money Input Mask Detail',
           }}
         />
-         <Stack.Screen
+        <Stack.Screen
           name="RenderHTMLScreen"
           component={RenderHTMLScreen}
           options={{
@@ -302,6 +303,13 @@ function Navigation() {
           component={ModalScreen}
           options={{
             title: 'Modal Detail',
+          }}
+        />
+        <Stack.Screen
+          name="RatingScreen"
+          component={RatingScreen}
+          options={{
+            title: 'Rating Detail',
           }}
         />
       </Stack.Navigator>

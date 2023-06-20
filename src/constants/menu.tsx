@@ -768,7 +768,8 @@ const menuData = [
         const selected = await getSelectCamera();
           `,
       ],
-      description: 'https://github.com/react-native-image-picker/react-native-image-picker',
+      description:
+        'https://github.com/react-native-image-picker/react-native-image-picker',
     },
     screenName: 'MediaPickerScreen',
   },
@@ -784,7 +785,8 @@ const menuData = [
         const info = await getBatteryLevel();
           `,
       ],
-      description: 'https://github.com/react-native-device-info/react-native-device-info',
+      description:
+        'https://github.com/react-native-device-info/react-native-device-info',
     },
     screenName: 'DeviceInfoScreen',
   },
@@ -800,7 +802,8 @@ const menuData = [
         <CustomInputMask onChangeText={handleChange} value={value} mask="card" />
           `,
       ],
-      description: 'https://github.com/CaioQuirinoMedeiros/react-native-mask-input',
+      description:
+        'https://github.com/CaioQuirinoMedeiros/react-native-mask-input',
     },
     screenName: 'InputMaskScreen',
   },
@@ -820,7 +823,8 @@ const menuData = [
         />
           `,
       ],
-      description: 'https://github.com/CaioQuirinoMedeiros/react-native-currency-input',
+      description:
+        'https://github.com/CaioQuirinoMedeiros/react-native-currency-input',
     },
     screenName: 'MoneyInputMaskScreen',
   },
@@ -839,6 +843,26 @@ const menuData = [
       description: 'https://github.com/meliorence/react-native-render-html',
     },
     screenName: 'RenderHTMLScreen',
+  },
+  {
+    id: 38,
+    title: 'Rating',
+    package: 'react-native-ratings',
+    description: 'Değerlendirme işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+         <CustomRating
+            ratingCount={5}
+            type={'custom'} //star, rocket, bell, heart
+            imageSize={50}
+            onFinishRating={ratingCompleted}/>
+          `,
+      ],
+      description: 'https://github.com/Monte9/react-native-ratings',
+    },
+    screenName: 'RatingScreen',
   },
 ];
 export default menuData;
