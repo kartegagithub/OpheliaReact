@@ -45,9 +45,19 @@ const menuData = [
     id: 3,
     title: 'TextInput',
     package: 'react-native-textinput-effects',
-    description: '',
+    description: 'Klavye aracılığıyla metin girişi yapılmasına olanak sağlar',
     installDescription: '',
-    usageDescription: '',
+    usageDescription: {
+      codes: [
+        `<CustomInput
+        placeholderText="placeholder"
+        placeholderTextColor={'gray'}
+        leftIcon={<IconUser />}
+        rightIcon={<IconUser />}
+        />`,
+      ],
+      description: '',
+    },
     screenName: 'TextInputScreen',
   },
   {
