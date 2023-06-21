@@ -8172,7 +8172,7 @@
     "prop-types" "^15.8.1"
     "react-native-iphone-screen-helper" "^2.0.2"
 
-"react-native-gesture-handler@^2.12.0", "react-native-gesture-handler@>= 1.0.0", "react-native-gesture-handler@>=2.5.0":
+"react-native-gesture-handler@^2.12.0", "react-native-gesture-handler@>= 1.0.0":
   "integrity" "sha512-rr+XwVzXAVpY8co25ukvyI38fKCxTQjz7WajeZktl8qUPdh1twnSExgpT47DqDi4n+m+OiJPAnHfZOkqqAQMOg=="
   "resolved" "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.12.0.tgz"
   "version" "2.12.0"
@@ -8274,7 +8274,7 @@
   dependencies:
     "lodash" "^4.17.15"
 
-"react-native-reanimated@^3.3.0", "react-native-reanimated@>=2.10.0":
+"react-native-reanimated@^3.3.0":
   "integrity" "sha512-LzfpPZ1qXBGy5BcUHqw3pBC0qSd22qXS3t8hWSbozXNrBkzMhhOrcILE/nEg/PHpNNp1xvGOW8NwpAMF006roQ=="
   "resolved" "https://registry.npmjs.org/react-native-reanimated/-/react-native-reanimated-3.3.0.tgz"
   "version" "3.3.0"
@@ -8353,11 +8353,6 @@
     "prop-types" "^15.6.1"
     "react-addons-shallow-compare" "15.6.2"
 
-"react-native-story-view@^0.0.2":
-  "integrity" "sha512-2tkIWL+4nVii9/kz0J0R81N5puwcTxRlPuCaY0mwixCev/96uh6ji5CmThjRWNfggjsYtyxDunHReBXc6gWKxg=="
-  "resolved" "https://registry.npmjs.org/react-native-story-view/-/react-native-story-view-0.0.2.tgz"
-  "version" "0.0.2"
-
 "react-native-svg@*", "react-native-svg@^13.2.0", "react-native-svg@^13.9.0", "react-native-svg@> 6.4.1", "react-native-svg@>=12.1.0":
   "integrity" "sha512-Ey18POH0dA0ob/QiwCBVrxIiwflhYuw0P0hBlOHeY4J5cdbs8ngdKHeWC/Kt9+ryP6fNoEQ1PUgPYw2Bs/rp5Q=="
   "resolved" "https://registry.npmjs.org/react-native-svg/-/react-native-svg-13.9.0.tgz"
@@ -8407,12 +8402,12 @@
     "prop-types" "^15.7.2"
     "yargs" "^16.1.1"
 
-"react-native-video-cache-control@*", "react-native-video-cache-control@^1.2.1":
+"react-native-video-cache-control@^1.2.1":
   "integrity" "sha512-I1RHIgmLxZhHxS5A22Jv+xsLWkhVRSQWFQhi/G/dLoLJhjmUH5BxwxdcbC57oT8wAyKcZSauTJj0Aw7ejqetBQ=="
   "resolved" "https://registry.npmjs.org/react-native-video-cache-control/-/react-native-video-cache-control-1.2.1.tgz"
   "version" "1.2.1"
 
-"react-native-video@^5.2.1", "react-native-video@>=5":
+"react-native-video@^5.2.1":
   "integrity" "sha512-aJlr9MeTuQ0LpZ4n+EC9RvhoKeiPbLtI2Rxy8u7zo/wzGevbRpWHSBj9xZ5YDBXnAVXzuqyNIkGhdw7bfdIBZw=="
   "resolved" "https://registry.npmjs.org/react-native-video/-/react-native-video-5.2.1.tgz"
   "version" "5.2.1"
@@ -8437,7 +8432,7 @@
   dependencies:
     "events" "^3.2.0"
 
-"react-native@*", "react-native@^*", "react-native@>= 0.30.0", "react-native@>= 0.50.0", "react-native@>= 0.55.x", "react-native@>= 0.64.3", "react-native@>=0.23.1", "react-native@>=0.35", "react-native@>=0.42.0", "react-native@>=0.46", "react-native@>=0.47.0", "react-native@>=0.48.4", "react-native@>=0.57", "react-native@>=0.57.0", "react-native@>=0.58", "react-native@>=0.59", "react-native@>=0.60", "react-native@>=0.60.0", "react-native@>=0.62", "react-native@>=0.63.3", "react-native@>=0.63.4", "react-native@>=0.65.0", "react-native@0.71.4":
+"react-native@*", "react-native@^*", "react-native@>= 0.30.0", "react-native@>= 0.50.0", "react-native@>= 0.55.x", "react-native@>= 0.64.3", "react-native@>=0.23.1", "react-native@>=0.35", "react-native@>=0.42.0", "react-native@>=0.46", "react-native@>=0.47.0", "react-native@>=0.48.4", "react-native@>=0.57", "react-native@>=0.57.0", "react-native@>=0.58", "react-native@>=0.59", "react-native@>=0.60", "react-native@>=0.60.0", "react-native@>=0.63.3", "react-native@>=0.63.4", "react-native@>=0.65.0", "react-native@0.71.4":
   "integrity" "sha512-3hSYqvWrOdKhpV3HpEKp1/CkWx8Sr/N/miCrmUIAsVTSJUR7JW0VvIsrV9urDhUj/s6v2WF4n7qIEEJsmTCrPw=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.71.4.tgz"
   "version" "0.71.4"
