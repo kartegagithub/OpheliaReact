@@ -26,14 +26,13 @@ function HomeScreen({navigation}) {
     StatusBar.setBarStyle('dark-content');
   }, []);
   useEffect(() => {
-    const filtered = menu?.filter(item =>
-      item.title.toLowerCase().includes(searchText.toLowerCase()),
-    );
-    if (searchText === '') {
-      return setFilteredData(menu);
-    }
-
-    setFilteredData(filtered);
+    const filtered = menu?.map(item => {
+      return {
+        ...item,
+        isHide: !item.title.toLowerCase().includes(searchText.toLowerCase()),
+      };
+    });
+    setMenu(filtered);
   }, [searchText]);
   const goScreen = screenName => {
     navigation.navigate(screenName);
@@ -41,20 +40,22 @@ function HomeScreen({navigation}) {
   const goScreenDetail = data => {
     navigation.navigate('DetailScreen', data);
   };
+
+  const onChange = item => {
+    const filtered = menu?.map(val => {
+      return {
+        ...val,
+        isOn: item?.id === val.id ? !val?.isOn : val.isOn,
+      };
+    });
+    setMenu(filtered);
+    //setMenu( );
+  };
+
   const renderMenu = ({item}) => {
-    const onChange = () => {
-      setMenu(
-        menu?.map(val => {
-          return {
-            ...val,
-            isOn: item?.id == val.id ? !val?.isOn : val.isOn,
-          };
-        }),
-      );
-    };
     return (
       <View style={homeScreenStyle.item}>
-        <CustomSwitch isOn={item?.isOn} onChange={onChange} />
+        <CustomSwitch isOn={item?.isOn} onChange={() => onChange(item)} />
         <CustomText style={homeScreenStyle.itemTitle}>{item.title}</CustomText>
         <View style={homeScreenStyle.itemButtons}>
           <CustomButton
@@ -115,11 +116,10 @@ function HomeScreen({navigation}) {
           />
         </View>
         <FlatList
-          data={filteredData}
+          data={menu?.filter(k => !k.isHide)}
           keyExtractor={item => item.id}
           renderItem={renderMenu}
         />
-
         <View style={homeScreenStyle.installArea}>
           <CustomButton
             onPress={generateInstall}
