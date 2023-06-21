@@ -41,6 +41,7 @@ import InputMaskScreen from '../../screens/InputMaskScreen';
 import RenderHTMLScreen from '../../screens/RenderHTMLScreen';
 import RatingScreen from '../../screens/RatingScreen';
 import VideoScreen from '../../screens/VideoScreen';
+import MaskedViewScreen from '../../screens/MaskedViewScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -318,6 +319,13 @@ function Navigation() {
           component={VideoScreen}
           options={{
             title: 'Video Detail',
+          }}
+        />
+        <Stack.Screen
+          name="MaskedViewScreen"
+          component={MaskedViewScreen}
+          options={{
+            title: 'Masked View Detail',
           }}
         />
       </Stack.Navigator>

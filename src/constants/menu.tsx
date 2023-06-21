@@ -892,5 +892,31 @@ const menuData = [
     },
     screenName: 'VideoScreen',
   },
+  {
+    id: 40,
+    title: 'Masked View',
+    package: '@react-native-masked-view/masked-view',
+    description: 'Masked View işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomMaskedView
+        maskElement={
+          <View>
+            <CustomText style={{fontSize: 35}}>Merhaba Dünya!</CustomText>
+          </View>
+        }>
+        <View style={{width: 80, backgroundColor: '#324376'}} />
+        <View style={{width: 80, backgroundColor: '#F5DD90'}} />
+        <View style={{width: 80, backgroundColor: '#F76C5E'}} />
+        <View style={{width: 80, backgroundColor: '#e1e1e1'}} />
+      </CustomMaskedView>
+          `,
+      ],
+      description: 'https://github.com/react-native-masked-view/masked-view',
+    },
+    screenName: 'MaskedViewScreen',
+  },
 ];
 export default menuData;
