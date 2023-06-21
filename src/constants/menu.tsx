@@ -874,5 +874,23 @@ const menuData = [
     },
     screenName: 'RatingScreen',
   },
+  {
+    id: 39,
+    title: 'Video',
+    package: 'react-native-video',
+    description: 'Video play işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomVideo
+          source={'https://download.samplelib.com/mp4/sample-15s.mp4'}
+        />
+          `,
+      ],
+      description: 'https://github.com/react-native-video/react-native-video',
+    },
+    screenName: 'VideoScreen',
+  },
 ];
 export default menuData;

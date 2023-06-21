@@ -40,6 +40,7 @@ import MoneyInputMaskScreen from '../../screens/MoneyInputMaskScreen';
 import InputMaskScreen from '../../screens/InputMaskScreen';
 import RenderHTMLScreen from '../../screens/RenderHTMLScreen';
 import RatingScreen from '../../screens/RatingScreen';
+import VideoScreen from '../../screens/VideoScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -310,6 +311,13 @@ function Navigation() {
           component={RatingScreen}
           options={{
             title: 'Rating Detail',
+          }}
+        />
+        <Stack.Screen
+          name="VideoScreen"
+          component={VideoScreen}
+          options={{
+            title: 'Video Detail',
           }}
         />
       </Stack.Navigator>
