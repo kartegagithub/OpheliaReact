@@ -938,5 +938,33 @@ const menuData = [
     },
     screenName: 'ExpandableScreen',
   },
+  {
+    id: 42,
+    title: 'Bounce Card',
+    package: 'react-native-apple-card-views @freakycoder/react-native-bounceable',
+    description: 'Card ve Bounce görünümü sunar.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+      <CustomBCard
+        type="other"
+        title={'Test Uygulaması'}
+        subtitle={'Değişime Hazır Olun!'}
+        largeTitle={'DILEK' + '\n' + 'ISTE' + '\n' + 'HEMEN!'}
+        buttonText={'İNDİR'}
+        iconSource={{
+          uri: 'https://play-lh.googleusercontent.com/6NoDzI5d956RNFq88Ydxp70TPKCfC-JoMQaWZLZDOASne6dUKrafZQsfZLPgeUMofA',
+        }}
+        backgroundSource={{uri: 'https://picsum.photos/id/111/900/900'}}
+        buttonSubtitle={'İndirmek için Tıkla'}
+        onButtonPress={() => alert('download Press')}
+      />
+           `,
+      ],
+      description: 'https://github.com/WrathChaos/react-native-apple-card-views',
+    },
+    screenName: 'BCardScreen',
+  },
 ];
 export default menuData;

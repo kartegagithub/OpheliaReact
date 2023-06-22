@@ -43,6 +43,7 @@ import RatingScreen from '../../screens/RatingScreen';
 import VideoScreen from '../../screens/VideoScreen';
 import MaskedViewScreen from '../../screens/MaskedViewScreen';
 import ExpandableScreen from '../../screens/ExpandableScreen';
+import BCardScreen from '../../screens/BCardScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -334,6 +335,13 @@ function Navigation() {
           component={ExpandableScreen}
           options={{
             title: 'Expandable Detail',
+          }}
+        />
+        <Stack.Screen
+          name="BCardScreen"
+          component={BCardScreen}
+          options={{
+            title: 'BCard Detail',
           }}
         />
       </Stack.Navigator>
