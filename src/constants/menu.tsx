@@ -918,5 +918,25 @@ const menuData = [
     },
     screenName: 'MaskedViewScreen',
   },
+  {
+    id: 41,
+    title: 'Expandable',
+    package: 'react-native-collapsible',
+    description: 'Her item detayı için genişletilebilir görünüm sunar.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+          CustomExpandable
+            sections={SECTIONS}
+            headerStyle={}
+            contentStyle={}
+            sectionTitleStyle={}/>
+           `,
+      ],
+      description: 'https://github.com/oblador/react-native-collapsible',
+    },
+    screenName: 'ExpandableScreen',
+  },
 ];
 export default menuData;

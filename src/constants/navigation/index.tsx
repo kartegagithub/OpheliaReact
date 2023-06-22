@@ -42,6 +42,7 @@ import RenderHTMLScreen from '../../screens/RenderHTMLScreen';
 import RatingScreen from '../../screens/RatingScreen';
 import VideoScreen from '../../screens/VideoScreen';
 import MaskedViewScreen from '../../screens/MaskedViewScreen';
+import ExpandableScreen from '../../screens/ExpandableScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -326,6 +327,13 @@ function Navigation() {
           component={MaskedViewScreen}
           options={{
             title: 'Masked View Detail',
+          }}
+        />
+        <Stack.Screen
+          name="ExpandableScreen"
+          component={ExpandableScreen}
+          options={{
+            title: 'Expandable Detail',
           }}
         />
       </Stack.Navigator>
