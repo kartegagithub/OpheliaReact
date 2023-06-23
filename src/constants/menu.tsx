@@ -966,5 +966,48 @@ const menuData = [
     },
     screenName: 'BCardScreen',
   },
+  {
+    id: 43,
+    title: 'Cupertino List',
+    package: 'react-native-cupertino-list',
+    description: 'IOS Style Cupertino Liste görünümü sunar.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        const items = [
+          {
+            data: [
+              {
+                title: 'Bütün Kayıtlar',
+                forward: {},
+                icon: 'ios-grid-outline',
+                onPress: () => {
+                  alert('Bütün kayıtlar');
+                },
+              },
+              {
+                title: 'Favoriler',
+                forward: {title: '6'},
+                icon: 'ios-star-outline',
+                enabledSwipeDelete: true,
+                onSwipeDelete: () => {
+                  alert('silindi');
+                },
+              },
+            ],
+          },
+          {
+            title: 'Ekstra',
+            data: [{title: 'Ayarlar', icon: 'ios-settings-outline'}],
+          },
+        ];
+        <CustomCupertinoList items={items} />
+           `,
+      ],
+      description: 'https://github.com/isaced/react-native-cupertino-list',
+    },
+    screenName: 'CupertinoListScreen',
+  },
 ];
 export default menuData;

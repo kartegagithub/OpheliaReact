@@ -44,6 +44,7 @@ import VideoScreen from '../../screens/VideoScreen';
 import MaskedViewScreen from '../../screens/MaskedViewScreen';
 import ExpandableScreen from '../../screens/ExpandableScreen';
 import BCardScreen from '../../screens/BCardScreen';
+import CupertinoListScreen from '../../screens/CupertinoListScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -342,6 +343,13 @@ function Navigation() {
           component={BCardScreen}
           options={{
             title: 'BCard Detail',
+          }}
+        />
+        <Stack.Screen
+          name="CupertinoListScreen"
+          component={CupertinoListScreen}
+          options={{
+            title: 'Cupertino List Detail',
           }}
         />
       </Stack.Navigator>

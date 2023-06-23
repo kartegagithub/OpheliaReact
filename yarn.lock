@@ -8154,6 +8154,11 @@
   "resolved" "https://registry.npmjs.org/react-native-compressor/-/react-native-compressor-1.6.1.tgz"
   "version" "1.6.1"
 
+"react-native-cupertino-list@^0.0.8":
+  "integrity" "sha512-Kz/GBUayKEvFJxDz3k3qp30V7StLEDy7JtD/Y3AeDowFJvEzd8eSUFwswMuA7mcwRtktAwZqO8KS10Z6WensVw=="
+  "resolved" "https://registry.npmjs.org/react-native-cupertino-list/-/react-native-cupertino-list-0.0.8.tgz"
+  "version" "0.0.8"
+
 "react-native-currency-input@^1.1.0":
   "integrity" "sha512-TNyqQ98pB6WdLJiEz5NIZWUT1zpzJNBUCGS+5PGO0QCmbssSA/n4zVC7+msX5Z0Wl+iwhpTPsCckDJeRIlxwKg=="
   "resolved" "https://registry.npmjs.org/react-native-currency-input/-/react-native-currency-input-1.1.0.tgz"
@@ -8189,7 +8194,7 @@
     "prop-types" "^15.8.1"
     "react-native-iphone-screen-helper" "^2.0.2"
 
-"react-native-gesture-handler@^2.12.0", "react-native-gesture-handler@>= 1.0.0":
+"react-native-gesture-handler@*", "react-native-gesture-handler@^2.12.0", "react-native-gesture-handler@>= 1.0.0":
   "integrity" "sha512-rr+XwVzXAVpY8co25ukvyI38fKCxTQjz7WajeZktl8qUPdh1twnSExgpT47DqDi4n+m+OiJPAnHfZOkqqAQMOg=="
   "resolved" "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.12.0.tgz"
   "version" "2.12.0"
@@ -8411,7 +8416,7 @@
     "initials" "^3.0.1"
     "prop-types" "^15.7.2"
 
-"react-native-vector-icons@^9.2.0":
+"react-native-vector-icons@*", "react-native-vector-icons@^9.2.0":
   "integrity" "sha512-wKYLaFuQST/chH3AJRjmOLoLy3JEs1JR6zMNgTaemFpNoXs0ztRnTxcxFD9xhX7cJe1/zoN5BpQYe7kL0m5yyA=="
   "resolved" "https://registry.npmjs.org/react-native-vector-icons/-/react-native-vector-icons-9.2.0.tgz"
   "version" "9.2.0"
