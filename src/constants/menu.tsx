@@ -1009,5 +1009,21 @@ const menuData = [
     },
     screenName: 'CupertinoListScreen',
   },
+  {
+    id: 44,
+    title: 'Curved Tab',
+    package: 'react-native-curved-bottom-bar',
+    description: 'Curved Botton tabbar için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomCurvedBar screens={screens} _renderIcon={_renderIcon} />
+          `,
+      ],
+      description: 'https://github.com/hoaphantn7604/react-native-curved-bottom-bar',
+    },
+    screenName: 'CurvedBarScreen',
+  },
 ];
 export default menuData;

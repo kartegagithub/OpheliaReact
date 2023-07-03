@@ -2107,7 +2107,7 @@
     "invariant" "^2.2.4"
     "nullthrows" "^1.1.1"
 
-"@react-navigation/bottom-tabs@^6.5.7":
+"@react-navigation/bottom-tabs@*", "@react-navigation/bottom-tabs@^6.5.7":
   "integrity" "sha512-9oZYyRu2z7+1pr2dX5V54rHFPmlj4ztwQxFe85zwpnGcPtGIsXj7VCIdlHnjRHJBBFCszvJGQpYY6/G2+DfD+A=="
   "resolved" "https://registry.npmjs.org/@react-navigation/bottom-tabs/-/bottom-tabs-6.5.7.tgz"
   "version" "6.5.7"
@@ -3754,6 +3754,18 @@
   "integrity" "sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw=="
   "resolved" "https://registry.npmjs.org/csstype/-/csstype-3.1.1.tgz"
   "version" "3.1.1"
+
+"d3-path@^3.1.0":
+  "integrity" "sha512-p3KP5HCf/bvjBSSKuXid6Zqijx7wIfNW+J/maPs+iwR35at5JCbLUT0LzF1cnjbCHWhqzQTIN2Jpe8pRebIEFQ=="
+  "resolved" "https://registry.npmjs.org/d3-path/-/d3-path-3.1.0.tgz"
+  "version" "3.1.0"
+
+"d3-shape@^3.2.0":
+  "integrity" "sha512-SaLBuwGm3MOViRq2ABk3eLoxwZELpH6zhl3FbAoJ7Vm1gofKx6El1Ib5z23NUEhF9AsGl7y+dzLe5Cw2AArGTA=="
+  "resolved" "https://registry.npmjs.org/d3-shape/-/d3-shape-3.2.0.tgz"
+  "version" "3.2.0"
+  dependencies:
+    "d3-path" "^3.1.0"
 
 "dag-map@~1.0.0":
   "integrity" "sha512-+LSAiGFwQ9dRnRdOeaj7g47ZFJcOUPukAP8J3A3fuZ1g9Y44BG+P1sgApjLXTQPOzC4+7S9Wr8kXsfpINM4jpw=="
@@ -8164,6 +8176,14 @@
   "resolved" "https://registry.npmjs.org/react-native-currency-input/-/react-native-currency-input-1.1.0.tgz"
   "version" "1.1.0"
 
+"react-native-curved-bottom-bar@^3.2.6":
+  "integrity" "sha512-o7LdGACt/KdL+kRoGdcXSRYrCxI6L/cHzeNA8OhfBYl//eh087N14dF/Cvoz/JN7YPUtrM5Xwdm4tuSI8PzNKQ=="
+  "resolved" "https://registry.npmjs.org/react-native-curved-bottom-bar/-/react-native-curved-bottom-bar-3.2.6.tgz"
+  "version" "3.2.6"
+  dependencies:
+    "d3-shape" "^3.2.0"
+    "react-native-size-scaling" "^0.5.1"
+
 "react-native-date-picker@^4.2.13":
   "integrity" "sha512-cQ3k+ExXggAnytomeNGNrtV/l2a7WzVUeWKo7Gs2pv/z3TCjjlmKn0ZBMPgcThrFAgFMxgYI0XzKVKT7TPsOmw=="
   "resolved" "https://registry.npmjs.org/react-native-date-picker/-/react-native-date-picker-4.2.13.tgz"
@@ -8366,6 +8386,11 @@
   "version" "7.0.8"
   dependencies:
     "colord" "2.9.2"
+
+"react-native-size-scaling@^0.5.1":
+  "integrity" "sha512-OVRox11fjpwUR7DQIPH/4RAhwkqm/r7lKYl5w0dEogFZ3Rz9CK7Bua7oaPLmVP2QnWP0rc0bpgkMc/Rl8ik1yw=="
+  "resolved" "https://registry.npmjs.org/react-native-size-scaling/-/react-native-size-scaling-0.5.1.tgz"
+  "version" "0.5.1"
 
 "react-native-snap-carousel@^3.9.1":
   "integrity" "sha512-xWEGusacIgK1YaDXLi7Gao2+ISLoGPVEBR8fcMf4tOOJQufutlNwkoLu0l6B8Qgsrre0nTxoVZikRgGRDWlLaQ=="
