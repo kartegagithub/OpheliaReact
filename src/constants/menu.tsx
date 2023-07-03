@@ -1049,5 +1049,21 @@ const menuData = [
     },
     screenName: 'DataTableScreen',
   },
+  {
+    id: 46,
+    title: 'Statusbar Alert',
+    package: 'react-native-statusbar-alert',
+    description: 'Statusbar Alert için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomCurvedBar screens={screens} _renderIcon={_renderIcon} />
+          `,
+      ],
+      description: 'https://github.com/gnestor/react-native-statusbar-alert',
+    },
+    screenName: 'StatusbarAlertScreen',
+  },
 ];
 export default menuData;

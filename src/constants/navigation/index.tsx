@@ -47,6 +47,7 @@ import BCardScreen from '../../screens/BCardScreen';
 import CupertinoListScreen from '../../screens/CupertinoListScreen';
 import CurvedBarScreen from '../../screens/CurvedBarScreen';
 import DataTableScreen from '../../screens/DataTableScreen';
+import StatusbarAlertScreen from '../../screens/StatusbarAlertScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -366,6 +367,13 @@ function Navigation() {
           component={DataTableScreen}
           options={{
             title: 'DataTable Detail',
+          }}
+        />
+         <Stack.Screen
+          name="StatusbarAlertScreen"
+          component={StatusbarAlertScreen}
+          options={{
+            title: 'Statusbar Alert Detail',
           }}
         />
       </Stack.Navigator>

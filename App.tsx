@@ -4,15 +4,18 @@ import {Provider} from 'react-redux';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import store from './src/store';
 import Navigation from './src/constants/navigation';
-import {StatusBar} from 'react-native';
+import {LogBox, StatusBar} from 'react-native';
 import {RootSiblingParent} from 'react-native-root-siblings';
 import FlashMessage from 'react-native-flash-message';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {CustomStatusbarAlert} from './src/components/customStatusbarAlert';
+LogBox.ignoreLogs(['Animated: `useNativeDriver` was not specified.']);
 
 function App(): JSX.Element {
   return (
     <Provider store={store}>
       <StatusBar backgroundColor="#fff" />
+
       <SafeAreaProvider>
         <GestureHandlerRootView style={{flex: 1}}>
           <RootSiblingParent>
@@ -22,7 +25,9 @@ function App(): JSX.Element {
               floating
               duration={2500}
             />
-            <Navigation />
+            <CustomStatusbarAlert>
+              <Navigation />
+            </CustomStatusbarAlert>
           </RootSiblingParent>
         </GestureHandlerRootView>
       </SafeAreaProvider>
