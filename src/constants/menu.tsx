@@ -941,7 +941,8 @@ const menuData = [
   {
     id: 42,
     title: 'Bounce Card',
-    package: 'react-native-apple-card-views @freakycoder/react-native-bounceable',
+    package:
+      'react-native-apple-card-views @freakycoder/react-native-bounceable',
     description: 'Card ve Bounce görünümü sunar.',
     installDescription: '',
     usageDescription: {
@@ -962,7 +963,8 @@ const menuData = [
       />
            `,
       ],
-      description: 'https://github.com/WrathChaos/react-native-apple-card-views',
+      description:
+        'https://github.com/WrathChaos/react-native-apple-card-views',
     },
     screenName: 'BCardScreen',
   },
@@ -1021,9 +1023,31 @@ const menuData = [
         <CustomCurvedBar screens={screens} _renderIcon={_renderIcon} />
           `,
       ],
-      description: 'https://github.com/hoaphantn7604/react-native-curved-bottom-bar',
+      description:
+        'https://github.com/hoaphantn7604/react-native-curved-bottom-bar',
     },
     screenName: 'CurvedBarScreen',
+  },
+  {
+    id: 45,
+    title: 'DataTable',
+    package: 'react-native-datatable-component',
+    description: 'Tablo görünümü için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+          <CustomDataTable
+            data={data}
+            noOfPages={2}
+            colNames={colNames}
+            />
+           `,
+      ],
+      description:
+        'https://github.com/MuhammadRafeh/react-native-datatable-component',
+    },
+    screenName: 'DataTableScreen',
   },
 ];
 export default menuData;

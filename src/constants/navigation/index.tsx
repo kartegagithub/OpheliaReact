@@ -46,6 +46,7 @@ import ExpandableScreen from '../../screens/ExpandableScreen';
 import BCardScreen from '../../screens/BCardScreen';
 import CupertinoListScreen from '../../screens/CupertinoListScreen';
 import CurvedBarScreen from '../../screens/CurvedBarScreen';
+import DataTableScreen from '../../screens/DataTableScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -353,11 +354,18 @@ function Navigation() {
             title: 'Cupertino List Detail',
           }}
         />
-         <Stack.Screen
+        <Stack.Screen
           name="CurvedBarScreen"
           component={CurvedBarScreen}
           options={{
             title: 'Curved Tabbar Detail',
+          }}
+        />
+        <Stack.Screen
+          name="DataTableScreen"
+          component={DataTableScreen}
+          options={{
+            title: 'DataTable Detail',
           }}
         />
       </Stack.Navigator>
