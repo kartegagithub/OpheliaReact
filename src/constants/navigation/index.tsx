@@ -48,6 +48,7 @@ import CupertinoListScreen from '../../screens/CupertinoListScreen';
 import CurvedBarScreen from '../../screens/CurvedBarScreen';
 import DataTableScreen from '../../screens/DataTableScreen';
 import StatusbarAlertScreen from '../../screens/StatusbarAlertScreen';
+import NotificationScreen from '../../screens/NotificationScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -374,6 +375,13 @@ function Navigation() {
           component={StatusbarAlertScreen}
           options={{
             title: 'Statusbar Alert Detail',
+          }}
+        />
+        <Stack.Screen
+          name="NotificationScreen"
+          component={NotificationScreen}
+          options={{
+            title: 'Notifications Detail',
           }}
         />
       </Stack.Navigator>

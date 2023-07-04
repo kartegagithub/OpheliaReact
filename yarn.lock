@@ -6833,6 +6833,11 @@
     "prop-types" "^15.6.2"
     "react-native-animatable" "1.3.3"
 
+"react-native-notificated@^0.1.0":
+  "integrity" "sha512-U39KxPhZqZHXodtOqpJSYeWFiyrrxWDaahrQ6+ItKhviW2BUb8x53H0KnEz0AsUT1Wlm5Q1RRhmmyfjr1rkQQA=="
+  "resolved" "https://registry.npmjs.org/react-native-notificated/-/react-native-notificated-0.1.0.tgz"
+  "version" "0.1.0"
+
 "react-native-permissions@^3.8.0":
   "integrity" "sha512-BfZ7ksgdpGchHZH8M/kxCGZbWeACANbnPmb3hNjVOMDQusc4PWlPpobX3eBqYMSKbpi7bMECeV9BVU4QuwAf9A=="
   "resolved" "https://registry.npmjs.org/react-native-permissions/-/react-native-permissions-3.8.0.tgz"

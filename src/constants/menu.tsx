@@ -1065,5 +1065,22 @@ const menuData = [
     },
     screenName: 'StatusbarAlertScreen',
   },
+  {
+    id: 47,
+    title: 'Notifications',
+    package: 'react-native-notificated',
+    description: 'Genel alert yapısı için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        showInfo('Title', 'Test Message');
+        showSuccess('Title', 'Test Message');
+          `,
+      ],
+      description: 'https://thewidlarzgroup.github.io/react-native-notificated/docs/intro/',
+    },
+    screenName: 'NotificationScreen',
+  },
 ];
 export default menuData;

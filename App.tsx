@@ -9,15 +9,21 @@ import {RootSiblingParent} from 'react-native-root-siblings';
 import FlashMessage from 'react-native-flash-message';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {CustomStatusbarAlert} from './src/components/customStatusbarAlert';
+import {createNotifications} from 'react-native-notificated';
+
 LogBox.ignoreLogs(['Animated: `useNativeDriver` was not specified.']);
 
 function App(): JSX.Element {
+  const {NotificationsProvider} = createNotifications({
+    notificationPosition: 'center',
+  });
+
   return (
     <Provider store={store}>
       <StatusBar backgroundColor="#fff" />
-
       <SafeAreaProvider>
         <GestureHandlerRootView style={{flex: 1}}>
+          <NotificationsProvider />
           <RootSiblingParent>
             <FlashMessage
               position="top"
