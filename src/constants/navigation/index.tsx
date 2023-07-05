@@ -49,6 +49,7 @@ import CurvedBarScreen from '../../screens/CurvedBarScreen';
 import DataTableScreen from '../../screens/DataTableScreen';
 import StatusbarAlertScreen from '../../screens/StatusbarAlertScreen';
 import NotificationScreen from '../../screens/NotificationScreen';
+import LoadersScreen from '../../screens/LoadersScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -382,6 +383,13 @@ function Navigation() {
           component={NotificationScreen}
           options={{
             title: 'Notifications Detail',
+          }}
+        />
+        <Stack.Screen
+          name="LoadersScreen"
+          component={LoadersScreen}
+          options={{
+            title: 'Loaders Detail',
           }}
         />
       </Stack.Navigator>

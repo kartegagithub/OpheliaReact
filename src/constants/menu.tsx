@@ -1082,5 +1082,22 @@ const menuData = [
     },
     screenName: 'NotificationScreen',
   },
+  {
+    id: 48,
+    title: 'Loaders',
+    package: 'react-native-loader-kit',
+    description: 'Loader animasyonları için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        showInfo('Title', 'Test Message');
+        showSuccess('Title', 'Test Message');
+          `,
+      ],
+      description: 'https://github.com/maitrungduc1410/react-native-loader-kit',
+    },
+    screenName: 'LoadersScreen',
+  },
 ];
 export default menuData;

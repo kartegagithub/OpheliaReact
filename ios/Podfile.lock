@@ -93,6 +93,9 @@ PODS:
     - lottie-ios (~> 3.4.0)
     - React-Core
   - NextLevelSessionExporter (0.4.6)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - OpenSSL-Universal (1.1.1100)
   - RCT-Folly (2021.07.22.00):
     - boost
@@ -354,6 +357,9 @@ PODS:
     - React-Core
   - react-native-image-picker (5.4.2):
     - React-Core
+  - react-native-loader-kit (2.0.2):
+    - NVActivityIndicatorView (= 5.1.1)
+    - React-Core
   - react-native-netinfo (9.3.7):
     - React-Core
   - react-native-render-html (6.3.4):
@@ -569,6 +575,7 @@ DEPENDENCIES:
   - react-native-compressor (from `../node_modules/react-native-compressor`)
   - react-native-date-picker (from `../node_modules/react-native-date-picker`)
   - react-native-image-picker (from `../node_modules/react-native-image-picker`)
+  - react-native-loader-kit (from `../node_modules/react-native-loader-kit`)
   - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-render-html (from `../node_modules/react-native-render-html`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
@@ -615,6 +622,7 @@ SPEC REPOS:
     - libevent
     - libwebp
     - NextLevelSessionExporter
+    - NVActivityIndicatorView
     - OpenSSL-Universal
     - SDWebImage
     - SDWebImageWebPCoder
@@ -676,6 +684,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-date-picker"
   react-native-image-picker:
     :path: "../node_modules/react-native-image-picker"
+  react-native-loader-kit:
+    :path: "../node_modules/react-native-loader-kit"
   react-native-netinfo:
     :path: "../node_modules/@react-native-community/netinfo"
   react-native-render-html:
@@ -759,6 +769,7 @@ SPEC CHECKSUMS:
   lottie-ios: 016449b5d8be0c3dcbcfa0a9988469999cd04c5d
   lottie-react-native: 8f9d4be452e23f6e5ca0fdc11669dc99ab52be81
   NextLevelSessionExporter: 4d8aa5e617f1c709724f2453efe5d4628480f65a
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   RCT-Folly: 424b8c9a7a0b9ab2886ffe9c3b041ef628fd4fb1
   RCTRequired: 5a024fdf458fa8c0d82fc262e76f982d4dcdecdd
@@ -778,6 +789,7 @@ SPEC CHECKSUMS:
   react-native-compressor: ebcf8bc36f8e44581a8f831583caee8a27e55a01
   react-native-date-picker: 04e866ba4e7857f83abd504ad42e787f0f02ae00
   react-native-image-picker: 77f552291e993f3fdcdf48cc3c280ef7f11789c8
+  react-native-loader-kit: 907b3df62c2c0e4ed9dfe3240521c97db58ce73a
   react-native-netinfo: 2517ad504b3d303e90d7a431b0fcaef76d207983
   react-native-render-html: 984dfe2294163d04bf5fe25d7c9f122e60e05ebe
   react-native-safe-area-context: 39c2d8be3328df5d437ac1700f4f3a4f75716acc

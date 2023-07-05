@@ -73,6 +73,7 @@
     "react-native-image-picker": "^5.4.2",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-linear-gradient": "^2.6.2",
+    "react-native-loader-kit": "^2.0.2",
     "react-native-mask-input": "^1.2.3",
     "react-native-material-ripple": "^0.9.1",
     "react-native-modal": "^13.0.1",
