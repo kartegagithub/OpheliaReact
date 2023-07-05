@@ -1091,8 +1091,7 @@ const menuData = [
     usageDescription: {
       codes: [
         `
-        showInfo('Title', 'Test Message');
-        showSuccess('Title', 'Test Message');
+        <CustomLoaders type={2} style={{width: 30, height: 30}} color='red' />
           `,
       ],
       description: 'https://github.com/maitrungduc1410/react-native-loader-kit',

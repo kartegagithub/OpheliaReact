@@ -15,7 +15,7 @@ function LoadersScreen() {
           {Array(27)
             .fill(null)
             .map((r, i) => (
-              <View>
+              <View key={i.toString()}>
                 <CustomText>CustomLoaders with type {i + 1}</CustomText>
                 <CustomLoaders type={i + 1} />
               </View>
