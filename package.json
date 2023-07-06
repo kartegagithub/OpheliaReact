@@ -101,7 +101,8 @@
     "react-native-video": "^5.2.1",
     "react-native-webview": "^12.0.2",
     "react-native-youtube-iframe": "^2.2.2",
-    "react-redux": "^8.0.5"
+    "react-redux": "^8.0.5",
+    "rn-placeholder": "^3.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

@@ -1098,5 +1098,21 @@ const menuData = [
     },
     screenName: 'LoadersScreen',
   },
+  {
+    id: 49,
+    title: 'Skeleton Content',
+    package: 'react-native-skeleton-content',
+    description: 'Skeleton Content animasyonları için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomLoaders type={2} style={{width: 30, height: 30}} color='red' />
+          `,
+      ],
+      description: 'https://github.com/alexZajac/react-native-skeleton-content',
+    },
+    screenName: 'SkeletonContentScreen',
+  },
 ];
 export default menuData;
