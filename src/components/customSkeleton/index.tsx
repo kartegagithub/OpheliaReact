@@ -13,8 +13,8 @@ const CustomSkeleton = ({data, leftMedia, rightMedia, ...props}) => {
       Animation={Fade}
       Left={leftMedia ? PlaceholderMedia : null}
       Right={rightMedia ? PlaceholderMedia : null}>
-      {data?.map(item => (
-        <PlaceholderLine {...item} />
+      {data?.map((item, i) => (
+        <PlaceholderLine key={i.toString()} {...item} />
       ))}
     </Placeholder>
   );

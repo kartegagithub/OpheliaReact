@@ -1107,7 +1107,34 @@ const menuData = [
     usageDescription: {
       codes: [
         `
-        <CustomLoaders type={2} style={{width: 30, height: 30}} color='red' />
+        const placeholderData = [
+          {
+            height: 10,
+            width: 100,
+            noMargin: false,
+            style: {},
+          },
+          {
+            height: 10,
+            width: 60,
+            noMargin: false,
+            style: {},
+          },
+          {
+            height: 10,
+            width: 35,
+            noMargin: false,
+            style: {},
+          },
+          {
+            height: 10,
+            width: 100,
+            color: '#000',
+            noMargin: false,
+            style: {},
+          },
+        ];
+        <CustomSkeleton data={placeholderData} leftMedia={true} />
           `,
       ],
       description: 'https://github.com/alexZajac/react-native-skeleton-content',
