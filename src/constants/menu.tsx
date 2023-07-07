@@ -1141,5 +1141,21 @@ const menuData = [
     },
     screenName: 'SkeletonContentScreen',
   },
+  {
+    id: 50,
+    title: 'Input Spinner',
+    package: 'react-native-input-spinner',
+    description: 'Spinner inputlar için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomInputSpinner onChange={b => alert(b)} />
+          `,
+      ],
+      description: 'https://github.com/marcocesarato/react-native-input-spinner',
+    },
+    screenName: 'InputSpinnerScreen',
+  },
 ];
 export default menuData;

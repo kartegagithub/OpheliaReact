@@ -51,6 +51,7 @@ import StatusbarAlertScreen from '../../screens/StatusbarAlertScreen';
 import NotificationScreen from '../../screens/NotificationScreen';
 import LoadersScreen from '../../screens/LoadersScreen';
 import SkeletonContentScreen from '../../screens/SkeletonContentScreen';
+import InputSpinnerScreen from '../../screens/InputSpinnerScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -398,6 +399,13 @@ function Navigation() {
           component={SkeletonContentScreen}
           options={{
             title: 'Skeleton Content Detail',
+          }}
+        />
+        <Stack.Screen
+          name="InputSpinnerScreen"
+          component={InputSpinnerScreen}
+          options={{
+            title: 'Input Spinner Detail',
           }}
         />
       </Stack.Navigator>
