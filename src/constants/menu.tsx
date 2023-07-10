@@ -1157,5 +1157,55 @@ const menuData = [
     },
     screenName: 'InputSpinnerScreen',
   },
+  {
+    id: 51,
+    title: 'Animation Card',
+    package: 'react-native-card-animation',
+    description: 'Animation Card için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        const renderFront = () => {
+          return (
+            <View>
+              <View
+                style={{
+                  backgroundColor: 'rgba(255,0,0,0.3)',
+                  position: 'absolute',
+                  zIndex: 999,
+                  width: 300,
+                  height: 500,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <CustomText
+                  style={{
+                    fontSize: 30,
+                    color: '#fff',
+                  }}>
+                  Ön Yüz
+                </CustomText>
+              </View>
+              <Image
+                source={{uri: 'https://picsum.photos/1000/1000'}}
+                style={{
+                  width: 300,
+                  height: 500,
+                }}
+              />
+            </View>
+          );
+        };
+        <CustomAnimationCard
+        renderBack={renderBack}
+        renderFront={renderFront}
+      />
+          `,
+      ],
+      description: 'https://github.com/access-mindinventory/react-native-card-animation',
+    },
+    screenName: 'AnimationCardScreen',
+  },
 ];
 export default menuData;
