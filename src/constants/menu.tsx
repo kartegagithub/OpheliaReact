@@ -1207,5 +1207,21 @@ const menuData = [
     },
     screenName: 'AnimationCardScreen',
   },
+  {
+    id: 52,
+    title: 'Fiesta',
+    package: '@shopify/react-native-skia react-native-fiesta',
+    description: 'Fiesta Animations için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomFiesta type="stars" />
+          `,
+      ],
+      description: 'https://github.com/mateoguzmana/react-native-fiesta',
+    },
+    screenName: 'FiestaScreen',
+  },
 ];
 export default menuData;

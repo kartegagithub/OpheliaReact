@@ -53,6 +53,7 @@ import LoadersScreen from '../../screens/LoadersScreen';
 import SkeletonContentScreen from '../../screens/SkeletonContentScreen';
 import InputSpinnerScreen from '../../screens/InputSpinnerScreen';
 import AnimationCardScreen from '../../screens/AnimationCardScreen';
+import FiestaScreen from '../../screens/FiestaScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -414,6 +415,13 @@ function Navigation() {
           component={AnimationCardScreen}
           options={{
             title: 'Animation Card Detail',
+          }}
+        />
+        <Stack.Screen
+          name="FiestaScreen"
+          component={FiestaScreen}
+          options={{
+            title: 'Fiesta Detail',
           }}
         />
       </Stack.Navigator>
