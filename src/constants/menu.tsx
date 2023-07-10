@@ -1160,7 +1160,7 @@ const menuData = [
   {
     id: 51,
     title: 'Animation Card',
-    package: 'react-native-card-animation',
+    package: 'react-native-gesture-flip-card',
     description: 'Animation Card için kullanılabilir.',
     installDescription: '',
     usageDescription: {
@@ -1203,7 +1203,7 @@ const menuData = [
       />
           `,
       ],
-      description: 'https://github.com/access-mindinventory/react-native-card-animation',
+      description: 'https://github.com/JungHsuan/react-native-gesture-flip-card',
     },
     screenName: 'AnimationCardScreen',
   },
