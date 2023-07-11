@@ -5,6 +5,7 @@ import Padding from '../shared/fragment/padding';
 import {View} from 'react-native';
 import CustomText from '../components/customText';
 import CustomLoaders from '../components/customLoaders';
+import defaultColor from '../constants/style/defaultColor';
 
 function LoadersScreen() {
   return (
@@ -12,12 +13,12 @@ function LoadersScreen() {
       <Content>
         <View>
           <Padding />
-          {Array(27)
+          {Array(12)
             .fill(null)
             .map((r, i) => (
               <View key={i.toString()}>
                 <CustomText>CustomLoaders with type {i + 1}</CustomText>
-                <CustomLoaders type={i + 1} />
+                <CustomLoaders type={i + 1} color={defaultColor.lightColor} />
               </View>
             ))}
 

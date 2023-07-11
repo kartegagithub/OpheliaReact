@@ -1223,5 +1223,21 @@ const menuData = [
     },
     screenName: 'FiestaScreen',
   },
+  {
+    id: 53,
+    title: 'Image Zoom',
+    package: 'react-native-image-zoom-viewer',
+    description: 'Image zoom için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomFiesta type="stars" />
+          `,
+      ],
+      description: 'https://github.com/ascoders/react-native-image-viewer',
+    },
+    screenName: 'ImageZoomScreen',
+  },
 ];
 export default menuData;

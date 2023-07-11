@@ -54,6 +54,7 @@ import SkeletonContentScreen from '../../screens/SkeletonContentScreen';
 import InputSpinnerScreen from '../../screens/InputSpinnerScreen';
 import AnimationCardScreen from '../../screens/AnimationCardScreen';
 import FiestaScreen from '../../screens/FiestaScreen';
+import ImageZoomScreen from '../../screens/ImageZoomScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -422,6 +423,13 @@ function Navigation() {
           component={FiestaScreen}
           options={{
             title: 'Fiesta Detail',
+          }}
+        />
+        <Stack.Screen
+          name="ImageZoomScreen"
+          component={ImageZoomScreen}
+          options={{
+            title: 'Image Zoom Detail',
           }}
         />
       </Stack.Navigator>
