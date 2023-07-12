@@ -1078,7 +1078,8 @@ const menuData = [
         showSuccess('Title', 'Test Message');
           `,
       ],
-      description: 'https://thewidlarzgroup.github.io/react-native-notificated/docs/intro/',
+      description:
+        'https://thewidlarzgroup.github.io/react-native-notificated/docs/intro/',
     },
     screenName: 'NotificationScreen',
   },
@@ -1153,7 +1154,8 @@ const menuData = [
         <CustomInputSpinner onChange={b => alert(b)} />
           `,
       ],
-      description: 'https://github.com/marcocesarato/react-native-input-spinner',
+      description:
+        'https://github.com/marcocesarato/react-native-input-spinner',
     },
     screenName: 'InputSpinnerScreen',
   },
@@ -1203,7 +1205,8 @@ const menuData = [
       />
           `,
       ],
-      description: 'https://github.com/JungHsuan/react-native-gesture-flip-card',
+      description:
+        'https://github.com/JungHsuan/react-native-gesture-flip-card',
     },
     screenName: 'AnimationCardScreen',
   },
@@ -1238,6 +1241,26 @@ const menuData = [
       description: 'https://github.com/ascoders/react-native-image-viewer',
     },
     screenName: 'ImageZoomScreen',
+  },
+  {
+    id: 54,
+    title: 'Step Indicator',
+    package: 'react-native-step-indicator',
+    description: 'Adım göstergesi için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomStepIndicator
+          direction="vertical"
+          customStyles={customStyles}
+          labels={labels}
+        />
+          `,
+      ],
+      description: 'https://github.com/24ark/react-native-step-indicator',
+    },
+    screenName: 'StepIndicatorScreen',
   },
 ];
 export default menuData;

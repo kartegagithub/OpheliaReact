@@ -55,6 +55,7 @@ import InputSpinnerScreen from '../../screens/InputSpinnerScreen';
 import AnimationCardScreen from '../../screens/AnimationCardScreen';
 import FiestaScreen from '../../screens/FiestaScreen';
 import ImageZoomScreen from '../../screens/ImageZoomScreen';
+import StepIndicatorScreen from '../../screens/StepIndicatorScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -376,7 +377,7 @@ function Navigation() {
             title: 'DataTable Detail',
           }}
         />
-         <Stack.Screen
+        <Stack.Screen
           name="StatusbarAlertScreen"
           component={StatusbarAlertScreen}
           options={{
@@ -430,6 +431,13 @@ function Navigation() {
           component={ImageZoomScreen}
           options={{
             title: 'Image Zoom Detail',
+          }}
+        />
+        <Stack.Screen
+          name="StepIndicatorScreen"
+          component={StepIndicatorScreen}
+          options={{
+            title: 'Step Indicator Detail',
           }}
         />
       </Stack.Navigator>
