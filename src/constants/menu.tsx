@@ -1279,5 +1279,21 @@ const menuData = [
     },
     screenName: 'AnimateNumberScreen',
   },
+  {
+    id: 56,
+    title: 'Circle Time',
+    package: 'react-countdown-circle-timer',
+    description: 'Circle progess ve değişimi için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomCircleTime duration={15} />
+          `,
+      ],
+      description: 'https://github.com/vydimitrov/react-countdown-circle-timer',
+    },
+    screenName: 'CircleTimeScreen',
+  },
 ];
 export default menuData;

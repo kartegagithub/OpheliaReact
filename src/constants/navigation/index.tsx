@@ -57,6 +57,7 @@ import FiestaScreen from '../../screens/FiestaScreen';
 import ImageZoomScreen from '../../screens/ImageZoomScreen';
 import StepIndicatorScreen from '../../screens/StepIndicatorScreen';
 import AnimateNumberScreen from '../../screens/AnimateNumberScreen';
+import CircleTimeScreen from '../../screens/CircleTimeScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -446,6 +447,13 @@ function Navigation() {
           component={AnimateNumberScreen}
           options={{
             title: 'Animate Number Detail',
+          }}
+        />
+        <Stack.Screen
+          name="CircleTimeScreen"
+          component={CircleTimeScreen}
+          options={{
+            title: 'Circle Time Detail',
           }}
         />
       </Stack.Navigator>
