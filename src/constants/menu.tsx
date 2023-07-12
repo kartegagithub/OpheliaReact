@@ -1235,7 +1235,7 @@ const menuData = [
     usageDescription: {
       codes: [
         `
-        <CustomFiesta type="stars" />
+        <CustomImageZoom uri={'https://picsum.photos/1000/1000'} />
           `,
       ],
       description: 'https://github.com/ascoders/react-native-image-viewer',
@@ -1261,6 +1261,23 @@ const menuData = [
       description: 'https://github.com/24ark/react-native-step-indicator',
     },
     screenName: 'StepIndicatorScreen',
+  },
+  {
+    id: 55,
+    title: 'Animate Number',
+    package: 'react-native-animated-numbers',
+    description: 'Animasyonlu sayı değişimi için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        const [number, setNumber] = useState(1);
+        <CustomAnimateNumber number={number} />
+          `,
+      ],
+      description: 'https://github.com/heyman333/react-native-animated-numbers',
+    },
+    screenName: 'AnimateNumberScreen',
   },
 ];
 export default menuData;

@@ -56,6 +56,7 @@ import AnimationCardScreen from '../../screens/AnimationCardScreen';
 import FiestaScreen from '../../screens/FiestaScreen';
 import ImageZoomScreen from '../../screens/ImageZoomScreen';
 import StepIndicatorScreen from '../../screens/StepIndicatorScreen';
+import AnimateNumberScreen from '../../screens/AnimateNumberScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -438,6 +439,13 @@ function Navigation() {
           component={StepIndicatorScreen}
           options={{
             title: 'Step Indicator Detail',
+          }}
+        />
+        <Stack.Screen
+          name="AnimateNumberScreen"
+          component={AnimateNumberScreen}
+          options={{
+            title: 'Animate Number Detail',
           }}
         />
       </Stack.Navigator>
