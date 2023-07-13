@@ -1295,5 +1295,52 @@ const menuData = [
     },
     screenName: 'CircleTimeScreen',
   },
+  {
+    id: 57,
+    title: 'Wheel Picker',
+    package: 'rreact-native-picky',
+    description: 'Wheel picker için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        const data = [
+          {
+            selected: 3,
+            items: [
+              {
+                label: 'Pazartesi',
+                value: 1,
+              },
+              {
+                label: 'Salı',
+                value: 2,
+              },
+            ],
+          },
+          {
+            selected: 1,
+            items: [
+              {
+                label: 'Ocak',
+                value: 1,
+              },
+              {
+                label: 'Şubat',
+                value: 2,
+              },
+            ],
+          },
+        ];
+        const onChange = val => {
+          alert(JSON.stringify(val));
+        };
+        <CustomWheelPicker data={data} onChange={onChange} />
+          `,
+      ],
+      description: 'https://github.com/Liamandrew/react-native-picky',
+    },
+    screenName: 'WheelPickerScreen',
+  },
 ];
 export default menuData;

@@ -58,6 +58,7 @@ import ImageZoomScreen from '../../screens/ImageZoomScreen';
 import StepIndicatorScreen from '../../screens/StepIndicatorScreen';
 import AnimateNumberScreen from '../../screens/AnimateNumberScreen';
 import CircleTimeScreen from '../../screens/CircleTimeScreen';
+import WheelPickerScreen from '../../screens/WheelPickerScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -454,6 +455,13 @@ function Navigation() {
           component={CircleTimeScreen}
           options={{
             title: 'Circle Time Detail',
+          }}
+        />
+        <Stack.Screen
+          name="WheelPickerScreen"
+          component={WheelPickerScreen}
+          options={{
+            title: 'Wheel Picker Detail',
           }}
         />
       </Stack.Navigator>
