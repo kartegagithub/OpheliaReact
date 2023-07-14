@@ -60,6 +60,7 @@ import AnimateNumberScreen from '../../screens/AnimateNumberScreen';
 import CircleTimeScreen from '../../screens/CircleTimeScreen';
 import WheelPickerScreen from '../../screens/WheelPickerScreen';
 import TooltipScreen from '../../screens/TooltipScreen';
+import DraggableGridScreen from '../../screens/DraggableGridScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -470,6 +471,13 @@ function Navigation() {
           component={TooltipScreen}
           options={{
             title: 'Tooltip Detail',
+          }}
+        />
+        <Stack.Screen
+          name="DraggableGridScreen"
+          component={DraggableGridScreen}
+          options={{
+            title: 'Draggable Flatlist Detail',
           }}
         />
       </Stack.Navigator>

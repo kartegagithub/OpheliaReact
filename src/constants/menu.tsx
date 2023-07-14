@@ -1360,5 +1360,25 @@ const menuData = [
     },
     screenName: 'TooltipScreen',
   },
+  {
+    id: 59,
+    title: 'Draggable Grid',
+    package: 'react-native-draggable-grid',
+    description: 'Sürüklenebilir grid elemanları için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+       <DraggableGrid
+          numColumns={4}
+          renderItem={renderItem}
+          data={data}
+    />
+          `,
+      ],
+      description: 'https://github.com/SHISME/react-native-draggable-grid',
+    },
+    screenName: 'DraggableGridScreen',
+  },
 ];
 export default menuData;
