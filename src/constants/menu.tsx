@@ -1342,5 +1342,21 @@ const menuData = [
     },
     screenName: 'WheelPickerScreen',
   },
+  {
+    id: 58,
+    title: 'Shine Button',
+    package: 'react-native-shine-button',
+    description: 'Shine efekti butonlar veya ikonlar için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomCircleTime duration={15} />
+          `,
+      ],
+      description: 'https://github.com/prscX/react-native-shine-button',
+    },
+    screenName: 'ShineButtonScreen',
+  },
 ];
 export default menuData;

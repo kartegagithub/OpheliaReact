@@ -7004,6 +7004,11 @@
   dependencies:
     "colord" "2.9.2"
 
+"react-native-shine-button@^2.0.0":
+  "integrity" "sha512-ymfpzfyT5IG1ntIP1poHyV8fzivz62XalCPfsWAg+2j4bI2C6JLqfCInV8PGA5p361cDQGK5deVXnh4lDUrFpw=="
+  "resolved" "https://registry.npmjs.org/react-native-shine-button/-/react-native-shine-button-2.0.0.tgz"
+  "version" "2.0.0"
+
 "react-native-size-scaling@^0.5.1":
   "integrity" "sha512-OVRox11fjpwUR7DQIPH/4RAhwkqm/r7lKYl5w0dEogFZ3Rz9CK7Bua7oaPLmVP2QnWP0rc0bpgkMc/Rl8ik1yw=="
   "resolved" "https://registry.npmjs.org/react-native-size-scaling/-/react-native-size-scaling-0.5.1.tgz"
