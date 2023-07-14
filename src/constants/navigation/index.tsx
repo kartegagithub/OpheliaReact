@@ -59,7 +59,7 @@ import StepIndicatorScreen from '../../screens/StepIndicatorScreen';
 import AnimateNumberScreen from '../../screens/AnimateNumberScreen';
 import CircleTimeScreen from '../../screens/CircleTimeScreen';
 import WheelPickerScreen from '../../screens/WheelPickerScreen';
-import ShineButtonScreen from '../../screens/ShineButtonScreen';
+import TooltipScreen from '../../screens/TooltipScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -466,10 +466,10 @@ function Navigation() {
           }}
         />
         <Stack.Screen
-          name="ShineButtonScreen"
-          component={ShineButtonScreen}
+          name="TooltipScreen"
+          component={TooltipScreen}
           options={{
-            title: 'Shine Button Detail',
+            title: 'Tooltip Detail',
           }}
         />
       </Stack.Navigator>

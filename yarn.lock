@@ -6627,6 +6627,14 @@
     "shell-quote" "^1.6.1"
     "ws" "^7"
 
+"react-dom@^16.8 || ^17.0 || ^18.0":
+  "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
+  "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
+  "version" "18.2.0"
+  dependencies:
+    "loose-envify" "^1.1.0"
+    "scheduler" "^0.23.0"
+
 "react-freeze@^1.0.0":
   "integrity" "sha512-ZnXwLQnGzrDpHBHiC56TXFXvmolPeMjTn1UOm610M4EXGzbEDR7oOIyS2ZiItgbs6eZc4oU/a0hpk8PrcKvv5g=="
   "resolved" "https://registry.npmjs.org/react-freeze/-/react-freeze-1.0.3.tgz"
@@ -7003,11 +7011,6 @@
   "version" "7.0.8"
   dependencies:
     "colord" "2.9.2"
-
-"react-native-shine-button@^2.0.0":
-  "integrity" "sha512-ymfpzfyT5IG1ntIP1poHyV8fzivz62XalCPfsWAg+2j4bI2C6JLqfCInV8PGA5p361cDQGK5deVXnh4lDUrFpw=="
-  "resolved" "https://registry.npmjs.org/react-native-shine-button/-/react-native-shine-button-2.0.0.tgz"
-  "version" "2.0.0"
 
 "react-native-size-scaling@^0.5.1":
   "integrity" "sha512-OVRox11fjpwUR7DQIPH/4RAhwkqm/r7lKYl5w0dEogFZ3Rz9CK7Bua7oaPLmVP2QnWP0rc0bpgkMc/Rl8ik1yw=="
@@ -7449,6 +7452,13 @@
   "integrity" "sha512-EmVeLT8zDcTPilQZ2OHO/IiYUy2gApKGgbshDZBX0C4qxsn0cFATwgwOwyz8O7Vwg1Hul97Ci95hu7d6Js6XMQ=="
   "resolved" "https://registry.npmjs.org/rn-placeholder/-/rn-placeholder-3.0.3.tgz"
   "version" "3.0.3"
+
+"rn-tooltip@^3.0.3":
+  "integrity" "sha512-GWL4TCCPLu06CY/0aOYOx7GSbmwWZok9fYxrOcfE0OD3Z5hCY8lCJme0ivQj8ZnTk3IJyDAedc3fFH1I/J3NrQ=="
+  "resolved" "https://registry.npmjs.org/rn-tooltip/-/rn-tooltip-3.0.3.tgz"
+  "version" "3.0.3"
+  dependencies:
+    "deprecated-react-native-prop-types" "^2.3.0"
 
 "run-parallel@^1.1.9":
   "integrity" "sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA=="

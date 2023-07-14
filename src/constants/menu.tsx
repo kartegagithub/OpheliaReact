@@ -1344,19 +1344,21 @@ const menuData = [
   },
   {
     id: 58,
-    title: 'Shine Button',
-    package: 'react-native-shine-button',
-    description: 'Shine efekti butonlar veya ikonlar için kullanılabilir.',
+    title: 'Tooltip',
+    package: 'rn-tooltip',
+    description: 'Tooltip için kullanılabilir.',
     installDescription: '',
     usageDescription: {
       codes: [
         `
-        <CustomCircleTime duration={15} />
+        <CustomTooltip renderPopover={renderPopover} width={120} height={120}>
+              <CustomText>Tooltip Göster</CustomText>
+        </CustomTooltip>
           `,
       ],
-      description: 'https://github.com/prscX/react-native-shine-button',
+      description: 'https://github.com/AndreiCalazans/rn-tooltip',
     },
-    screenName: 'ShineButtonScreen',
+    screenName: 'TooltipScreen',
   },
 ];
 export default menuData;
