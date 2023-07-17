@@ -1380,5 +1380,32 @@ const menuData = [
     },
     screenName: 'DraggableGridScreen',
   },
+  {
+    id: 60,
+    title: 'Popup UI',
+    package: 'popup-ui',
+    description: 'Güzel popup ui işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        showPopupUI({
+          type: 's',
+          callbackHide: true,
+          title: 'Test',
+          text: 'Test Mesajımdır',
+          button: true,
+        });
+        showToastUI({
+          type: 's',
+          title: 'Test',
+          text: 'Test Mesajımdır',
+        });
+          `,
+      ],
+      description: 'https://github.com/RafaelAugustoS/react-native-popup-ui',
+    },
+    screenName: 'PopupUIScreen',
+  },
 ];
 export default menuData;

@@ -61,6 +61,7 @@ import CircleTimeScreen from '../../screens/CircleTimeScreen';
 import WheelPickerScreen from '../../screens/WheelPickerScreen';
 import TooltipScreen from '../../screens/TooltipScreen';
 import DraggableGridScreen from '../../screens/DraggableGridScreen';
+import PopupUIScreen from '../../screens/PopupUIScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -478,6 +479,13 @@ function Navigation() {
           component={DraggableGridScreen}
           options={{
             title: 'Draggable Flatlist Detail',
+          }}
+        />
+        <Stack.Screen
+          name="PopupUIScreen"
+          component={PopupUIScreen}
+          options={{
+            title: 'Popup UI Detail',
           }}
         />
       </Stack.Navigator>
