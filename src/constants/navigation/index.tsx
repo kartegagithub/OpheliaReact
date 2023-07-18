@@ -62,6 +62,7 @@ import WheelPickerScreen from '../../screens/WheelPickerScreen';
 import TooltipScreen from '../../screens/TooltipScreen';
 import DraggableGridScreen from '../../screens/DraggableGridScreen';
 import PopupUIScreen from '../../screens/PopupUIScreen';
+import SegmentedControlScreen from '../../screens/SegmentedControlScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -488,6 +489,13 @@ function Navigation() {
             title: 'Popup UI Detail',
           }}
         />
+        <Stack.Screen
+        name="SegmentedControlScreen"
+        component={SegmentedControlScreen}
+        options={{
+          title: 'Segmented Control Detail',
+        }}
+      />
       </Stack.Navigator>
     </NavigationContainer>
   );

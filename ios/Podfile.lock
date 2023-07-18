@@ -366,6 +366,8 @@ PODS:
     - RCTTypeSafety
     - React-Core
     - ReactCommon/turbomodule/core
+  - react-native-segmented-control (2.4.2):
+    - React-Core
   - react-native-skia (0.1.197):
     - React
     - React-callinvoker
@@ -579,6 +581,7 @@ DEPENDENCIES:
   - react-native-picky (from `../node_modules/react-native-picky`)
   - react-native-render-html (from `../node_modules/react-native-render-html`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
+  - "react-native-segmented-control (from `../node_modules/@react-native-segmented-control/segmented-control`)"
   - "react-native-skia (from `../node_modules/@shopify/react-native-skia`)"
   - react-native-video (from `../node_modules/react-native-video`)
   - react-native-webview (from `../node_modules/react-native-webview`)
@@ -692,6 +695,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-render-html"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
+  react-native-segmented-control:
+    :path: "../node_modules/@react-native-segmented-control/segmented-control"
   react-native-skia:
     :path: "../node_modules/@shopify/react-native-skia"
   react-native-video:
@@ -794,6 +799,7 @@ SPEC CHECKSUMS:
   react-native-picky: 534ec27b70a3bda7983cf34cfbfdb51ce1237a3a
   react-native-render-html: 984dfe2294163d04bf5fe25d7c9f122e60e05ebe
   react-native-safe-area-context: 39c2d8be3328df5d437ac1700f4f3a4f75716acc
+  react-native-segmented-control: 2221962f5073e2e809aa3691e8e410fc10b60578
   react-native-skia: e2cb3443442bf7680e3276dc82cd87c97f96b6f9
   react-native-video: c26780b224543c62d5e1b2a7244a5cd1b50e8253
   react-native-webview: 203b6a1c7507737f777c91d7e10c30e7e67c1a17

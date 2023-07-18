@@ -1407,5 +1407,24 @@ const menuData = [
     },
     screenName: 'PopupUIScreen',
   },
+  {
+    id: 61,
+    title: 'Segmented Control',
+    package: 'react-native-resegmented-control',
+    description: 'Segment tarzı kontrol için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomSegmentedControl
+          onChange={onChange}
+          values={['Profil', 'Ayarlar', 'Hakkında']}
+        />
+        `,
+      ],
+      description: 'https://github.com/richardvclam/react-native-resegmented-control',
+    },
+    screenName: 'SegmentedControlScreen',
+  },
 ];
 export default menuData;
