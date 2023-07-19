@@ -63,6 +63,7 @@ import TooltipScreen from '../../screens/TooltipScreen';
 import DraggableGridScreen from '../../screens/DraggableGridScreen';
 import PopupUIScreen from '../../screens/PopupUIScreen';
 import SegmentedControlScreen from '../../screens/SegmentedControlScreen';
+import StaggerViewScreen from '../../screens/StaggerViewScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -490,12 +491,19 @@ function Navigation() {
           }}
         />
         <Stack.Screen
-        name="SegmentedControlScreen"
-        component={SegmentedControlScreen}
-        options={{
-          title: 'Segmented Control Detail',
-        }}
-      />
+          name="SegmentedControlScreen"
+          component={SegmentedControlScreen}
+          options={{
+            title: 'Segmented Control Detail',
+          }}
+        />
+        <Stack.Screen
+          name="StaggerViewScreen"
+          component={StaggerViewScreen}
+          options={{
+            title: 'Stagger View Detail',
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

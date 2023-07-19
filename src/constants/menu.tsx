@@ -1426,5 +1426,24 @@ const menuData = [
     },
     screenName: 'SegmentedControlScreen',
   },
+  {
+    id: 62,
+    title: 'Stagger View',
+    package: '@mindinventory/react-native-stagger-view',
+    description: 'Stagger View gösterimi için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        const data = Array.from({length: 25}, (_, i) => {
+          return {url: 'https://picsum.photos/id/' + (i + 21 * 2) + '/1000/1000'};
+        });
+        <CustomStaggerView data={data} />
+        `,
+      ],
+      description: 'https://github.com/Mindinventory/react-native-stagger-view',
+    },
+    screenName: 'StaggerViewScreen',
+  },
 ];
 export default menuData;
