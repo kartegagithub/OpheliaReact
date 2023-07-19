@@ -1445,5 +1445,45 @@ const menuData = [
     },
     screenName: 'StaggerViewScreen',
   },
+  {
+    id: 63,
+    title: 'Onboard Swiper',
+    package: 'react-native-onboarding-swiper',
+    description: 'App tutorial slider onboard için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        const pages = [
+          {
+            backgroundColor: defaultColor.darkColor,
+            image: (
+              <CustomImage source={{uri: 'https://picsum.photos/id/237/200/300'}} />
+            ),
+            title: 'Onları Seviyoruz!!!',
+            subtitle: 'Hayvanları çok seviyoruz!',
+          },
+          {
+            backgroundColor: defaultColor.middleColor,
+            image: (
+              <CustomImage source={{uri: 'https://picsum.photos/id/11/200/300'}} />
+            ),
+            title: 'Doğaya Aşığız!',
+            subtitle: 'Doğa hayatımızın kaynağı!',
+          },
+        ];
+        const onSkip = () => {
+          alert('skip');
+        };
+        const onDone = () => {
+          alert('Done finish');
+        };
+        CustomOnboardingSwiper pages={pages} onSkip={onSkip} onDone={onDone} />
+        `,
+      ],
+      description: 'https://github.com/jfilter/react-native-onboarding-swiper',
+    },
+    screenName: 'OnboardSwiperScreen',
+  },
 ];
 export default menuData;

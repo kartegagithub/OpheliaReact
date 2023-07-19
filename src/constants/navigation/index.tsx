@@ -64,6 +64,7 @@ import DraggableGridScreen from '../../screens/DraggableGridScreen';
 import PopupUIScreen from '../../screens/PopupUIScreen';
 import SegmentedControlScreen from '../../screens/SegmentedControlScreen';
 import StaggerViewScreen from '../../screens/StaggerViewScreen';
+import OnboardSwiperScreen from '../../screens/OnboardSwiperScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -502,6 +503,13 @@ function Navigation() {
           component={StaggerViewScreen}
           options={{
             title: 'Stagger View Detail',
+          }}
+        />
+        <Stack.Screen
+          name="OnboardSwiperScreen"
+          component={OnboardSwiperScreen}
+          options={{
+            title: 'Onboard Swiper Detail',
           }}
         />
       </Stack.Navigator>
