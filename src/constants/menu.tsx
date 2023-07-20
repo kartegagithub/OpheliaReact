@@ -1485,5 +1485,35 @@ const menuData = [
     },
     screenName: 'OnboardSwiperScreen',
   },
+  {
+    id: 64,
+    title: 'System Settings',
+    package: 'react-native-system-setting',
+    description: 'Sistem ayarlarını öğrenmek ve değiştirmek için kullanılabilir.',
+    installDescription: `androidmanifest ekle;
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    `,
+    usageDescription: {
+      codes: [
+        `
+        const [deviceData, setDeviceData] = useState({});
+        setDeviceData({
+          bluetoothStatus: await bluetoothStatus(),
+          wifiStatus: await wifiStatus(),
+          locationStatus: await locationStatus(),
+          airplaneStatus: await airplaneStatus(),
+          volume: await getVolume(),
+          brightness: await getBrightness(),
+        });
+        `,
+      ],
+      description: 'https://github.com/jfilter/react-native-onboarding-swiper',
+    },
+    screenName: 'SystemSettingsScreen',
+  },
 ];
 export default menuData;

@@ -65,6 +65,7 @@ import PopupUIScreen from '../../screens/PopupUIScreen';
 import SegmentedControlScreen from '../../screens/SegmentedControlScreen';
 import StaggerViewScreen from '../../screens/StaggerViewScreen';
 import OnboardSwiperScreen from '../../screens/OnboardSwiperScreen';
+import SystemSettingsScreen from '../../screens/SystemSettingsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -510,6 +511,13 @@ function Navigation() {
           component={OnboardSwiperScreen}
           options={{
             title: 'Onboard Swiper Detail',
+          }}
+        />
+        <Stack.Screen
+          name="SystemSettingsScreen"
+          component={SystemSettingsScreen}
+          options={{
+            title: 'System Setting Detail',
           }}
         />
       </Stack.Navigator>
