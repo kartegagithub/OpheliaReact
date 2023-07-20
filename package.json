@@ -105,6 +105,7 @@
     "react-native-snap-carousel": "^3.9.1",
     "react-native-statusbar-alert": "^0.4.0",
     "react-native-step-indicator": "^1.0.3",
+    "react-native-styled-text": "^2.0.0",
     "react-native-svg": "^13.9.0",
     "react-native-swipe-list-view": "^3.2.9",
     "react-native-switch-toggle": "^2.2.1",

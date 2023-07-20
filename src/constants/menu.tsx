@@ -1515,5 +1515,33 @@ const menuData = [
     },
     screenName: 'SystemSettingsScreen',
   },
+  {
+    id: 65,
+    title: 'Styled Text',
+    package: 'react-native-styled-text',
+    description: 'Styled text için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomStyledText
+          textStyles={{
+            demo: {
+              backgroundColor: 'yellow',
+            },
+          }}
+          styles={{
+            backgroundColor: 'red',
+          }}>
+          {
+            'Welcome to <b><u>React Native</u> <demo><i>Styled</i> Text</demo></b> demo!'
+          }
+        </CustomStyledText>
+        `,
+      ],
+      description: 'https://github.com/fram-x/react-native-styled-text',
+    },
+    screenName: 'StyledTextScreen',
+  },
 ];
 export default menuData;

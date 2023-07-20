@@ -66,6 +66,7 @@ import SegmentedControlScreen from '../../screens/SegmentedControlScreen';
 import StaggerViewScreen from '../../screens/StaggerViewScreen';
 import OnboardSwiperScreen from '../../screens/OnboardSwiperScreen';
 import SystemSettingsScreen from '../../screens/SystemSettingsScreen';
+import StyledTextScreen from '../../screens/StyledTextScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -518,6 +519,13 @@ function Navigation() {
           component={SystemSettingsScreen}
           options={{
             title: 'System Setting Detail',
+          }}
+        />
+        <Stack.Screen
+          name="StyledTextScreen"
+          component={StyledTextScreen}
+          options={{
+            title: 'Styled Text Detail',
           }}
         />
       </Stack.Navigator>
