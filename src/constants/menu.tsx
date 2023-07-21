@@ -1543,5 +1543,33 @@ const menuData = [
     },
     screenName: 'StyledTextScreen',
   },
+  {
+    id: 66,
+    title: 'Parsed Text',
+    package: 'react-native-parsed-text',
+    description: 'Text içerisinde mail, mention vs. yakalama işlemleri için kullanılabilir.',
+    installDescription: '',
+    usageDescription: {
+      codes: [
+        `
+        <CustomStyledText
+          textStyles={{
+            demo: {
+              backgroundColor: 'yellow',
+            },
+          }}
+          styles={{
+            backgroundColor: 'red',
+          }}>
+          {
+            'Welcome to <b><u>React Native</u> <demo><i>Styled</i> Text</demo></b> demo!'
+          }
+        </CustomStyledText>
+        `,
+      ],
+      description: 'hhttps://github.com/taskrabbit/react-native-parsed-text',
+    },
+    screenName: 'ParsedTextScreen',
+  },
 ];
 export default menuData;
