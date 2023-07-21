@@ -1552,19 +1552,14 @@ const menuData = [
     usageDescription: {
       codes: [
         `
-        <CustomStyledText
-          textStyles={{
-            demo: {
-              backgroundColor: 'yellow',
-            },
-          }}
-          styles={{
-            backgroundColor: 'red',
-          }}>
-          {
-            'Welcome to <b><u>React Native</u> <demo><i>Styled</i> Text</demo></b> demo!'
-          }
-        </CustomStyledText>
+        <CustomParsedText>
+        Hello this is an example of the ParsedText, links like
+        http://www.google.com or http://www.facebook.com are clickable and
+        phone number 444-555-6666 can call too. But you can also do more
+        with this package, for example Bob will change style and David
+        too. foo@gmail.com And the magic number is 42! #react
+        #react-native
+      </CustomParsedText>
         `,
       ],
       description: 'hhttps://github.com/taskrabbit/react-native-parsed-text',
