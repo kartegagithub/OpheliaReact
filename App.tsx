@@ -3,7 +3,7 @@ import 'react-native-gesture-handler';
 import {Provider} from 'react-redux';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import store from './src/store';
-import Navigation from './src/constants/navigation';
+import Navigation from './src/constants/navigation/navigation';
 
 function App(): JSX.Element {
   return (
