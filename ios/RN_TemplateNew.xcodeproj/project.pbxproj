@@ -14,6 +14,7 @@
 		50339E81C4377D894E3E1697 /* libPods-RN_TemplateNew.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0B3B1761D1E4D0F725439C /* libPods-RN_TemplateNew.a */; };
 		7FC0484AD5848FAF5B057487 /* libPods-RN_TemplateNew-RN_TemplateNewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 309BF2814546CB261452C9C3 /* libPods-RN_TemplateNew-RN_TemplateNewTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		92EF50CB1E3AB08F0115BA79 /* libPods-RN_TemplateNew.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB80BABFF3E04287CDC5CDAE /* libPods-RN_TemplateNew.a */; };
 		F65EC6D92A14F9F000C6B8DB /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F65EC6C92A14F9EA00C6B8DB /* MaterialIcons.ttf */; };
 		F65EC6DA2A14F9F000C6B8DB /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F65EC6CA2A14F9EB00C6B8DB /* EvilIcons.ttf */; };
 		F65EC6DB2A14F9F000C6B8DB /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F65EC6CB2A14F9EB00C6B8DB /* Octicons.ttf */; };
