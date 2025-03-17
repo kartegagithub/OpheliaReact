@@ -1,6 +1,6 @@
 import * as React from 'react';
 import style from './style';
-import StatusBarAlert from 'react-native-statusbar-alert';
+// import StatusBarAlert from 'react-native-statusbar-alert';
 
 const StatusbarAlertContext = React.createContext();
 export function useStatusBarAlert() {
@@ -25,22 +25,23 @@ export const CustomStatusbarAlert = ({type, children, ...props}) => {
     return 'blue';
   };
   return (
-    <StatusbarAlertContext.Provider
-      value={{show, setShow, setting, setSetting}}>
-      <StatusBarAlert
-        visible={show}
-        message={setting?.message}
-        backgroundColor="#3CC29E"
-        color="white"
-        useNativeDriver={false}
-        pulse="background"
-        style={{
-          backgroundColor: getType(setting?.type),
-        }}
-        statusbarHeight={52}
-        {...props}
-      />
-      {children}
-    </StatusbarAlertContext.Provider>
+    <>{children}</>
+    // <StatusbarAlertContext.Provider
+    //   value={{show, setShow, setting, setSetting}}>
+    //   <StatusBarAlert
+    //     visible={show}
+    //     message={setting?.message}
+    //     backgroundColor="#3CC29E"
+    //     color="white"
+    //     useNativeDriver={false}
+    //     pulse="background"
+    //     style={{
+    //       backgroundColor: getType(setting?.type),
+    //     }}
+    //     statusbarHeight={52}
+    //     {...props}
+    //   />
+    //   {children}
+    // </StatusbarAlertContext.Provider>
   );
 };

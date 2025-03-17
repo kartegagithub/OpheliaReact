@@ -2,7 +2,7 @@ import React from 'react';
 import Container from '../shared/fragment/container';
 import Content from '../shared/fragment/content';
 import Padding from '../shared/fragment/padding';
-import {View} from 'react-native';
+import {Text, View} from 'react-native';
 import CustomWheelPicker from '../components/customWheelPicker';
 
 function WheelPickerScreen() {
@@ -78,17 +78,18 @@ function WheelPickerScreen() {
     alert(JSON.stringify(val));
   };
   return (
-    <Container>
-      <Content>
-        <View>
-          <Padding />
-          <View>
-            <CustomWheelPicker data={data} onChange={onChange} />
-          </View>
-          <Padding />
-        </View>
-      </Content>
-    </Container>
+    <></>
+    // <Container>
+    //   <Content>
+    //     <View>
+    //       <Padding />
+    //       <View>
+    //         <CustomWheelPicker data={data} onChange={onChange} />
+    //       </View>
+    //       <Padding />
+    //     </View>
+    //   </Content>
+    // </Container>
   );
 }
 export default WheelPickerScreen;

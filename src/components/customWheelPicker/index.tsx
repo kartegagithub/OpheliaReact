@@ -1,12 +1,12 @@
 import * as React from 'react';
 import style from './style';
 import {View} from 'react-native';
-import {Picker, PickerColumn, PickerItem} from 'react-native-picky';
+// import {Picker, PickerColumn, PickerItem} from 'react-native-picky';
 
 const CustomWheelPicker = ({data = [], onChange, ...props}) => {
   return (
     <View style={{flex: 1}}>
-      <Picker>
+      {/* <Picker>
         {data?.map((v, i) => {
           return (
             <PickerColumn
@@ -19,7 +19,7 @@ const CustomWheelPicker = ({data = [], onChange, ...props}) => {
             </PickerColumn>
           );
         })}
-      </Picker>
+      </Picker> */}
     </View>
   );
 };

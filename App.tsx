@@ -10,9 +10,10 @@ import FlashMessage from 'react-native-flash-message';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {CustomStatusbarAlert} from './src/components/customStatusbarAlert';
 import {createNotifications} from 'react-native-notificated';
-import { Root } from 'popup-ui';
+import {Root} from 'popup-ui';
 
 LogBox.ignoreLogs(['Animated: `useNativeDriver` was not specified.']);
+LogBox.ignoreAllLogs();
 
 function App(): JSX.Element {
   const {NotificationsProvider} = createNotifications({

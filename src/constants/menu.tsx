@@ -1422,7 +1422,8 @@ const menuData = [
         />
         `,
       ],
-      description: 'https://github.com/richardvclam/react-native-resegmented-control',
+      description:
+        'https://github.com/richardvclam/react-native-resegmented-control',
     },
     screenName: 'SegmentedControlScreen',
   },
@@ -1489,7 +1490,8 @@ const menuData = [
     id: 64,
     title: 'System Settings',
     package: 'react-native-system-setting',
-    description: 'Sistem ayarlarını öğrenmek ve değiştirmek için kullanılabilir.',
+    description:
+      'Sistem ayarlarını öğrenmek ve değiştirmek için kullanılabilir.',
     installDescription: `androidmanifest ekle;
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
@@ -1547,7 +1549,8 @@ const menuData = [
     id: 66,
     title: 'Parsed Text',
     package: 'react-native-parsed-text',
-    description: 'Text içerisinde mail, mention vs. yakalama işlemleri için kullanılabilir.',
+    description:
+      'Text içerisinde mail, mention vs. yakalama işlemleri için kullanılabilir.',
     installDescription: '',
     usageDescription: {
       codes: [
