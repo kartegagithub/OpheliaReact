@@ -15,7 +15,7 @@ import {Root} from 'popup-ui';
 LogBox.ignoreLogs(['Animated: `useNativeDriver` was not specified.']);
 LogBox.ignoreAllLogs();
 
-function App(): JSX.Element {
+function App(): React.JSX.Element {
   const {NotificationsProvider} = createNotifications({
     notificationPosition: 'center',
   });

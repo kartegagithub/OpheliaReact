@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Popup, Toast} from 'popup-ui';
+// import {Popup, Toast} from 'popup-ui';
 const getType = t => {
   if (t == 's') {
     return 'Success';
@@ -31,29 +31,29 @@ const showPopupUI = ({
   onCallback,
   ...props
 }) => {
-  Popup.show({
-    type: getType(type),
-    title,
-    button: false,
-    textBody: text,
-    buttonText: buttonText || 'Tamam',
-    callback: () => {
-      if (callbackHide) {
-        Popup.hide();
-        onCallback?.();
-      }
-    },
-    ...props,
-  });
+  // Popup.show({
+  //   type: getType(type),
+  //   title,
+  //   button: false,
+  //   textBody: text,
+  //   buttonText: buttonText || 'Tamam',
+  //   callback: () => {
+  //     if (callbackHide) {
+  //       Popup.hide();
+  //       onCallback?.();
+  //     }
+  //   },
+  //   ...props,
+  // });
 };
 
 const showToastUI = ({type, title, text, color, timing, ...props}) => {
-  Toast.show({
-    title,
-    text,
-    color: getTypeCode(type) || '#2ecc71',
-    timing: timing || 3000,
-  });
+  // Toast.show({
+  //   title,
+  //   text,
+  //   color: getTypeCode(type) || '#2ecc71',
+  //   timing: timing || 3000,
+  // });
 };
 
 export {showPopupUI, showToastUI};
