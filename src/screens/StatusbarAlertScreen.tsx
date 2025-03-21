@@ -6,28 +6,28 @@ import Container from '../shared/fragment/container';
 import Padding from '../shared/fragment/padding';
 
 function StatusbarAlertScreen() {
-  const {show, setShow, setSetting} = useStatusBarAlert();
+  // const {show, setShow, setSetting} = useStatusBarAlert();
 
-  const showHide = () => {
-    setShow(!show);
-  };
-  const showErrorMessage = () => {
-    setSetting({
-      type: 'success',
-      message: 'Sessiz Mod Kapatıldı',
-    });
-    setShow(!show);
-  };
+  // const showHide = () => {
+  //   setShow(!show);
+  // };
+  // const showErrorMessage = () => {
+  //   setSetting({
+  //     type: 'success',
+  //     message: 'Sessiz Mod Kapatıldı',
+  //   });
+  //   setShow(!show);
+  // };
   return (
     <Container>
-      <Padding />
+      {/* <Padding />
       <CustomButton onPress={showHide}>
         <CustomText color="white">Göster/Gizle</CustomText>
       </CustomButton>
       <Padding />
       <CustomButton onPress={showErrorMessage}>
         <CustomText color="white">Göster/Gizle With Message</CustomText>
-      </CustomButton>
+      </CustomButton> */}
     </Container>
   );
 }

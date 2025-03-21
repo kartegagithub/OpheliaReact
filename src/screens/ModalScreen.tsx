@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Container from '../shared/fragment/container';
 import Content from '../shared/fragment/content';
-import CustomModal from '../components/customModal';
+// import CustomModal from '../components/customModal';
 import {Button, View} from 'react-native';
 import defaultColor from '../constants/style/defaultColor';
 
@@ -31,12 +31,12 @@ function ModalScreen() {
             title="Show modal"
             onPress={toggleModal}
           />
-          <CustomModal
+          {/* <CustomModal
             isModalVisible={isModalVisible}
             buttonText="Helloo"
             toggleModal={toggleModal}
             titleContentModal={'Hide Modal'}
-          />
+          /> */}
         </View>
         <View style={{marginTop: 10}}>
           <Button
@@ -44,13 +44,13 @@ function ModalScreen() {
             title="Sloow modal"
             onPress={toggleSloowModal}
           />
-          <CustomModal
+          {/* <CustomModal
             animationInTiming={4000}
             isModalVisible={isSloowModalVisible}
             buttonText="Helloo"
             toggleModal={toggleSloowModal}
             titleContentModal={'Hide Modal'}
-          />
+          /> */}
         </View>
         <View style={{marginTop: 10}}>
           <Button
@@ -58,7 +58,7 @@ function ModalScreen() {
             title="Animation modal"
             onPress={toggleAnimationModal}
           />
-          <CustomModal
+          {/* <CustomModal
             swipeDirection={'left'}
             deviceHeight={1000}
             hasBackdrop={true}
@@ -73,7 +73,7 @@ function ModalScreen() {
             buttonText="Helloo"
             toggleModal={toggleAnimationModal}
             titleContentModal={'Hide Modal'}
-          />
+          /> */}
         </View>
       </Content>
     </Container>
