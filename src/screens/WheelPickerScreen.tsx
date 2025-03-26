@@ -78,18 +78,17 @@ function WheelPickerScreen() {
     alert(JSON.stringify(val));
   };
   return (
-    <></>
-    // <Container>
-    //   <Content>
-    //     <View>
-    //       <Padding />
-    //       <View>
-    //         <CustomWheelPicker data={data} onChange={onChange} />
-    //       </View>
-    //       <Padding />
-    //     </View>
-    //   </Content>
-    // </Container>
+    <Container>
+      <Content>
+        <View>
+          <Padding />
+          <View>
+            <CustomWheelPicker data={data} onChange={onChange} />
+          </View>
+          <Padding />
+        </View>
+      </Content>
+    </Container>
   );
 }
 export default WheelPickerScreen;
