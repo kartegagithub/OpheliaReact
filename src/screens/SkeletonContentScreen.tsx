@@ -6,48 +6,13 @@ import {View} from 'react-native';
 import CustomSkeleton from '../components/customSkeleton';
 
 function SkeletonContentScreen() {
-  const placeholderData = [
-    {
-      height: 10,
-      width: 100,
-      noMargin: false,
-      style: {},
-    },
-    {
-      height: 10,
-      width: 60,
-      noMargin: false,
-      style: {},
-    },
-    {
-      height: 10,
-      width: 35,
-      noMargin: false,
-      style: {},
-    },
-    {
-      height: 10,
-      width: 100,
-      color: '#000',
-      noMargin: false,
-      style: {},
-    },
-  ];
   return (
     <Container>
       <Content>
         <View>
           <Padding />
           <View>
-            <CustomSkeleton data={placeholderData} leftMedia={true} />
-          </View>
-          <Padding />
-          <View>
-            <CustomSkeleton
-              data={placeholderData}
-              leftMedia={true}
-              rightMedia={true}
-            />
+            <CustomSkeleton />
           </View>
           <Padding />
         </View>
