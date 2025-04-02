@@ -2,7 +2,7 @@ import * as React from 'react';
 import style from './style';
 import {Image, TouchableOpacity, View} from 'react-native';
 import CustomText from '../customText';
-import Carousel, {Pagination} from 'react-native-snap-carousel';
+// import Carousel, {Pagination} from 'react-native-snap-carousel';
 import {wp} from '../../shared/helpers/veriables';
 import CustomIcon from '../customIcon';
 
@@ -41,7 +41,7 @@ const CustomCarousel = ({
       style={{
         width: width || wp(100),
       }}>
-      <Carousel
+      {/* <Carousel
         ref={carouselRef}
         data={items || []}
         renderItem={render || _renderItem}
@@ -52,7 +52,7 @@ const CustomCarousel = ({
           props?.onSnapToItem?.(index);
           setActiveSlide(index);
         }}
-      />
+      /> */}
       {showArrow && (
         <>
           <TouchableOpacity
@@ -77,7 +77,7 @@ const CustomCarousel = ({
           </TouchableOpacity>
         </>
       )}
-      {showPagination && (
+      {/* {showPagination && (
         <Pagination
           dotsLength={items?.length}
           activeDotIndex={activeSlide}
@@ -97,7 +97,7 @@ const CustomCarousel = ({
           inactiveDotScale={0.6}
           {...paginationProps}
         />
-      )}
+      )} */}
     </View>
   );
 };
