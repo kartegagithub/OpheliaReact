@@ -5,7 +5,6 @@ import Padding from '../shared/fragment/padding';
 import {View} from 'react-native';
 import CustomText from '../components/customText';
 import CustomCarousel from '../components/customCarousel';
-import {wp} from '../shared/helpers/veriables';
 
 function CarouselScreen() {
   const data = [
@@ -51,66 +50,28 @@ function CarouselScreen() {
           </View>
           <Padding />
           <View>
-            <CustomText>Tinder Layout</CustomText>
-            <CustomCarousel
-              items={data}
-              layout={'tinder'}
-              layoutCardOffset={`9`}
-            />
+            <CustomText>Parallax</CustomText>
+            <CustomCarousel items={data} mode={'parallax'} />
           </View>
           <Padding />
           <View>
-            <CustomText>Stack Layout</CustomText>
-            <CustomCarousel
-              items={data}
-              layout={'stack'}
-              layoutCardOffset={`18`}
-            />
+            <CustomText>Horizontal Stack Layout</CustomText>
+            <CustomCarousel items={data} mode={'horizontal-stack'} />
+          </View>
+          <Padding />
+          <View>
+            <CustomText>Vertical Stack Layout</CustomText>
+            <CustomCarousel items={data} mode={'vertical-stack'} />
           </View>
           <Padding />
           <View>
             <CustomText>Show Pagination</CustomText>
-            <CustomCarousel
-              items={data}
-              layout={'stack'}
-              layoutCardOffset={`18`}
-              showPagination={true}
-            />
+            <CustomCarousel items={data} showPagination={true} />
           </View>
           <Padding />
-          <View>
-            <CustomText>With Arrow</CustomText>
-            <CustomCarousel
-              items={data}
-              layoutCardOffset={`18`}
-              showArrow={true}
-              width={wp(100) - 40}
-              itemWidth={wp(100) - 40}
-            />
-          </View>
           <Padding />
-          <View>
-            <CustomText>With Arrow</CustomText>
-            <CustomCarousel
-              items={data}
-              layoutCardOffset={`18`}
-              showArrow={true}
-              width={wp(100) - 40}
-              itemWidth={wp(65)}
-              firstItem={1}
-            />
-          </View>
           <Padding />
-          <View>
-            <CustomText>With Multi Item</CustomText>
-            <CustomCarousel
-              items={data}
-              showArrow={true}
-              width={wp(100) - 40}
-              itemWidth={(wp(100) - 40) / 3}
-              firstItem={1}
-            />
-          </View>
+          <Padding />
           <Padding />
         </View>
       </Content>

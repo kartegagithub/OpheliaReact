@@ -25,6 +25,7 @@ const style = StyleSheet.create({
   },
   arrowLeft: {left: 0, paddingLeft: 10},
   arrowRight: {right: 0, paddingRight: 10},
+  pagination: {backgroundColor: 'rgba(0,0,0,0.2)', borderRadius: 50},
 });
 
 export default style;
