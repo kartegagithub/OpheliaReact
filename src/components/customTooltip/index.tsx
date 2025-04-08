@@ -2,8 +2,22 @@ import * as React from 'react';
 import style from './style';
 import defaultColor from '../../constants/style/defaultColor';
 import Tooltip from 'rn-tooltip';
+import {ViewStyle} from 'react-native';
 
-const CustomTooltip = ({
+interface CustomTooltipProps {
+  children: React.ReactNode;
+  renderPopover?: React.ReactNode;
+  backgroundColor?: string;
+  containerStyle?: ViewStyle;
+  highlightColor?: string;
+  onOpen?: () => void;
+  onClose?: () => void;
+  withOverlay?: boolean;
+  overlayColor?: string;
+  [key: string]: any;
+}
+
+const CustomTooltip: React.FC<CustomTooltipProps> = ({
   children,
   renderPopover = null,
   backgroundColor = defaultColor.lightColor,
@@ -23,12 +37,14 @@ const CustomTooltip = ({
       highlightColor={highlightColor}
       withOverlay={withOverlay}
       overlayColor={overlayColor}
-      onOpen={() => onOpen?.()}
-      onOpen={() => onClose?.()}
-      {...props}
-    >
+      onOpen={onOpen}
+      onClose={onClose}
+      {...props}>
       {children}
     </Tooltip>
   );
 };
+
+CustomTooltip.displayName = 'CustomTooltip';
+
 export default CustomTooltip;

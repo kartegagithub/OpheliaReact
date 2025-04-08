@@ -1,21 +1,35 @@
 import React, {useState} from 'react';
 import Accordion from 'react-native-collapsible/Accordion';
-import {View} from 'react-native';
+import {View, ViewStyle} from 'react-native';
 import CustomText from '../customText';
 import CustomIcon from '../customIcon';
-const CustomExpandable = ({
+
+interface Section {
+  id: number | string;
+  title: string;
+  content: string;
+}
+
+interface CustomExpandableProps {
+  contentStyle?: ViewStyle;
+  sections: Section[];
+  headerStyle?: ViewStyle;
+  sectionTitleStyle?: ViewStyle;
+}
+
+const CustomExpandable: React.FC<CustomExpandableProps> = ({
   contentStyle,
   sections,
   headerStyle,
   sectionTitleStyle,
 }) => {
-  const [active, setActive] = useState([]);
+  const [active, setActive] = useState<number[]>([]);
 
-  const _renderHeader = section => {
+  const _renderHeader = (section: Section): React.ReactElement => {
     return (
       <View style={headerStyle}>
-        <CustomText>{section?.title}</CustomText>
-        {active?.[0] === section?.id ? (
+        <CustomText>{section.title}</CustomText>
+        {active[0] === section.id ? (
           <CustomIcon name="chevron-up" type="fontAwesome" size={15} />
         ) : (
           <CustomIcon name="chevron-down" type="fontAwesome" size={15} />
@@ -23,18 +37,20 @@ const CustomExpandable = ({
       </View>
     );
   };
-  const _renderSectionTitle = section => {
-    return <View style={sectionTitleStyle}></View>;
+
+  const _renderSectionTitle = (section: Section): React.ReactElement => {
+    return <View style={sectionTitleStyle} />;
   };
-  const _renderContent = section => {
+
+  const _renderContent = (section: Section): React.ReactElement => {
     return (
       <View style={contentStyle}>
-        <CustomText>{section?.content}</CustomText>
+        <CustomText>{section.content}</CustomText>
       </View>
     );
   };
 
-  const _updateSections = activeSections => {
+  const _updateSections = (activeSections: number[]): void => {
     setActive(activeSections);
   };
 
@@ -49,5 +65,7 @@ const CustomExpandable = ({
     />
   );
 };
+
+CustomExpandable.displayName = 'CustomExpandable';
 
 export default CustomExpandable;

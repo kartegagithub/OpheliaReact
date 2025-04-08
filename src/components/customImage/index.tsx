@@ -1,18 +1,33 @@
 import * as React from 'react';
 import style from './style';
-import TurboImage from 'react-native-turbo-image';
+import TurboImage, {TurboImageProps} from 'react-native-turbo-image';
+import {ImageSourcePropType, ImageStyle} from 'react-native';
 
-const CustomImage = ({source, priority, ...props}) => {
+interface CustomImageProps extends Omit<TurboImageProps, 'source'> {
+  source: ImageSourcePropType;
+  priority?: 'low' | 'normal' | 'high';
+  style?: ImageStyle;
+}
+
+const CustomImage: React.FC<CustomImageProps> = ({
+  source,
+  priority = 'normal',
+  style: customStyle,
+  ...props
+}) => {
   return (
     <TurboImage
-      style={{...style.defaultSize, ...style}}
+      style={{...style.defaultSize, ...customStyle}}
       source={{
-        priority: priority || 'normal',
+        priority,
         ...source,
       }}
-      resizeMode={'cover'}
+      resizeMode="cover"
       {...props}
     />
   );
 };
+
+CustomImage.displayName = 'CustomImage';
+
 export default CustomImage;

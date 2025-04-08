@@ -1,8 +1,19 @@
 import * as React from 'react';
+import {TextStyle} from 'react-native';
 import style from './style';
-import AnimatedNumber from './animatedNumber';
+import AnimatedNumber, {AnimatedNumberProps} from './animatedNumber';
 
-const CustomAnimateNumber = ({number = 0, textStyle, ...props}) => {
+interface CustomAnimateNumberProps
+  extends Omit<AnimatedNumberProps, 'animateToNumber' | 'fontStyle'> {
+  number?: number;
+  textStyle?: TextStyle;
+}
+
+const CustomAnimateNumber: React.FC<CustomAnimateNumberProps> = ({
+  number = 0,
+  textStyle,
+  ...props
+}) => {
   return (
     <AnimatedNumber
       includeComma
@@ -12,4 +23,5 @@ const CustomAnimateNumber = ({number = 0, textStyle, ...props}) => {
     />
   );
 };
+
 export default CustomAnimateNumber;

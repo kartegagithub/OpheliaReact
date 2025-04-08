@@ -11,18 +11,59 @@ import {
   ProgressChart,
   ContributionGraph,
   StackedBarChart,
+  ChartConfig,
+  AbstractChartConfig,
 } from 'react-native-chart-kit';
 import {hp, wp} from '../../shared/helpers/veriables';
-//types line,bar,pie,progress,contribution,stacked
-const CustomChart = ({
+
+type ChartType =
+  | 'line'
+  | 'bar'
+  | 'pie'
+  | 'progress'
+  | 'contribution'
+  | 'stacked';
+
+interface Dataset {
+  data: number[];
+  color?: string;
+  strokeWidth?: number;
+  [key: string]: any;
+}
+
+interface ChartData {
+  labels?: string[];
+  datasets: Dataset[];
+}
+
+interface PieChartData {
+  name: string;
+  population: number;
+  color: string;
+  legendFontColor?: string;
+}
+
+interface CustomChartProps {
+  type?: ChartType;
+  width?: number;
+  height?: number;
+  config?: Partial<AbstractChartConfig>;
+  data?: ChartData | PieChartData[] | {data: number[]};
+  yAxisLabel?: string;
+  yAxisSuffix?: string;
+  style?: any;
+  [key: string]: any;
+}
+
+const CustomChart: React.FC<CustomChartProps> = ({
   type = 'line',
-  width,
-  height,
+  width = wp(80),
+  height = hp(25),
   config,
   data,
   ...props
 }) => {
-  const generalConfig = {
+  const generalConfig: AbstractChartConfig = {
     backgroundColor: defaultColor.lightColor,
     backgroundGradientFrom: defaultColor.middleColor,
     backgroundGradientTo: defaultColor.lightColor,
@@ -39,96 +80,100 @@ const CustomChart = ({
     },
     ...config,
   };
-  if (type === 'line') {
-    return (
-      <LineChart
-        data={
-          data || {
-            labels: ['test'],
-            datasets: [
-              {
-                data: [1],
-              },
-            ],
-          }
-        }
-        width={width || wp(80)}
-        height={height || hp(25)}
-        yAxisLabel="₺"
-        yAxisSuffix=""
-        yAxisInterval={1}
-        chartConfig={generalConfig}
-        bezier
-        style={style.chart}
-        {...props}
-      />
-    );
-  } else if (type === 'pie') {
-    return (
-      <PieChart
-        data={data}
-        chartConfig={generalConfig}
-        width={width || wp(80)}
-        height={height || hp(25)}
-        accessor={'population'}
-        backgroundColor={'transparent'}
-        paddingLeft={'15'}
-        absolute
-        {...props}
-      />
-    );
-  } else if (type === 'bar') {
-    return (
-      <BarChart
-        style={generalConfig?.style || {}}
-        data={data}
-        width={width || wp(80)}
-        height={height || hp(25)}
-        yAxisLabel=""
-        chartConfig={generalConfig}
-        verticalLabelRotation={30}
-        {...props}
-      />
-    );
-  } else if (type === 'progress') {
-    return (
-      <ProgressChart
-        data={data}
-        width={width || wp(80)}
-        height={height || hp(25)}
-        strokeWidth={16}
-        radius={32}
-        chartConfig={generalConfig}
-        hideLegend={false}
-        style={generalConfig?.style || {}}
-        {...props}
-      />
-    );
-  } else if (type === 'contribution') {
-    return (
-      <ContributionGraph
-        values={data}
-        endDate={new Date('2023-05-30')}
-        numDays={105}
-        width={width || wp(80)}
-        height={height || hp(25)}
-        chartConfig={generalConfig}
-        {...props}
-      />
-    );
-  } else if (type === 'stacked') {
-    return (
-      <StackedBarChart
-        style={generalConfig?.style || {}}
-        data={data}
-        width={width || wp(80)}
-        height={height || hp(25)}
-        chartConfig={generalConfig}
-        {...props}
-      />
-    );
-  } else {
-    return null;
+
+  const defaultData: ChartData = {
+    labels: ['test'],
+    datasets: [
+      {
+        data: [1],
+      },
+    ],
+  };
+
+  switch (type) {
+    case 'line':
+      return (
+        <LineChart
+          data={(data as ChartData) || defaultData}
+          width={width}
+          height={height}
+          yAxisLabel="₺"
+          yAxisSuffix=""
+          yAxisInterval={1}
+          chartConfig={generalConfig}
+          bezier
+          style={style.chart}
+          {...props}
+        />
+      );
+    case 'pie':
+      return (
+        <PieChart
+          data={data as PieChartData[]}
+          chartConfig={generalConfig}
+          width={width}
+          height={height}
+          accessor={'population'}
+          backgroundColor={'transparent'}
+          paddingLeft={'15'}
+          absolute
+          {...props}
+        />
+      );
+    case 'bar':
+      return (
+        <BarChart
+          style={generalConfig?.style || {}}
+          data={data as ChartData}
+          width={width}
+          height={height}
+          yAxisLabel=""
+          chartConfig={generalConfig}
+          verticalLabelRotation={30}
+          {...props}
+        />
+      );
+    case 'progress':
+      return (
+        <ProgressChart
+          data={data as {data: number[]}}
+          width={width}
+          height={height}
+          strokeWidth={16}
+          radius={32}
+          chartConfig={generalConfig}
+          hideLegend={false}
+          {...props}
+        />
+      );
+    case 'contribution':
+      return (
+        <ContributionGraph
+          values={data as any[]}
+          endDate={new Date('2023-05-30')}
+          numDays={105}
+          width={width}
+          height={height}
+          chartConfig={generalConfig}
+          {...props}
+        />
+      );
+    case 'stacked':
+      return (
+        <StackedBarChart
+          style={generalConfig?.style || {}}
+          data={data as ChartData}
+          width={width}
+          height={height}
+          chartConfig={generalConfig}
+          {...props}
+        />
+      );
+    default:
+      return null;
   }
 };
+
+CustomChart.displayName = 'CustomChart';
+
 export default CustomChart;

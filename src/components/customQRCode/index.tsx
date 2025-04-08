@@ -1,14 +1,28 @@
 import * as React from 'react';
-import style from './style';
-import QRCode from 'react-native-qrcode-svg';
+import QRCode, {QRCodeProps} from 'react-native-qrcode-svg';
 
-const CustomQRCode = ({
-  backgroundColor,
-  color,
+interface CustomQRCodeProps extends Omit<QRCodeProps, 'value'> {
+  value: string;
+  backgroundColor?: string;
+  color?: string;
+  gradientDirection?: string[];
+  linearGradient?: string[];
+  enableLinearGradient?: boolean;
+  logo?: any;
+  logoSize?: number;
+  logoBackgroundColor?: string;
+  logoMargin?: number;
+  logoBorderRadius?: number;
+  quietZone?: number;
+}
+
+const CustomQRCode: React.FC<CustomQRCodeProps> = ({
+  backgroundColor = '#FFFFFF',
+  color = '#000000',
   value,
   gradientDirection,
   linearGradient,
-  enableLinearGradient,
+  enableLinearGradient = false,
   logo,
   logoSize,
   logoBackgroundColor,
@@ -31,7 +45,11 @@ const CustomQRCode = ({
       logoMargin={logoMargin}
       logoBorderRadius={logoBorderRadius}
       quietZone={quietZone}
+      {...props}
     />
   );
 };
+
+CustomQRCode.displayName = 'CustomQRCode';
+
 export default CustomQRCode;

@@ -1,51 +1,77 @@
 import {Platform} from 'react-native';
-import {check, PERMISSIONS, RESULTS, request} from 'react-native-permissions';
-const permList = {
+import {
+  check,
+  PERMISSIONS,
+  RESULTS,
+  request,
+  Permission,
+  PermissionStatus,
+} from 'react-native-permissions';
+
+type PermissionType = 'camera' | 'microphone';
+
+interface PermissionList {
+  [key: string]: Permission;
+}
+
+const permList: PermissionList = {
   camera:
-    Platform.OS == 'android'
+    Platform.OS === 'android'
       ? PERMISSIONS.ANDROID.CAMERA
       : PERMISSIONS.IOS.CAMERA,
   microphone:
-    Platform.OS == 'android'
+    Platform.OS === 'android'
       ? PERMISSIONS.ANDROID.RECORD_AUDIO
       : PERMISSIONS.IOS.MICROPHONE,
 };
-const getPermCode = code => {
+
+const getPermCode = (code: PermissionType | null): Permission | null => {
   if (!code) return null;
-  return permList?.[code];
+  return permList[code];
 };
-const requestPermission = (perm, req, reqFunc, allowControl) => {
-  request(getPermCode(perm)).then(result => {
+
+const requestPermission = (
+  perm: PermissionType,
+  req: boolean,
+  reqFunc?: () => void,
+  allowControl?: (result: PermissionStatus) => void,
+): void => {
+  const permCode = getPermCode(perm);
+  if (!permCode) return;
+
+  request(permCode).then(result => {
     allowControl?.(result);
   });
 };
-const getPermission = (perm, req, reqFunc, requestControl) => {
-  check(getPermCode(perm))
+
+const getPermission = (
+  perm: PermissionType,
+  req: boolean,
+  reqFunc?: () => void,
+  requestControl?: boolean,
+): void => {
+  const permCode = getPermCode(perm);
+  if (!permCode) return;
+
+  check(permCode)
     .then(result => {
       switch (result) {
         case RESULTS.UNAVAILABLE:
-          if (!req) reqFunc?.();
-          if (requestControl) requestPermission(perm, req, reqFunc);
-          break;
         case RESULTS.DENIED:
-          if (!req) reqFunc?.();
-          if (requestControl) requestPermission(perm, req, reqFunc);
-          break;
         case RESULTS.LIMITED:
-          if (!req) reqFunc?.();
-          if (requestControl) requestPermission(perm, req, reqFunc);
-        case RESULTS.GRANTED:
-          reqFunc?.();
-          break;
         case RESULTS.BLOCKED:
           if (!req) reqFunc?.();
           if (requestControl) requestPermission(perm, req, reqFunc);
           break;
+        case RESULTS.GRANTED:
+          reqFunc?.();
+          break;
       }
     })
     .catch(error => {
+      console.error('Permission check failed:', error);
       if (!req) reqFunc?.();
     });
 };
 
-export {getPermission};
+export {getPermission, type PermissionType};

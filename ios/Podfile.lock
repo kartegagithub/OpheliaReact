@@ -1413,7 +1413,7 @@ PODS:
     - Yoga
   - react-native-segmented-control (2.5.7):
     - React-Core
-  - react-native-skia (2.0.0-next.1):
+  - react-native-skia (2.0.0-next.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1436,7 +1436,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-turbo-image (1.22.1):
+  - react-native-turbo-image (1.22.3):
     - APNGKit
     - DoubleConversion
     - Gifu
@@ -1838,7 +1838,7 @@ PODS:
     - Yoga
   - RNDeviceInfo (10.14.0):
     - React-Core
-  - RNGestureHandler (2.24.0):
+  - RNGestureHandler (2.25.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1880,7 +1880,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNReanimated (3.17.1):
+  - RNReanimated (3.17.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1902,10 +1902,10 @@ PODS:
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - RNReanimated/reanimated (= 3.17.1)
-    - RNReanimated/worklets (= 3.17.1)
+    - RNReanimated/reanimated (= 3.17.2)
+    - RNReanimated/worklets (= 3.17.2)
     - Yoga
-  - RNReanimated/reanimated (3.17.1):
+  - RNReanimated/reanimated (3.17.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1927,9 +1927,9 @@ PODS:
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - RNReanimated/reanimated/apple (= 3.17.1)
+    - RNReanimated/reanimated/apple (= 3.17.2)
     - Yoga
-  - RNReanimated/reanimated/apple (3.17.1):
+  - RNReanimated/reanimated/apple (3.17.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1952,7 +1952,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNReanimated/worklets (3.17.1):
+  - RNReanimated/worklets (3.17.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1974,9 +1974,9 @@ PODS:
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - RNReanimated/worklets/apple (= 3.17.1)
+    - RNReanimated/worklets/apple (= 3.17.2)
     - Yoga
-  - RNReanimated/worklets/apple (3.17.1):
+  - RNReanimated/worklets/apple (3.17.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2432,8 +2432,8 @@ SPEC CHECKSUMS:
   react-native-render-html: 984dfe2294163d04bf5fe25d7c9f122e60e05ebe
   react-native-safe-area-context: 286b3e7b5589795bb85ffc38faf4c0706c48a092
   react-native-segmented-control: 44d14c6899ee12de3384517f4fa1cf4a66ae105c
-  react-native-skia: 3d4019882172140d9ea2f786fc3c20d818107e2e
-  react-native-turbo-image: 09799c9addb22698602fdcfedba89cf419aecfdd
+  react-native-skia: f769adb7706666c714feb30e6c47bf395a6919c9
+  react-native-turbo-image: 1191b95fb537eb5d89d4d5cd3bed15092abc8e3c
   react-native-video: c26780b224543c62d5e1b2a7244a5cd1b50e8253
   react-native-webview: ca20dfd45204cc81f0b21e70d1e5a349daecfb81
   React-NativeModulesApple: fb48894de492e6f9a73e53d8f92a6a792e40666c
@@ -2468,9 +2468,9 @@ SPEC CHECKSUMS:
   RNCMaskedView: 18c76ebdf9752bb75652829f99f6c3d1318cc864
   RNCPicker: ffbd7b9fc7c1341929e61dbef6219f7860f57418
   RNDeviceInfo: 59344c19152c4b2b32283005f9737c5c64b42fba
-  RNGestureHandler: 9b05fab9a0b48fe48c968de7dbb9ca38a2b4f7ab
+  RNGestureHandler: 66e593addd8952725107cfaa4f5e3378e946b541
   RNPermissions: e5b7042e8683d78df301b289a5b7542493875567
-  RNReanimated: ff71ce0443c71c8a77501ace7b9738ede83cfa55
+  RNReanimated: 1132f0ffe1d28ac76a227405ed16f037a6692008
   RNScreens: 0f01bbed9bd8045a8d58e4b46993c28c7f498f3c
   RNSVG: 8588ee1ca9b2e6fd2c99466e35b3db0e9f81bb40
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748

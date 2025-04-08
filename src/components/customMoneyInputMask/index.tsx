@@ -1,19 +1,25 @@
 import * as React from 'react';
-import {View} from 'react-native';
+import {View, ViewStyle, StyleProp, TextStyle} from 'react-native';
 import styles from './style';
-import CurrencyInput from 'react-native-currency-input';
+import CurrencyInput, {CurrencyInputProps} from 'react-native-currency-input';
 
-function CustomMoneyInputMask({
+interface InputProps extends Omit<CurrencyInputProps, 'onChangeValue'> {
+  style?: StyleProp<TextStyle>;
+  onChangeValue?: (value: number | null) => void;
+  value: number | null;
+}
+
+const CustomMoneyInputMask: React.FC<InputProps> = ({
   style,
-  onChangeText,
+  onChangeValue,
   value,
   ...props
-}: InputProps) {
+}) => {
   return (
     <View>
       <CurrencyInput
         value={value}
-        onChangeValue={onChangeText}
+        onChangeValue={(value: number | null) => onChangeValue?.(value)}
         delimiter="."
         separator=","
         precision={2}
@@ -24,5 +30,8 @@ function CustomMoneyInputMask({
       />
     </View>
   );
-}
+};
+
+CustomMoneyInputMask.displayName = 'CustomMoneyInputMask';
+
 export default CustomMoneyInputMask;

@@ -1,27 +1,60 @@
-import {showMessage} from 'react-native-flash-message';
+import {showMessage, MessageType} from 'react-native-flash-message';
 
-const showInfo = text => {
+interface MessageOptions {
+  message: string;
+  type: MessageType;
+  description?: string;
+  duration?: number;
+  floating?: boolean;
+  position?: 'top' | 'bottom' | 'center';
+  icon?:
+    | 'auto'
+    | 'none'
+    | {icon: MessageType | 'auto'; position: 'left' | 'right'; props: {}};
+}
+
+const showInfo = (
+  text: string,
+  options?: Partial<Omit<MessageOptions, 'type' | 'message'>>,
+): void => {
   showMessage({
     message: text,
     type: 'info',
+    ...options,
   });
 };
-const showError = text => {
+
+const showError = (
+  text: string,
+  options?: Partial<Omit<MessageOptions, 'type' | 'message'>>,
+): void => {
   showMessage({
     message: text,
     type: 'danger',
+    ...options,
   });
 };
-const showSuccess = text => {
+
+const showSuccess = (
+  text: string,
+  options?: Partial<Omit<MessageOptions, 'type' | 'message'>>,
+): void => {
   showMessage({
     message: text,
     type: 'success',
+    ...options,
   });
 };
-const showWarn = text => {
+
+const showWarn = (
+  text: string,
+  options?: Partial<Omit<MessageOptions, 'type' | 'message'>>,
+): void => {
   showMessage({
     message: text,
     type: 'warning',
+    ...options,
   });
 };
+
 export {showError, showWarn, showInfo, showSuccess};

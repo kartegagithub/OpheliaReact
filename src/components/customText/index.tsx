@@ -1,11 +1,26 @@
 import * as React from 'react';
-import {StyleProp, Text, ViewStyle} from 'react-native';
+import {
+  StyleProp,
+  Text,
+  TextStyle,
+  TextProps as RNTextProps,
+} from 'react-native';
 import styles from './style';
-type TextProps = {
-  style?: StyleProp<ViewStyle>;
-  children?: string | number;
-};
-function CustomText({style, size, color, children}: TextProps) {
+
+interface CustomTextProps extends Omit<RNTextProps, 'style'> {
+  style?: StyleProp<TextStyle>;
+  size?: number;
+  color?: string;
+  children?: React.ReactNode;
+}
+
+const CustomText: React.FC<CustomTextProps> = ({
+  style,
+  size,
+  color,
+  children,
+  ...props
+}) => {
   return (
     <Text
       style={[
@@ -14,9 +29,13 @@ function CustomText({style, size, color, children}: TextProps) {
           color: color || styles.customTextStyle.color,
         },
         style,
-      ]}>
+      ]}
+      {...props}>
       {children}
     </Text>
   );
-}
+};
+
+CustomText.displayName = 'CustomText';
+
 export default CustomText;

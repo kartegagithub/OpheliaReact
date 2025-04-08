@@ -1,8 +1,22 @@
 import * as React from 'react';
 import style from './style';
-import {ImageZoom} from '@likashefqet/react-native-image-zoom';
+import {ImageZoom, ImageZoomProps} from '@likashefqet/react-native-image-zoom';
+import {ViewStyle} from 'react-native';
 
-const CustomImageZoom = ({uri, containerStyle, ...props}) => {
+interface CustomImageZoomProps extends Omit<ImageZoomProps, 'uri'> {
+  uri: string;
+  containerStyle?: ViewStyle;
+  minScale?: number;
+  maxScale?: number;
+}
+
+const CustomImageZoom: React.FC<CustomImageZoomProps> = ({
+  uri,
+  containerStyle,
+  minScale = 0.5,
+  maxScale = 3,
+  ...props
+}) => {
   return (
     <ImageZoom
       containerStyle={{
@@ -11,10 +25,13 @@ const CustomImageZoom = ({uri, containerStyle, ...props}) => {
         ...containerStyle,
       }}
       uri={uri}
-      minScale={0.5}
-      maxScale={3}
+      minScale={minScale}
+      maxScale={maxScale}
       {...props}
     />
   );
 };
+
+CustomImageZoom.displayName = 'CustomImageZoom';
+
 export default CustomImageZoom;

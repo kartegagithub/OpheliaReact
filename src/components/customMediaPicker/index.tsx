@@ -1,6 +1,22 @@
-import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+import {
+  launchCamera,
+  launchImageLibrary,
+  ImagePickerResponse,
+  ImageLibraryOptions,
+  CameraOptions,
+} from 'react-native-image-picker';
 
-const getSelectImage = async options => {
+interface MediaPickerOptions
+  extends Omit<ImageLibraryOptions, 'mediaType'>,
+    Omit<CameraOptions, 'mediaType'> {
+  mediaType?: 'photo' | 'video' | 'mixed';
+  includeBase64?: boolean;
+  [key: string]: any;
+}
+
+const getSelectImage = async (
+  options?: MediaPickerOptions,
+): Promise<ImagePickerResponse> => {
   const result = await launchImageLibrary({
     mediaType: 'photo',
     includeBase64: true,
@@ -8,7 +24,10 @@ const getSelectImage = async options => {
   });
   return result;
 };
-const getSelectCamera = async options => {
+
+const getSelectCamera = async (
+  options?: MediaPickerOptions,
+): Promise<ImagePickerResponse> => {
   const result = await launchCamera({
     mediaType: 'photo',
     includeBase64: true,
@@ -16,7 +35,10 @@ const getSelectCamera = async options => {
   });
   return result;
 };
-const getSelectVideo = async options => {
+
+const getSelectVideo = async (
+  options?: MediaPickerOptions,
+): Promise<ImagePickerResponse> => {
   const result = await launchImageLibrary({
     mediaType: 'video',
     includeBase64: true,
@@ -25,4 +47,10 @@ const getSelectVideo = async options => {
   return result;
 };
 
-export {getSelectVideo, getSelectCamera, getSelectImage};
+export {
+  getSelectVideo,
+  getSelectCamera,
+  getSelectImage,
+  type MediaPickerOptions,
+  type ImagePickerResponse,
+};

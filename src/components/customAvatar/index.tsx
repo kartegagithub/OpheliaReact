@@ -1,13 +1,28 @@
 import * as React from 'react';
-import style from './style';
+import {View, ViewStyle, TextStyle} from 'react-native';
 import UserAvatar from 'react-native-user-avatar';
+import style from './style';
 import defaultColor from '../../constants/style/defaultColor';
-import {View} from 'react-native';
 import CustomText from '../customText';
-const generateRandomColor = () => {
+
+interface CustomAvatarProps {
+  size?: number;
+  containerStyle?: ViewStyle;
+  src?: string;
+  name?: string;
+  textColor?: string;
+  randomBg?: boolean;
+  bgColor?: string;
+  badgeContainer?: ViewStyle;
+  badgeText?: string;
+  badgeTextStyle?: TextStyle;
+}
+
+const generateRandomColor = (): string => {
   return '#' + ((Math.random() * 0xffffff) << 0).toString(16).padStart(6, '0');
 };
-const CustomAvatar = ({
+
+const CustomAvatar: React.FC<CustomAvatarProps> = ({
   size = 50,
   containerStyle,
   src,
@@ -43,4 +58,5 @@ const CustomAvatar = ({
     </View>
   );
 };
+
 export default CustomAvatar;

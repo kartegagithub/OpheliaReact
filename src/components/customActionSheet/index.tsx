@@ -2,7 +2,21 @@ import * as React from 'react';
 import styles from './style';
 import ActionSheet from 'react-native-actionsheet';
 
-const CustomActionSheet = React.forwardRef(
+interface CustomActionSheetProps {
+  onPress?: (option: string, index: number) => void;
+  cancelButtonIndex?: number;
+  destructiveButtonIndex?: number;
+  title?: string | null;
+  message?: string | null;
+  options: string[];
+}
+
+type CustomActionSheetRef = ActionSheet;
+
+const CustomActionSheet = React.forwardRef<
+  CustomActionSheetRef,
+  CustomActionSheetProps
+>(
   (
     {
       onPress,
@@ -23,10 +37,13 @@ const CustomActionSheet = React.forwardRef(
         cancelButtonIndex={cancelButtonIndex}
         destructiveButtonIndex={destructiveButtonIndex}
         onPress={index => {
-          onPress?.(options?.[index], index);
+          onPress?.(options[index], index);
         }}
       />
     );
   },
 );
+
+CustomActionSheet.displayName = 'CustomActionSheet';
+
 export default CustomActionSheet;

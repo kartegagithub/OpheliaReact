@@ -1,17 +1,37 @@
 import * as React from 'react';
 import style from './style';
-import DropDownPicker from 'react-native-dropdown-picker';
+import DropDownPicker, {
+  ValueType,
+  ItemType,
+} from 'react-native-dropdown-picker';
 import {View} from 'react-native';
 import CustomText from '../customText';
 import Icon from 'react-native-vector-icons/FontAwesome';
-const CustomDropdown = ({onSelect, defaultValue, ...props}) => {
-  const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState(defaultValue || null);
-  const [items, setItems] = React.useState(items || []);
 
-  const changeData = item => {
-    onSelect?.(item);
-  };
+interface CustomDropdownProps<T extends ValueType = string> {
+  onSelect?: (item: ItemType<T>) => void;
+  defaultValue?: T;
+  items?: ItemType<T>[];
+  [key: string]: any;
+}
+
+const CustomDropdown = <T extends ValueType = string>({
+  onSelect,
+  defaultValue,
+  items: initialItems = [],
+  ...props
+}: CustomDropdownProps<T>) => {
+  const [open, setOpen] = React.useState<boolean>(false);
+  const [value, setValue] = React.useState<T | null>(defaultValue || null);
+  const [items, setItems] = React.useState<ItemType<T>[]>(initialItems);
+
+  const changeData = React.useCallback(
+    (item: ItemType<T>) => {
+      onSelect?.(item);
+    },
+    [onSelect],
+  );
+
   return (
     <DropDownPicker
       placeholder="Seçim Yapın"
@@ -21,11 +41,12 @@ const CustomDropdown = ({onSelect, defaultValue, ...props}) => {
       setOpen={setOpen}
       setValue={setValue}
       setItems={setItems}
-      onSelectItem={item => {
-        changeData(item);
-      }}
+      onSelectItem={changeData}
       {...props}
     />
   );
 };
+
+CustomDropdown.displayName = 'CustomDropdown';
+
 export default CustomDropdown;

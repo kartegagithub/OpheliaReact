@@ -1,30 +1,39 @@
 import * as React from 'react';
-import {View} from 'react-native';
-import MaskInput, {Masks} from 'react-native-mask-input';
+import {View, StyleProp, ViewStyle, TextStyle} from 'react-native';
+import MaskInput, {Masks, MaskInputProps} from 'react-native-mask-input';
 import styles from './style';
 
-function CustomInputMask({
+type MaskType = 'currency' | 'card' | 'date' | (string | RegExp)[];
+
+interface InputProps extends Omit<MaskInputProps, 'mask'> {
+  style?: StyleProp<TextStyle>;
+  onChangeText?: (masked: string, unmasked: string) => void;
+  value: string;
+  mask: MaskType;
+}
+
+const CustomInputMask: React.FC<InputProps> = ({
   style,
   onChangeText,
   value,
   mask,
   ...props
-}: InputProps) {
-  const getMask = m => {
-    const maskList = {
+}) => {
+  const getMask = (m: MaskType): (string | RegExp)[] => {
+    const maskList: Record<string, (string | RegExp)[]> = {
       currency: Masks.BRL_CURRENCY,
       card: Masks.CREDIT_CARD,
       date: Masks.DATE_DDMMYYYY,
     };
-    const find = maskList?.[m];
-    return find || m;
+    return typeof m === 'string' ? maskList[m] || m : m;
   };
+
   return (
     <View>
       <MaskInput
         style={[styles.input, style]}
         value={value}
-        onChangeText={(masked, unmasked) => {
+        onChangeText={(masked: string, unmasked: string) => {
           onChangeText?.(masked, unmasked);
         }}
         placeholderTextColor="#fff"
@@ -33,5 +42,8 @@ function CustomInputMask({
       />
     </View>
   );
-}
+};
+
+CustomInputMask.displayName = 'CustomInputMask';
+
 export default CustomInputMask;

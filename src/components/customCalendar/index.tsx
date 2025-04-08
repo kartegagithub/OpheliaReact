@@ -1,18 +1,34 @@
 import moment from 'moment';
 import * as React from 'react';
-import {Calendar, LocaleConfig} from 'react-native-calendars';
+import {
+  Calendar,
+  LocaleConfig,
+  DateData,
+  CalendarProps,
+} from 'react-native-calendars';
 import {langData} from './tr';
 
-const CustomCalendar = ({onSelected, ...props}) => {
+interface CustomCalendarProps extends Omit<CalendarProps, 'onDayPress'> {
+  onSelected?: (day: DateData) => void;
+}
+
+const CustomCalendar: React.FC<CustomCalendarProps> = ({
+  onSelected,
+  ...props
+}) => {
   LocaleConfig.locales['tr'] = langData;
   LocaleConfig.defaultLocale = 'tr';
-  return (
-    <Calendar
-      onDayPress={day => {
-        onSelected?.(day);
-      }}
-      {...props}
-    />
+
+  const handleDayPress = React.useCallback(
+    (day: DateData) => {
+      onSelected?.(day);
+    },
+    [onSelected],
   );
+
+  return <Calendar onDayPress={handleDayPress} {...props} />;
 };
+
+CustomCalendar.displayName = 'CustomCalendar';
+
 export default CustomCalendar;

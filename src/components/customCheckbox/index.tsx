@@ -1,8 +1,22 @@
 import * as React from 'react';
+import {TextStyle, ViewStyle} from 'react-native';
 import defaultColor from '../../constants/style/defaultColor';
-import BouncyCheckbox from 'react-native-bouncy-checkbox';
+import BouncyCheckbox, {
+  IBouncyCheckboxProps,
+} from 'react-native-bouncy-checkbox';
 
-const CustomCheckbox = ({
+interface CustomCheckboxProps extends Omit<IBouncyCheckboxProps, 'onPress'> {
+  textStyle?: TextStyle;
+  onPress?: (isChecked: boolean) => void;
+  text?: string;
+  fillColor?: string;
+  iconStyle?: ViewStyle;
+  innerIconStyle?: ViewStyle;
+  isChecked?: boolean;
+  size?: number;
+}
+
+const CustomCheckbox: React.FC<CustomCheckboxProps> = ({
   textStyle,
   onPress,
   text,
@@ -10,12 +24,12 @@ const CustomCheckbox = ({
   iconStyle,
   innerIconStyle,
   isChecked,
-  size,
+  size = 25,
   ...props
 }) => {
   return (
     <BouncyCheckbox
-      size={size || 25}
+      size={size}
       fillColor={fillColor || defaultColor?.middleColor}
       unfillColor="#FFFFFF"
       text={text}
@@ -30,4 +44,7 @@ const CustomCheckbox = ({
     />
   );
 };
+
+CustomCheckbox.displayName = 'CustomCheckbox';
+
 export default CustomCheckbox;

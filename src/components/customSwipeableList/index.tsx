@@ -1,20 +1,37 @@
 import * as React from 'react';
 import styles from './style';
-import defaultColor from '../../constants/style/defaultColor';
 import {TouchableOpacity, View} from 'react-native';
 import CustomText from '../customText';
-import {SwipeListView} from 'react-native-swipe-list-view';
+import {SwipeListView, RowMap} from 'react-native-swipe-list-view';
 
-const CustomSwipeableList = ({onItemPress, data, onItemDelete, ...props}) => {
-  const [listData, setListData] = React.useState(data || []);
+interface ListItem {
+  key: string;
+  text: string;
+  [key: string]: any;
+}
 
-  const closeRow = (rowMap, rowKey) => {
+interface CustomSwipeableListProps {
+  data?: ListItem[];
+  onItemPress?: (data: {item: ListItem; index: number}) => void;
+  onItemDelete?: (index: number, newData: ListItem[]) => void;
+  [key: string]: any;
+}
+
+const CustomSwipeableList: React.FC<CustomSwipeableListProps> = ({
+  onItemPress,
+  data,
+  onItemDelete,
+  ...props
+}) => {
+  const [listData, setListData] = React.useState<ListItem[]>(data || []);
+
+  const closeRow = (rowMap: RowMap<ListItem>, rowKey: string): void => {
     if (rowMap[rowKey]) {
       rowMap[rowKey].closeRow();
     }
   };
 
-  const deleteRow = (rowMap, rowKey) => {
+  const deleteRow = (rowMap: RowMap<ListItem>, rowKey: string): void => {
     closeRow(rowMap, rowKey);
     const newData = [...listData];
     const prevIndex = listData.findIndex(item => item.key === rowKey);
@@ -23,11 +40,14 @@ const CustomSwipeableList = ({onItemPress, data, onItemDelete, ...props}) => {
     onItemDelete?.(prevIndex, newData);
   };
 
-  const onRowDidOpen = rowKey => {
+  const onRowDidOpen = (rowKey: string): void => {
     console.log('This row opened', rowKey);
   };
 
-  const renderItem = data => (
+  const renderItem = (data: {
+    item: ListItem;
+    index: number;
+  }): React.JSX.Element => (
     <TouchableOpacity
       activeOpacity={1}
       onPress={() => onItemPress?.(data)}
@@ -38,7 +58,10 @@ const CustomSwipeableList = ({onItemPress, data, onItemDelete, ...props}) => {
     </TouchableOpacity>
   );
 
-  const renderHiddenItem = (data, rowMap) => (
+  const renderHiddenItem = (
+    data: {item: ListItem; index: number},
+    rowMap: RowMap<ListItem>,
+  ): React.JSX.Element => (
     <View style={styles.rowBack}>
       <TouchableOpacity
         style={[styles.backLeftBtn]}
@@ -59,7 +82,7 @@ const CustomSwipeableList = ({onItemPress, data, onItemDelete, ...props}) => {
   );
 
   return (
-    <SwipeListView
+    <SwipeListView<ListItem>
       data={listData}
       renderItem={renderItem}
       renderHiddenItem={renderHiddenItem}
@@ -73,4 +96,7 @@ const CustomSwipeableList = ({onItemPress, data, onItemDelete, ...props}) => {
     />
   );
 };
+
+CustomSwipeableList.displayName = 'CustomSwipeableList';
+
 export default CustomSwipeableList;

@@ -1,46 +1,61 @@
-import {Alert} from 'react-native';
-import {Linking} from 'react-native';
-import {StyleSheet} from 'react-native';
-import ParsedText from 'react-native-parsed-text';
+import * as React from 'react';
+import {Alert, Linking, StyleSheet, TextStyle} from 'react-native';
+import ParsedText, {ParseShape} from 'react-native-parsed-text';
 
-const CustomParsedText = ({children, ...props}) => {
-  const handleUrlPress = (url, matchIndex /*: number*/) => {
+interface CustomParsedTextProps {
+  children: string;
+  style?: TextStyle;
+  [key: string]: any;
+}
+
+interface MatchResult {
+  [key: number]: string;
+}
+
+const CustomParsedText: React.FC<CustomParsedTextProps> = ({
+  children,
+  ...props
+}) => {
+  const handleUrlPress = (url: string, matchIndex: number): void => {
     Linking.openURL(url);
   };
 
-  handlePhonePress = (phone, matchIndex /*: number*/) => {
+  const handlePhonePress = (phone: string, matchIndex: number): void => {
     Alert.alert(`${phone} has been pressed!`);
   };
 
-  handleNamePress = (name, matchIndex /*: number*/) => {
+  const handleNamePress = (name: string, matchIndex: number): void => {
     Alert.alert(`Hello ${name}`);
   };
 
-  handleEmailPress = (email, matchIndex /*: number*/) => {
+  const handleEmailPress = (email: string, matchIndex: number): void => {
     Alert.alert(`send email to ${email}`);
   };
 
-  renderText = (matchingString, matches) => {
-    let pattern = /\[(@[^:]+):([^\]]+)\]/i;
-    let match = matchingString.match(pattern);
-    return `^^${match[1]}^^`;
+  const renderText = (matchingString: string, matches: MatchResult): string => {
+    const pattern = /\[(@[^:]+):([^\]]+)\]/i;
+    const match = matchingString.match(pattern);
+    return match ? `^^${match[1]}^^` : matchingString;
   };
+
+  const parsePatterns: ParseShape[] = [
+    {type: 'url', style: styles.url, onPress: handleUrlPress},
+    {type: 'phone', style: styles.phone, onPress: handlePhonePress},
+    {type: 'email', style: styles.email, onPress: handleEmailPress},
+    {
+      pattern: /\[(@[^:]+):([^\]]+)\]/i,
+      style: styles.username,
+      onPress: handleNamePress,
+      renderText: renderText,
+    },
+    {pattern: /42/, style: styles.magicNumber},
+    {pattern: /#(\w+)/, style: styles.hashTag},
+  ];
+
   return (
     <ParsedText
       style={styles.text}
-      parse={[
-        {type: 'url', style: styles.url, onPress: handleUrlPress},
-        {type: 'phone', style: styles.phone, onPress: handlePhonePress},
-        {type: 'email', style: styles.email, onPress: handleEmailPress},
-        {
-          pattern: /\[(@[^:]+):([^\]]+)\]/i,
-          style: styles.username,
-          onPress: handleNamePress,
-          renderText: renderText,
-        },
-        {pattern: /42/, style: styles.magicNumber},
-        {pattern: /#(\w+)/, style: styles.hashTag},
-      ]}
+      parse={parsePatterns}
       childrenProps={{allowFontScaling: false}}
       {...props}>
       {children}
@@ -55,42 +70,37 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-
   url: {
     color: 'red',
     textDecorationLine: 'underline',
   },
-
   email: {
     textDecorationLine: 'underline',
   },
-
   text: {
     color: 'black',
     fontSize: 15,
   },
-
   phone: {
     color: 'blue',
     textDecorationLine: 'underline',
   },
-
   name: {
     color: 'red',
   },
-
   username: {
     color: 'green',
     fontWeight: 'bold',
   },
-
   magicNumber: {
     fontSize: 42,
     color: 'pink',
   },
-
   hashTag: {
     fontStyle: 'italic',
   },
 });
+
+CustomParsedText.displayName = 'CustomParsedText';
+
 export default CustomParsedText;

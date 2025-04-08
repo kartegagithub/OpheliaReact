@@ -1,7 +1,14 @@
 import * as React from 'react';
-import Lottie from 'lottie-react-native';
+import Lottie, {AnimatedLottieViewProps} from 'lottie-react-native';
+import {StyleProp, ViewStyle} from 'react-native';
 
-const CustomLottie = React.forwardRef(
+interface CustomLottieProps extends Omit<AnimatedLottieViewProps, 'source'> {
+  autoPlay?: boolean;
+  loop?: boolean;
+  style?: StyleProp<ViewStyle>;
+}
+
+const CustomLottie = React.forwardRef<Lottie, CustomLottieProps>(
   ({autoPlay = true, loop = true, style, ...props}, ref) => {
     return (
       <Lottie
@@ -19,4 +26,7 @@ const CustomLottie = React.forwardRef(
     );
   },
 );
+
+CustomLottie.displayName = 'CustomLottie';
+
 export default CustomLottie;

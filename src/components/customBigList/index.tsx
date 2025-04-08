@@ -1,11 +1,33 @@
 import * as React from 'react';
 import style from './style';
-import {View} from 'react-native';
+import {View, ListRenderItem} from 'react-native';
 import CustomText from '../customText';
 import BigList from 'react-native-big-list';
 
-const CustomBigList = ({data, customRender, ...props}) => {
-  const renderItem = ({item, index}) => (
+interface ListItem {
+  title?: string;
+  description?: string;
+  [key: string]: any;
+}
+
+interface CustomBigListProps {
+  data?: ListItem[];
+  customRender?: ListRenderItem<ListItem>;
+  itemHeight?: number;
+  numColumns?: number;
+  refreshing?: boolean;
+  placeholder?: boolean;
+  [key: string]: any;
+}
+
+const CustomBigList: React.FC<CustomBigListProps> = ({
+  data,
+  customRender,
+  itemHeight = 50,
+  numColumns = 1,
+  ...props
+}) => {
+  const renderItem: ListRenderItem<ListItem> = ({item, index}) => (
     <View style={style.item}>
       <CustomText style={style.itemT}>
         {item?.title || 'Not Found Title'}
@@ -15,16 +37,18 @@ const CustomBigList = ({data, customRender, ...props}) => {
       </CustomText>
     </View>
   );
+
   return (
     <BigList
       data={data || []}
       renderItem={customRender || renderItem}
       placeholder
       refreshing
-      numColumns={1}
-      itemHeight={50}
+      numColumns={numColumns}
+      itemHeight={itemHeight}
       {...props}
     />
   );
 };
+
 export default CustomBigList;
